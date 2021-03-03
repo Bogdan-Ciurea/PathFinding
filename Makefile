@@ -4,7 +4,7 @@
 EXE_DIR = .
 EXE = $(EXE_DIR)/rendering
 
-SRC= 07_texture_loading_and_rendering.c
+SRC= main.c
 
 # generic build details
 
@@ -31,5 +31,5 @@ clean:
 
 # dependencies
 
-07_texture_loading_and_rendering.o:  07_texture_loading_and_rendering.c  
+main.o:  main.c  
 
