@@ -1,4 +1,4 @@
-#include <SDL2/SDL.h>
+#include <SDL.h>
 #include <stdio.h>
 int main(void){
     SDL_Init(SDL_INIT_VIDEO);
