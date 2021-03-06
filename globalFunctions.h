@@ -20,7 +20,9 @@
 //The variable that will store a link between thw nodes
 typedef struct{
     int id, node1Id, node2Id;
-    float length;
+    double length;
+
+    double node1Lat, node1Lon, node2Lat, node2Lon;
 
     //int wayId, poi;
     //float veg, arch, land;
@@ -29,13 +31,13 @@ typedef struct{
 //A variable that will store the next possible nodes from anoter node
 typedef struct{
     int Id;
-    float length;
+    double length;
 }NextNode;
 
 //A variable that will store information about a node
 typedef struct{
     int id;
-    float lat, lon;
+    double lat, lon;
     NextNode *nextNodes;
     int numberOfNextNodes;
 }Node;
@@ -76,6 +78,12 @@ int readFromFile(char* input);
 
 //A function that will transform the read data into an easier to process information
 int linkPoints();
+
+//A function that adds the coordonates of the ends of a Link
+int completeLinks();
+
+int relativePozX(double y);
+int relativePozY(double x);
 
 //A function that will show the map on the points
 void showMap();

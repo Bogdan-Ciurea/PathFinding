@@ -10,26 +10,64 @@
     Date Work Commenced: 3rd Mar 2021
 *************************************************************************/
 
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#include <SDL.h>
+#include <SDL_image.h>
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "globalFunctions.h"
 
-static const int width = 640;
-static const int mapWidth = 425;
-static const int height = 480;
-static const int mapHeight = 366;
+static const float multiplier = 1.5;
+static const int width = 640 * multiplier;
+static const int mapWidth = 500 * multiplier;
+static const int height = 480 * multiplier;
+static const int mapHeight = 400 * multiplier;
 extern double maxLat, maxLon, minLat, minLon;
 
+void drawPoint(int x, int y, SDL_Renderer *renderer){
+    //printf("%i %i\n", x, y);
+    SDL_RenderDrawPoint(renderer, x, y);
 
-double relativePozX(double x){
-    return (x - minLon)*mapWidth/(maxLon-minLon) + (width - mapWidth)/2;
+    //Make the box
+    SDL_RenderDrawPoint(renderer, x, y - 3);
+
+    SDL_RenderDrawPoint(renderer, x - 2, y - 2);
+    SDL_RenderDrawPoint(renderer, x - 1, y - 2);
+    SDL_RenderDrawPoint(renderer, x, y - 2);
+    SDL_RenderDrawPoint(renderer, x + 1, y - 2);
+    SDL_RenderDrawPoint(renderer, x + 2, y - 2);
+
+    SDL_RenderDrawPoint(renderer, x - 2, y - 1);
+    SDL_RenderDrawPoint(renderer, x + 2, y - 1);
+
+    SDL_RenderDrawPoint(renderer, x - 3, y);
+    SDL_RenderDrawPoint(renderer, x - 2, y);
+    SDL_RenderDrawPoint(renderer, x + 2, y);
+    SDL_RenderDrawPoint(renderer, x + 3, y);
+
+    SDL_RenderDrawPoint(renderer, x - 2, y + 1);
+    SDL_RenderDrawPoint(renderer, x + 2, y + 1);
+
+    SDL_RenderDrawPoint(renderer, x - 2, y + 2);
+    SDL_RenderDrawPoint(renderer, x - 1, y + 2);
+    SDL_RenderDrawPoint(renderer, x, y + 2);
+    SDL_RenderDrawPoint(renderer, x + 1, y + 2);
+    SDL_RenderDrawPoint(renderer, x + 2, y + 2);
+
+    SDL_RenderDrawPoint(renderer, x, y + 3);
 }
 
-double relativePozY(double y){
-    return height - ((y - minLat)*mapHeight/(maxLat-minLat) + (height-mapHeight)/2);
+void drawLine(SDL_Renderer *renderer, int x1, int x2, int y1, int y2){
+    SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
+    //printf("%i, %i, %i, %i\n", x1, y1, x2, y2);
+}
+
+int relativePozX(double x){
+    return (int) ((x - minLon)*mapWidth/(maxLon-minLon) + (width - mapWidth)/2);
+}
+
+int relativePozY(double y){
+    return (int) (height - ((y - minLat)*mapHeight/(maxLat-minLat) + (height-mapHeight)/2));
 }
 
 void showMap(){
@@ -52,17 +90,25 @@ void showMap(){
         SDL_SetRenderDrawColor(renderer, 255, 255 ,255, 255);
         SDL_RenderClear(renderer);
 
+        //Make a box for the map
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+        SDL_Rect rect = {(width - mapWidth) / 2 - 4, (height - mapHeight) / 2 - 4, mapWidth + 8, mapHeight + 8};
+        SDL_RenderDrawRect(renderer, &rect);
+
         //Draws all the points
         SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
 
         int i;
         extern Nodes listOfNodes;
+        extern Links listOfLinks;
 
-        for(i = 0; i < listOfNodes.numberOfNodes; i++){
-            //printf("%f, %f\n", relativePozX(listOfNodes.nodes[i].lat), relativePozY(listOfNodes.nodes[i].lon));
-            SDL_RenderDrawPoint(renderer,relativePozX(listOfNodes.nodes[i].lon), relativePozY(listOfNodes.nodes[i].lat));
-            //break;
-        }
+        //Draw the points
+        for(i = 0; i < listOfNodes.numberOfNodes; i++)
+            drawPoint(relativePozX(listOfNodes.nodes[i].lon), relativePozY(listOfNodes.nodes[i].lat), renderer);
+
+        for(i = 0; i < listOfLinks.numberOfLinks; i++)
+            drawLine(renderer, relativePozX(listOfLinks.links[i].node1Lon), relativePozX(listOfLinks.links[i].node2Lon),
+                     relativePozY(listOfLinks.links[i].node1Lat), relativePozY(listOfLinks.links[i].node2Lat));
 
         //Shows what was drawn
         SDL_RenderPresent(renderer);

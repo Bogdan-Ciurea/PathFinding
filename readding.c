@@ -18,11 +18,12 @@
 
 int readFromFile(char* path){
     FILE* file = fopen(path, "r");
-    char line[604] ,*arg;;
+    char line[604] ,*arg;
+    double x, y; int a;
 
     extern double maxLat, maxLon, minLat, minLon;
     int links = 0, nodes = 0;
-    
+
     while(fscanf(file, "%[^\n]\n", line) != EOF){
         arg = strtok(line, " =");
         if(!strcmp("<bounding", arg)){
@@ -33,7 +34,7 @@ int readFromFile(char* path){
             arg = strtok(NULL," =");
             arg = strtok(NULL," =");
             minLon = atof(arg);
-            
+
             arg = strtok(NULL," =");
             arg = strtok(NULL," =");
             maxLat = atof(arg);
@@ -41,12 +42,25 @@ int readFromFile(char* path){
             arg = strtok(NULL," =");
             arg = strtok(NULL," =");
             maxLon = atof(arg);
-            
+
         }
         else if(!strcmp("<link", arg))
             links++;
-        else if(!strcmp("<node", arg))
-            nodes++;
+        else if(!strcmp("<node", arg)){
+            arg = strtok(NULL, "= ");
+            arg = strtok(NULL, "= ");
+
+            arg = strtok(NULL, "= ");
+            arg = strtok(NULL, "= ");
+            x = atof(arg);
+
+            arg = strtok(NULL, "= ");
+            arg = strtok(NULL, "= ");
+            y = atof(arg);
+
+            if(minLat <= x && x <= maxLat && minLon <= y && y <= maxLon)
+                nodes++;
+        }
         else break;
         /*if(!strcmp("<way", arg))
             way++;
@@ -54,20 +68,20 @@ int readFromFile(char* path){
             geom++;*/
     }
     fclose(file);
-    
-    
+
+
 
     extern Links listOfLinks;
     listOfLinks.numberOfLinks = links;
     listOfLinks.links = calloc(links, sizeof(Link));
     links = 0;
-    
+
     extern Nodes listOfNodes;
     listOfNodes.numberOfNodes = nodes;
     listOfNodes.nodes = calloc(nodes, sizeof(Node));
     nodes = 0;
 
-    
+
 
     file = fopen(path, "r");
     while(fscanf(file, "%[^\n]\n", line) != EOF){
@@ -97,15 +111,25 @@ int readFromFile(char* path){
         else if(!strcmp("<node", arg)){
             arg = strtok(NULL, "= ");
             arg = strtok(NULL, "= ");
-            listOfNodes.nodes[nodes].id = atoi(arg);
+            a = atoi(arg);
+            //listOfNodes.nodes[nodes].id = atoi(arg);
 
             arg = strtok(NULL, "= ");
             arg = strtok(NULL, "= ");
-            listOfNodes.nodes[nodes].lat = atof(arg);
+            x = atof(arg);
+            //listOfNodes.nodes[nodes].lat = atof(arg);
 
             arg = strtok(NULL, "= ");
             arg = strtok(NULL, "= ");
-            listOfNodes.nodes[nodes++].lon = atof(arg);
+            y = atof(arg);
+            //listOfNodes.nodes[nodes].lon = atof(arg);
+
+            if(minLat <= x && x <= maxLat && minLon <= y && y <= maxLon){
+                listOfNodes.nodes[nodes].id = a;
+                listOfNodes.nodes[nodes].lat = x;
+                listOfNodes.nodes[nodes++].lon = y;
+            }
+
         }
         else break;
     }
@@ -124,7 +148,7 @@ int linkPoints(){
         for(j = 0; j < listOfLinks.numberOfLinks; j++)
             if(listOfLinks.links[j].node1Id == listOfNodes.nodes[i].id || listOfLinks.links[j].node2Id == listOfNodes.nodes[i].id)
                 s++;
-        
+
         listOfNodes.nodes[i].numberOfNextNodes = s;
         listOfNodes.nodes[i].nextNodes = calloc(s, sizeof(NextNode));
         s = 0;
@@ -141,5 +165,26 @@ int linkPoints(){
     }
 
     return 1;
+}
 
+int completeLinks(){
+    extern Links listOfLinks;
+    extern Nodes listOfNodes;
+    int i, j;
+
+    for(i = 0; i < listOfLinks.numberOfLinks; i++)
+        for(j = 0; j < listOfNodes.numberOfNodes; j++){
+            if(listOfLinks.links[i].node1Id ==listOfNodes.nodes[j].id){
+                listOfLinks.links[i].node1Lat = listOfNodes.nodes[j].lat;
+                listOfLinks.links[i].node1Lon = listOfNodes.nodes[j].lon;
+            }
+            if(listOfLinks.links[i].node2Id == listOfNodes.nodes[j].id){
+                listOfLinks.links[i].node2Lat = listOfNodes.nodes[j].lat;
+                listOfLinks.links[i].node2Lon = listOfNodes.nodes[j].lon;
+            }
+
+        }
+
+
+    return 1;
 }
