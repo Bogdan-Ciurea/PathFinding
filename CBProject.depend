@@ -21,3 +21,25 @@
 	<stdlib.h>
 	"globalFunctions.h"
 
+1615042492 source:/home/cserv1_a/soc_ug/sc20bac/Desktop/Programs/COMP1921 CWK2/comp1921-cwk2/readding.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"globalFunctions.h"
+
+1615042492 /home/cserv1_a/soc_ug/sc20bac/Desktop/Programs/COMP1921 CWK2/comp1921-cwk2/globalFunctions.h
+
+1615042492 source:/home/cserv1_a/soc_ug/sc20bac/Desktop/Programs/COMP1921 CWK2/comp1921-cwk2/SDLFunctions.c
+	<SDL.h>
+	<SDL_image.h>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"globalFunctions.h"
+
+1615042980 source:/home/cserv1_a/soc_ug/sc20bac/Desktop/Programs/COMP1921 CWK2/comp1921-cwk2/main.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"globalFunctions.h"
+

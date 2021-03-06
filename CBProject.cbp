@@ -32,21 +32,21 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="Final_Map.map" />
-		<Unit filename="Main.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="SDL2.dll" />
-		<Unit filename="SDL2_image.dll" />
-		<Unit filename="SDL2_mixer.dll" />
 		<Unit filename="SDLFunctions.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="globalFunctions.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="readding.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />
+			<code_completion />
+			<envvars />
+			<debugger />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

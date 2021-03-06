@@ -2,9 +2,8 @@
 # code details
 
 EXE_DIR = .
-EXE = $(EXE_DIR)/rendering
-
-SRC= 07_texture_loading_and_rendering.c
+EXE = $(EXE_DIR)/path
+SRC= main.c readding.c SDLFunctions.c
 
 # generic build details
 
@@ -31,5 +30,5 @@ clean:
 
 # dependencies
 
-07_texture_loading_and_rendering.o:  07_texture_loading_and_rendering.c  
+main.c readding.c SDLFunctions.o:  main.c readding.c SDLFunctions.c  
 

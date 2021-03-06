@@ -10,8 +10,8 @@
     Date Work Commenced: 3rd Mar 2021
 *************************************************************************/
 
-#include <SDL.h>
-#include <SDL_image.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>

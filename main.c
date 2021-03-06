@@ -30,7 +30,7 @@ int main(void){
 	printf("===============\n");
 	printf("Hello\n===============\n\n");
 
-	char *path;
+	char path[50];
 
 	printf("Type the name of the file you want to open.\nBe carefull to also type the extension of the file.\n");
 	printf("You can also type exit to end the program!\n");
