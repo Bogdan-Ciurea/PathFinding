@@ -58,5 +58,6 @@ int main(void){
 		printf("Error while linking the points!\n");
 
 	showMap();
+	scanf(" %[^\n]", path);
 	return 0;
 }

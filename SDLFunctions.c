@@ -17,8 +17,8 @@
 #include <stdlib.h>
 #include "globalFunctions.h"
 
-static const int width = 600;
-static const int height = 800;
+static const int width = 800;
+static const int height = 600;
 
 void showMap(){
 
