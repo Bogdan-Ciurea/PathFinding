@@ -17,11 +17,11 @@
     Variables
 ===============*/
 
-//The variable that will store a link between thw nodes 
+//The variable that will store a link between thw nodes
 typedef struct{
     int id, node1Id, node2Id;
     float length;
-    
+
     //int wayId, poi;
     //float veg, arch, land;
 }Link;
@@ -63,6 +63,7 @@ typedef struct{
     int nodes, *nodeId;
 }Geom;
 */
+
 double minLat, maxLat, minLon, maxLon;
 Nodes listOfNodes;
 Links listOfLinks;
@@ -70,10 +71,12 @@ Links listOfLinks;
 /*==============
     Functions
 ===============*/
+//A function that will read the data from the file
 int readFromFile(char* input);
 
+//A function that will transform the read data into an easier to process information
 int linkPoints();
 
-
+//A function that will show the map on the points
 void showMap();
 #endif

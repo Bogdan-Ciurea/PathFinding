@@ -26,7 +26,7 @@ int tryToOpenFile(char * text){
 }
 
 int main(void){
-    
+
 	printf("===============\n");
 	printf("Hello\n===============\n\n");
 
@@ -57,6 +57,6 @@ int main(void){
 	else
 		printf("Error while linking the points!\n");
 
-	//showMap();
+	showMap();
 	return 0;
 }
