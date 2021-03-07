@@ -16,15 +16,27 @@
 #include <stdlib.h>
 #include "globalFunctions.h"
 
+//The function will return -1 if the node is not in the list
+//or the index otherwise
+int nodeInLinks(int Id){
+    extern Links listOfLinks;
+
+    for(int i = 0; i < listOfLinks.numberOfLinks; i++)
+        if(listOfLinks.links[i].node1Id == Id || listOfLinks.links[i].node2Id == Id)
+            return 1;
+    return 0;
+}
+
 //Reads the information from the file
 int readFromFile(char* path){
     FILE* file = fopen(path, "r");
-    char line[604] ,*arg;
+    char line[605] ,*arg;
     double x, y; int a;
 
     extern double maxLat, maxLon, minLat, minLon;
     int links = 0, nodes = 0;
 
+    //See how many Links are there and store the data of Lat and Lon
     while(fscanf(file, "%[^\n]\n", line) != EOF){
         arg = strtok(line, " =");
         if(!strcmp("<bounding", arg)){
@@ -47,21 +59,6 @@ int readFromFile(char* path){
         }
         else if(!strcmp("<link", arg))
             links++;
-        else if(!strcmp("<node", arg)){
-            arg = strtok(NULL, "= ");
-            arg = strtok(NULL, "= ");
-
-            arg = strtok(NULL, "= ");
-            arg = strtok(NULL, "= ");
-            x = atof(arg);
-
-            arg = strtok(NULL, "= ");
-            arg = strtok(NULL, "= ");
-            y = atof(arg);
-
-            if(minLat <= x && x <= maxLat && minLon <= y && y <= maxLon)
-                nodes++;
-        }
         else break;
         /*if(!strcmp("<way", arg))
             way++;
@@ -70,26 +67,18 @@ int readFromFile(char* path){
     }
     fclose(file);
 
-
-
+    //Create the list of Links
     extern Links listOfLinks;
     listOfLinks.numberOfLinks = links;
     listOfLinks.links = calloc(links, sizeof(Link));
     links = 0;
 
-    extern Nodes listOfNodes;
-    listOfNodes.numberOfNodes = nodes;
-    listOfNodes.nodes = calloc(nodes, sizeof(Node));
-    nodes = 0;
-
-
-
+    //Store the information for the listOfLinks and see what Nodes are valid
     file = fopen(path, "r");
     while(fscanf(file, "%[^\n]\n", line) != EOF){
-        arg = strtok(line, " ");
-        if(!strcmp("<bounding", arg)){
+        arg = strtok(line, " =");
+        if(!strcmp("<bounding", arg)){}
 
-        }
         else if(!strcmp("<link", arg)){
             arg = strtok(NULL, "= ");
             arg = strtok(NULL, "= ");
@@ -109,23 +98,54 @@ int readFromFile(char* path){
             arg = strtok(NULL, "= ");
             listOfLinks.links[links++].length = atof(arg);
         }
+
         else if(!strcmp("<node", arg)){
             arg = strtok(NULL, "= ");
             arg = strtok(NULL, "= ");
             a = atoi(arg);
-            //listOfNodes.nodes[nodes].id = atoi(arg);
 
             arg = strtok(NULL, "= ");
             arg = strtok(NULL, "= ");
             x = atof(arg);
-            //listOfNodes.nodes[nodes].lat = atof(arg);
 
             arg = strtok(NULL, "= ");
             arg = strtok(NULL, "= ");
             y = atof(arg);
-            //listOfNodes.nodes[nodes].lon = atof(arg);
 
-            if(minLat <= x && x <= maxLat && minLon <= y && y <= maxLon){
+            if(minLat <= x && x <= maxLat && minLon <= y && y <= maxLon && nodeInLinks(a))
+                nodes++;
+        }
+        else break;
+    }
+
+    extern Nodes listOfNodes;
+    listOfNodes.numberOfNodes = nodes;
+    listOfNodes.nodes = calloc(nodes, sizeof(Node));
+    nodes = 0;
+    int position;
+
+
+    file = fopen(path, "r");
+    while(fscanf(file, "%[^\n]\n", line) != EOF){
+        arg = strtok(line, " ");
+        if(!strcmp("<bounding", arg)){}
+
+        else if(!strcmp("<link", arg)){}
+
+        else if(!strcmp("<node", arg)){
+            arg = strtok(NULL, "= ");
+            arg = strtok(NULL, "= ");
+            a = atoi(arg);
+
+            arg = strtok(NULL, "= ");
+            arg = strtok(NULL, "= ");
+            x = atof(arg);
+
+            arg = strtok(NULL, "= ");
+            arg = strtok(NULL, "= ");
+            y = atof(arg);
+
+            if(minLat <= x && x <= maxLat && minLon <= y && y <= maxLon && nodeInLinks(a)){
                 listOfNodes.nodes[nodes].id = a;
                 listOfNodes.nodes[nodes].lat = x;
                 listOfNodes.nodes[nodes++].lon = y;
@@ -136,35 +156,6 @@ int readFromFile(char* path){
     }
 
     fclose(file);
-    return 1;
-}
-
-int linkPoints(){
-    extern Links listOfLinks;
-    extern Nodes listOfNodes;
-    int i, j, s;
-
-    for(i = 0; i < listOfNodes.numberOfNodes; i++){
-        s = 0;
-        for(j = 0; j < listOfLinks.numberOfLinks; j++)
-            if(listOfLinks.links[j].node1Id == listOfNodes.nodes[i].id || listOfLinks.links[j].node2Id == listOfNodes.nodes[i].id)
-                s++;
-
-        listOfNodes.nodes[i].numberOfNextNodes = s;
-        listOfNodes.nodes[i].nextNodes = calloc(s, sizeof(NextNode));
-        s = 0;
-
-        for(j = 0; j < listOfLinks.numberOfLinks; j++)
-            if(listOfLinks.links[j].node1Id == listOfNodes.nodes[i].id){
-                listOfNodes.nodes[i].nextNodes[s].Id = listOfLinks.links[j].node2Id;
-                listOfNodes.nodes[i].nextNodes[s++].length = listOfLinks.links[j].length;
-            }
-            else if(listOfLinks.links[j].node2Id == listOfNodes.nodes[i].id){
-                listOfNodes.nodes[i].nextNodes[s].Id = listOfLinks.links[j].node1Id;
-                listOfNodes.nodes[i].nextNodes[s++].length = listOfLinks.links[j].length;
-            }
-    }
-
     return 1;
 }
 
@@ -189,3 +180,4 @@ int completeLinks(){
 
     return 1;
 }
+

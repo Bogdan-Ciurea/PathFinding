@@ -1,19 +1,19 @@
 # depslib dependency file v1.0
-1615064471 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\main.c
+1615115375 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\main.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 	"globalFunctions.h"
 
-1615064173 c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\globalfunctions.h
+1615118158 c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\globalfunctions.h
 
-1615062851 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\readding.c
+1615115614 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\readding.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 	"globalFunctions.h"
 
-1615065729 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\sdlfunctions.c
+1615116566 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\sdlfunctions.c
 	<SDL.h>
 	<SDL_image.h>
 	<string.h>

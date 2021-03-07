@@ -108,14 +108,14 @@ void showMap(){
         for(i = 0; i < listOfNodes.numberOfNodes; i++)
             drawPoint(relativePozX(listOfNodes.nodes[i].lon), relativePozY(listOfNodes.nodes[i].lat), renderer);
 
+
+        //SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
         for(i = 0; i < listOfLinks.numberOfLinks; i++)
             drawLine(renderer, relativePozX(listOfLinks.links[i].node1Lon), relativePozX(listOfLinks.links[i].node2Lon),
                      relativePozY(listOfLinks.links[i].node1Lat), relativePozY(listOfLinks.links[i].node2Lat));
 
         //Shows what was drawn
         SDL_RenderPresent(renderer);
-
-        //running = 0;
 
     }
 

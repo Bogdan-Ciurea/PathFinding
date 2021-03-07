@@ -28,18 +28,11 @@ typedef struct{
     //float veg, arch, land;
 }Link;
 
-//A struct that will store the next possible nodes from another node
-typedef struct{
-    int Id;
-    double length;
-}NextNode;
 
 //A struct that will store information about a node
 typedef struct{
     int id;
     double lat, lon;
-    NextNode *nextNodes;
-    int numberOfNextNodes;
 }Node;
 
 //The variable that will store all the links

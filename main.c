@@ -52,12 +52,12 @@ int main(void){
 
 	printf("Linking points...\n");
 
-	if(linkPoints() && completeLinks())
+	if(completeLinks())
 		printf("Points linked succesfully.\n");
 	else
 		printf("Error while linking the points!\n");
 
 	showMap();
-
+	//scanf(" %[^\n]", path);
 	return 0;
 }
