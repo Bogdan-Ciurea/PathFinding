@@ -17,7 +17,7 @@
     Variables
 ===============*/
 
-//The variable that will store a link between thw nodes
+//The struct that will store a link between the nodes
 typedef struct{
     int id, node1Id, node2Id;
     double length;
@@ -28,13 +28,13 @@ typedef struct{
     //float veg, arch, land;
 }Link;
 
-//A variable that will store the next possible nodes from anoter node
+//A struct that will store the next possible nodes from another node
 typedef struct{
     int Id;
     double length;
 }NextNode;
 
-//A variable that will store information about a node
+//A struct that will store information about a node
 typedef struct{
     int id;
     double lat, lon;
@@ -79,7 +79,7 @@ int readFromFile(char* input);
 //A function that will transform the read data into an easier to process information
 int linkPoints();
 
-//A function that adds the coordonates of the ends of a Link
+//A function that adds the coordinates of the ends of a Link
 int completeLinks();
 
 int relativePozX(double y);

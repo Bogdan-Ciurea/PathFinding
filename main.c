@@ -57,18 +57,7 @@ int main(void){
 	else
 		printf("Error while linking the points!\n");
 
-
-    /*extern Links listOfLinks;
-    extern Nodes listOfNodes;
-
-    printf("Id:%i  x:%f y:%f\nId:%i  x:%f y:%f\n", listOfLinks.links[0].node1Id, listOfLinks.links[0].node1Lat, listOfLinks.links[0].node1Lon, listOfLinks.links[0].node2Id, listOfLinks.links[0].node2Lat, listOfLinks.links[0].node2Lon);
-    printf("\nId:%i  x:%f y:%f\n", listOfNodes.nodes[0].id, listOfNodes.nodes[0].lat, listOfNodes.nodes[0].lon);
-
-
-    printf("%i %i\n%i %i\n\n%i %i", relativePozX(listOfLinks.links[0].node1Lon), relativePozY(listOfLinks.links[0].node1Lat),
-           relativePozX(listOfLinks.links[0].node2Lon), relativePozY(listOfLinks.links[0].node2Lat), relativePozX(listOfNodes.nodes[0].lon), relativePozY(listOfNodes.nodes[0].lat));
-*/
 	showMap();
-	//scanf(" %[^\n]", path);
+
 	return 0;
 }

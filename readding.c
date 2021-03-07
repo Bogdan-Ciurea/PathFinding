@@ -16,6 +16,7 @@
 #include <stdlib.h>
 #include "globalFunctions.h"
 
+//Reads the information from the file
 int readFromFile(char* path){
     FILE* file = fopen(path, "r");
     char line[604] ,*arg;

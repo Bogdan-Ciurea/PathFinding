@@ -24,8 +24,8 @@ static const int height = 480 * multiplier;
 static const int mapHeight = 400 * multiplier;
 extern double maxLat, maxLon, minLat, minLon;
 
+//Shows the points in a star like formation
 void drawPoint(int x, int y, SDL_Renderer *renderer){
-    //printf("%i %i\n", x, y);
     SDL_RenderDrawPoint(renderer, x, y);
 
     //Make the box
@@ -57,11 +57,12 @@ void drawPoint(int x, int y, SDL_Renderer *renderer){
     SDL_RenderDrawPoint(renderer, x, y + 3);
 }
 
+// Draws a line between two points
 void drawLine(SDL_Renderer *renderer, int x1, int x2, int y1, int y2){
     SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
-    //printf("%i, %i, %i, %i\n", x1, y1, x2, y2);
 }
 
+//Shows the relative position to the window that we want to show
 int relativePozX(double x){
     return (int) ((x - minLon)*mapWidth/(maxLon-minLon) + (width - mapWidth)/2);
 }
@@ -70,6 +71,7 @@ int relativePozY(double y){
     return (int) (height - ((y - minLat)*mapHeight/(maxLat-minLat) + (height-mapHeight)/2));
 }
 
+//Draws the map
 void showMap(){
 
     SDL_Init(SDL_INIT_VIDEO);
