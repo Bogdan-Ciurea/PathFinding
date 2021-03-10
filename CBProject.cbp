@@ -31,10 +31,16 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Dijkstra.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="SDLFunctions.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="globalFunctions.h" />
+		<Unit filename="functions.h" />
+		<Unit filename="globalFunctions.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -3,7 +3,7 @@
     School of Computing
     COMP1921 - Programming project
     Coursework 2
-    File: globalFunctions.h
+    File: functions.h
     Student Name: Bogdan Alexandru Ciurea
     Student ID: 201438333
     Email: sc20bac@leeds.ac.uk
@@ -17,23 +17,18 @@
     Variables
 ===============*/
 
-//The struct that will store a link between the nodes
-typedef struct{
-    int id, node1Id, node2Id;
-    double length;
-
-    double node1Lat, node1Lon, node2Lat, node2Lon;
-
-    //int wayId, poi;
-    //float veg, arch, land;
-}Link;
-
-
 //A struct that will store information about a node
 typedef struct{
-    int id;
+    int id, matrixId;
     double lat, lon;
 }Node;
+
+//The struct that will store a link between the nodes
+typedef struct{
+    int id;
+    double length;
+    Node node1, node2;
+}Link;
 
 //The variable that will store all the links
 typedef struct{
@@ -59,25 +54,27 @@ typedef struct{
 }Geom;
 */
 
+
 double minLat, maxLat, minLon, maxLon;
+int indexStart, indexFinish;
 Nodes listOfNodes;
+Nodes pathOfNodes;
 Links listOfLinks;
 
 /*==============
     Functions
 ===============*/
+
 //A function that will read the data from the file
 int readFromFile(char* input);
 
-//A function that will transform the read data into an easier to process information
-int linkPoints();
-
-//A function that adds the coordinates of the ends of a Link
-int completeLinks();
-
-int relativePozX(double y);
-int relativePozY(double x);
-
 //A function that will show the map on the points
-void showMap();
+void showMap(int showPath);
+
+//A function that will get the two points' coordinates
+int getCoordinatesStFin();
+
+//The function that will make Dijkstra's algorithm and show the process
+int dijkstra();
+
 #endif

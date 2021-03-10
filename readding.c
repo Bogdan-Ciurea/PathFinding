@@ -14,7 +14,28 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "globalFunctions.h"
+#include "functions.h"
+
+//Adds the points to the end on each Link
+void completeLinks(){
+    extern Links listOfLinks;
+    extern Nodes listOfNodes;
+    int i, j;
+
+    for(i = 0; i < listOfLinks.numberOfLinks; i++)
+        for(j = 0; j < listOfNodes.numberOfNodes; j++){
+            if(listOfLinks.links[i].node1.id ==listOfNodes.nodes[j].id){
+                listOfLinks.links[i].node1.lat = listOfNodes.nodes[j].lat;
+                listOfLinks.links[i].node1.lon = listOfNodes.nodes[j].lon;
+                listOfLinks.links[i].node1.matrixId = listOfNodes.nodes[j].matrixId;
+            }
+            if(listOfLinks.links[i].node2.id == listOfNodes.nodes[j].id){
+                listOfLinks.links[i].node2.lat = listOfNodes.nodes[j].lat;
+                listOfLinks.links[i].node2.lon = listOfNodes.nodes[j].lon;
+                listOfLinks.links[i].node2.matrixId = listOfNodes.nodes[j].matrixId;
+            }
+        }
+}
 
 //The function will return -1 if the node is not in the list
 //or the index otherwise
@@ -22,7 +43,7 @@ int nodeInLinks(int Id){
     extern Links listOfLinks;
 
     for(int i = 0; i < listOfLinks.numberOfLinks; i++)
-        if(listOfLinks.links[i].node1Id == Id || listOfLinks.links[i].node2Id == Id)
+        if(listOfLinks.links[i].node1.id == Id || listOfLinks.links[i].node2.id == Id)
             return 1;
     return 0;
 }
@@ -86,11 +107,11 @@ int readFromFile(char* path){
 
             arg = strtok(NULL, "= ");
             arg = strtok(NULL, "= ");
-            listOfLinks.links[links].node1Id = atoi(arg);
+            listOfLinks.links[links].node1.id = atoi(arg);
 
             arg = strtok(NULL, "= ");
             arg = strtok(NULL, "= ");
-            listOfLinks.links[links].node2Id = atoi(arg);
+            listOfLinks.links[links].node2.id = atoi(arg);
 
             arg = strtok(NULL, "= ");
             arg = strtok(NULL, "= ");
@@ -118,19 +139,17 @@ int readFromFile(char* path){
         else break;
     }
 
+
     extern Nodes listOfNodes;
     listOfNodes.numberOfNodes = nodes;
     listOfNodes.nodes = calloc(nodes, sizeof(Node));
     nodes = 0;
-    int position;
 
 
     file = fopen(path, "r");
     while(fscanf(file, "%[^\n]\n", line) != EOF){
         arg = strtok(line, " ");
-        if(!strcmp("<bounding", arg)){}
-
-        else if(!strcmp("<link", arg)){}
+        if(!strcmp("<bounding", arg) || !strcmp("<link", arg)){}
 
         else if(!strcmp("<node", arg)){
             arg = strtok(NULL, "= ");
@@ -148,7 +167,9 @@ int readFromFile(char* path){
             if(minLat <= x && x <= maxLat && minLon <= y && y <= maxLon && nodeInLinks(a)){
                 listOfNodes.nodes[nodes].id = a;
                 listOfNodes.nodes[nodes].lat = x;
-                listOfNodes.nodes[nodes++].lon = y;
+                listOfNodes.nodes[nodes].lon = y;
+                listOfNodes.nodes[nodes].matrixId = nodes;
+                nodes++;
             }
 
         }
@@ -156,28 +177,32 @@ int readFromFile(char* path){
     }
 
     fclose(file);
+
+    //Adds the points to the end on each Link
+    completeLinks();
+
     return 1;
 }
 
-int completeLinks(){
-    extern Links listOfLinks;
+//Makes a matrix that will be used later for the algorithms
+/*
+void makeMatrix(){
     extern Nodes listOfNodes;
+    extern Links listOfLinks;
     int i, j;
 
-    for(i = 0; i < listOfLinks.numberOfLinks; i++)
-        for(j = 0; j < listOfNodes.numberOfNodes; j++){
-            if(listOfLinks.links[i].node1Id ==listOfNodes.nodes[j].id){
-                listOfLinks.links[i].node1Lat = listOfNodes.nodes[j].lat;
-                listOfLinks.links[i].node1Lon = listOfNodes.nodes[j].lon;
-            }
-            if(listOfLinks.links[i].node2Id == listOfNodes.nodes[j].id){
-                listOfLinks.links[i].node2Lat = listOfNodes.nodes[j].lat;
-                listOfLinks.links[i].node2Lon = listOfNodes.nodes[j].lon;
-            }
+    graph.matrix = calloc(listOfNodes.numberOfNodes, listOfNodes.numberOfNodes * sizeof(double));
+    graph.dimension = listOfNodes.numberOfNodes;
 
-        }
+    for(i = 0; i < listOfNodes.numberOfNodes; i++)
+        for(j = 0; j < listOfNodes.numberOfNodes; j++)
+            graph.matrix[i][j] = 0;
 
+    printf("Hello\n");
 
-    return 1;
-}
+    for(i = 0; i < listOfLinks.numberOfLinks; i++){
+        graph.matrix[listOfLinks.links[i].node1.matrixId][listOfLinks.links[i].node2.matrixId] = listOfLinks.links[i].length;
+        graph.matrix[listOfLinks.links[i].node2.matrixId][listOfLinks.links[i].node1.matrixId] = listOfLinks.links[i].length;
+    }
+}*/
 
