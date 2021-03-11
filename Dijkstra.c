@@ -18,8 +18,8 @@
 
 #include <time.h> //To make the animation
 
-#include <SDL.h>
-#include <SDL_image.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 
 #include "functions.h"
 /*
@@ -161,7 +161,7 @@ int dijkstra(int animation){
     SDL_Event event;
     extern int indexStart, height, width; //indexFinish;
 
-    int n = listOfNodes.numberOfNodes, i, j;// lastNode;
+    int n = listOfNodes.numberOfNodes, i, j, lastNode;
 	double distance[n], mindistance;
 	int visited[n], count, nextnode, pred[n];
 
