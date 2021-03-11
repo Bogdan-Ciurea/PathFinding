@@ -66,10 +66,14 @@ If the user wants to see the distance between two points, he needs to insert the
 This command can be accessed by typeing `read nodes` into the CMD.
 
 If the user has chosen to use this command, he will be asked to insert the following information: 
-    - startNode's Latitude ;
-    - startNode's Longitude;
-    - endNode's Latitude;
-    - endNode's Longitude;
+
+- startNode's Latitude ;
+
+- startNode's Longitude;
+
+- endNode's Latitude;
+
+- endNode's Longitude;
 
 If the coordinates are not exactly the same as the Node in the database, the user will not be able to proceed. Also, if the user inserted invalid characters, he will need to type again the coordinates.
 
