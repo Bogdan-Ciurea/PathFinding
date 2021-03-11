@@ -56,6 +56,7 @@ typedef struct{
 
 
 double minLat, maxLat, minLon, maxLon;
+int width, height;
 int indexStart, indexFinish;
 Nodes listOfNodes;
 Nodes pathOfNodes;

@@ -18,8 +18,8 @@
 
 #include <time.h> //To make the animation
 
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#include <SDL.h>
+#include <SDL_image.h>
 
 #include "functions.h"
 /*
@@ -37,39 +37,6 @@ yes
 extern Links listOfLinks;
 extern Nodes pathOfNodes;
 extern Nodes listOfNodes;
-
-//These distances are taken from the image that we where given
-//They can be changed by changing the value of the scaler
-int width;
-int mapWidth;
-int height;
-int mapHeight;
-int distToBoxWidth;
-int distToBoxHeight;
-int distFromBoxWidth;
-int distFromBoxHeight;
-int smallLine;
-int distBetweenLinesBot;
-int distBetweenLinesLeft;
-int boxWidth;
-int boxHeight;
-
-void initValues(){
-    float scaler = 1.5;
-    width = 640 * scaler;
-    mapWidth = 421 * scaler;
-    height = 480 * scaler;
-    mapHeight = 358 * scaler;
-    distToBoxWidth = 107 * scaler;
-    distToBoxHeight = 24 * scaler;
-    distFromBoxWidth = 20 * scaler;
-    distFromBoxHeight = 40 * scaler;
-    smallLine = 5 * scaler;
-    distBetweenLinesBot = 100 * scaler;
-    distBetweenLinesLeft = 38 * scaler;
-    boxWidth = 500 * scaler;
-    boxHeight = 420 * scaler;
-}
 
 void wait(float seconds){
     int millSec = 10000 * seconds;
@@ -118,7 +85,6 @@ void drawInitialFrame(SDL_Renderer *renderer){
 }
 
 void animatePath(SDL_Renderer *renderer){
-    initValues();
     int running = 1, i, j;
     SDL_Event event;
 
@@ -191,10 +157,11 @@ void animatePath(SDL_Renderer *renderer){
 
 int dijkstra(int animation){
     //Initialize the variables
+    initValues();
     SDL_Event event;
-    extern int indexStart; //indexFinish;
+    extern int indexStart, height, width; //indexFinish;
 
-    int n = listOfNodes.numberOfNodes, i, j, lastNode;
+    int n = listOfNodes.numberOfNodes, i, j;// lastNode;
 	double distance[n], mindistance;
 	int visited[n], count, nextnode, pred[n];
 

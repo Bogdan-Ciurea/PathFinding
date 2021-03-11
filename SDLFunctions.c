@@ -10,8 +10,8 @@
     Date Work Commenced: 3rd Mar 2021
 *************************************************************************/
 
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#include <SDL.h>
+#include <SDL_image.h>
 //#include <SDL_ttf.h>
 
 #include <string.h>
@@ -21,9 +21,9 @@
 
 //These distances are taken from the image that we where given
 //They can be changed by changing the value of the scaler
-int width;
+extern int width;
 int mapWidth;
-int height;
+extern int height;
 int mapHeight;
 int distToBoxWidth;
 int distToBoxHeight;
@@ -35,7 +35,7 @@ int distBetweenLinesLeft;
 int boxWidth;
 int boxHeight;
 
-void initValues1(){
+void initValues(){
     float scaler = 1.5;
     width = 640 * scaler;
     mapWidth = 421 * scaler;
@@ -129,7 +129,7 @@ int relativePozY(double y){
 
 //Draws the map
 void showMap(int showPath){
-    initValues1();
+    initValues();
 
     SDL_Init(SDL_INIT_VIDEO);
 

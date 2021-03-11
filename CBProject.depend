@@ -7,13 +7,13 @@
 
 1615121279 c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\globalfunctions.h
 
-1615146581 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\readding.c
+1615480911 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\readding.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 	"functions.h"
 
-1615474341 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\sdlfunctions.c
+1615481131 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\sdlfunctions.c
 	<SDL.h>
 	<SDL_image.h>
 	<string.h>
@@ -43,13 +43,13 @@
 	<stdlib.h>
 	"globalFunctions.h"
 
-1615369457 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\globalfunctions.c
+1615480911 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\globalfunctions.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
 	"functions.h"
 
-1615402215 c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\functions.h
+1615481073 c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\functions.h
 
 1615474478 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\dijkstra.c
 	<stdio.h>
