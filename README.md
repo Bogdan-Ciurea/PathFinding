@@ -91,8 +91,11 @@ Keep in mind that, if one of the algorithms has not been used, the program will 
 ## The Algorithms
 
 There are a couple of algorithms that the user will be able to chose from:
-    - Dijkstra's algorithm;
-    - Bellman-Ford algorithm;
+
+- Dijkstra's algorithm;
+
+- Bellman-Ford algorithm;
+
 He can chose of o these by typeing `dijkstra` or `bellman-ford` respectively in the CMD. 
 After the user has chosen an algorithm, another information will be required: if an animation of the algorithm wants to be shown.
 
