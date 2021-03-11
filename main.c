@@ -51,7 +51,7 @@ int main(void){
 	printf("Hello\n===============\n\n");
 
 	char path[50];
-	int a;
+	int a, answer;
 
 
 	//Reading the input for the file.
@@ -102,8 +102,23 @@ int main(void){
         }
         else if(!strcmp("dijkstra", path)){
             if(hasReadNodes){
+
+                printf("This algorithm has an animation that will show how it works.\nDo you want to use this option? (yes/no)\n");
+                do{
+                    printf("\n>>>");scanf(" %[^\n]", path);
+                    if(strcmp(path, "yes") == 0)
+                        answer = 1;
+                    else if(strcmp(path, "no") == 0)
+                        answer = 0;
+                    else{
+                        printf("Unrecognised command!\n");
+                        answer = -1;
+                    }
+
+                }while(answer == -1);
+
                 printf("Loading...\n");
-                if(dijkstra())
+                if(dijkstra(answer))
                    hasMadeAPath = 1;
                 else
                     printf("Error while applying Dijkstra.\n");

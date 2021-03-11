@@ -61,6 +61,22 @@ Nodes listOfNodes;
 Nodes pathOfNodes;
 Links listOfLinks;
 
+//Variables for drawing the image
+const float scaler;
+const int width ;
+const int mapWidth;
+const int height;
+const int mapHeight;
+const int distToBoxWidth;
+const int distToBoxHeight;
+const int distFromBoxWidth;
+const int distFromBoxHeight;
+const int smallLine;
+const int distBetweenLinesBot;
+const int distBetweenLinesLeft;
+const int boxWidth;
+const int boxHeight;
+
 /*==============
     Functions
 ===============*/
@@ -70,6 +86,10 @@ int readFromFile(char* input);
 
 //A function that will show the map on the points
 void showMap(int showPath);
+
+//Shows the relative position to the window that we want to show
+int relativePozY(double y);
+int relativePozX(double x);
 
 //A function that will get the two points' coordinates
 int getCoordinatesStFin();

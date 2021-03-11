@@ -21,20 +21,20 @@
 
 //These distances are taken from the image that we where given
 //They can be changed by changing the value of the scaler
-const float scaler = 1.5;
-const int width = 640 * scaler;
-const int mapWidth = 421 * scaler;
-const int height = 480 * scaler;
-const int mapHeight = 358 * scaler;
-const int distToBoxWidth = 107 * scaler;
-const int distToBoxHeight = 24 * scaler;
-const int distFromBoxWidth = 20 * scaler;
-const int distFromBoxHeight = 40 * scaler;
-const int smallLine = 5 * scaler;
-const int distBetweenLinesBot = 100 * scaler;
-const int distBetweenLinesLeft = 38 * scaler;
-const int boxWidth = 500 * scaler;
-const int boxHeight = 420 * scaler;
+extern const float scaler = 1.5;
+extern const int width = 640 * scaler;
+extern const int mapWidth = 421 * scaler;
+extern const int height = 480 * scaler;
+extern const int mapHeight = 358 * scaler;
+extern const int distToBoxWidth = 107 * scaler;
+extern const int distToBoxHeight = 24 * scaler;
+extern const int distFromBoxWidth = 20 * scaler;
+extern const int distFromBoxHeight = 40 * scaler;
+extern const int smallLine = 5 * scaler;
+extern const int distBetweenLinesBot = 100 * scaler;
+extern const int distBetweenLinesLeft = 38 * scaler;
+extern const int boxWidth = 500 * scaler;
+extern const int boxHeight = 420 * scaler;
 
 extern double maxLat, maxLon, minLat, minLon;
 extern Nodes pathOfNodes;
@@ -107,13 +107,6 @@ int relativePozX(double x){
     return (int) ((x - minLon)*mapWidth/(maxLon-minLon) + distToBoxWidth + distFromBoxWidth);
 }
 
-int canDrawPoint(int index){
-    for(int i = 0; i < pathOfNodes.numberOfNodes; i++)
-        if(pathOfNodes.nodes[i].matrixId == index)
-            return 0;
-    return 1;
-}
-
 int relativePozY(double y){
     return (int) (height - ((y - minLat)*mapHeight/(maxLat-minLat) + distToBoxHeight + distFromBoxHeight));
 }
@@ -129,28 +122,29 @@ void showMap(int showPath){
 
     int running = 1;
     SDL_Event event;
-    while(running){
+
+
+    //The main window
+    SDL_SetRenderDrawColor(renderer, 255, 255 ,255, 255);
+    SDL_RenderClear(renderer);
+
+    //Make a box for the map
+    makeFrame(renderer);
+
+    int i;
+    extern Nodes listOfNodes;
+    extern Links listOfLinks;
+
+    while(running && !showPath){
 
         while(SDL_PollEvent(&event))
             if(event.type == SDL_QUIT)
                 running = 0;
 
-        //The main window
-        SDL_SetRenderDrawColor(renderer, 255, 255 ,255, 255);
-        SDL_RenderClear(renderer);
-
-        //Make a box for the map
-        /*SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-        SDL_Rect rect = {(width - mapWidth) / 2 - 4, (height - mapHeight) / 2 - 4, mapWidth + 8, mapHeight + 8};
-        SDL_RenderDrawRect(renderer, &rect);*/
-        makeFrame(renderer);
-
         //Draws all the points
         SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
 
-        int i;
-        extern Nodes listOfNodes;
-        extern Links listOfLinks;
+
 
         //Draw the points
         for(i = 0; i < listOfNodes.numberOfNodes; i++)
@@ -162,19 +156,12 @@ void showMap(int showPath){
             drawLine(renderer, relativePozX(listOfLinks.links[i].node1.lon), relativePozX(listOfLinks.links[i].node2.lon),
                      relativePozY(listOfLinks.links[i].node1.lat), relativePozY(listOfLinks.links[i].node2.lat));
 
-        SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
-        if(showPath){
-            for(i = 0; i < pathOfNodes.numberOfNodes; i++)
-                drawPoint(relativePozX(pathOfNodes.nodes[i].lon), relativePozY(pathOfNodes.nodes[i].lat),renderer);
-            for(i = 1; i < pathOfNodes.numberOfNodes; i++)
-                drawLine(renderer, relativePozX(pathOfNodes.nodes[i - 1].lon), relativePozX(pathOfNodes.nodes[i].lon),
-                     relativePozY(pathOfNodes.nodes[i - 1].lat), relativePozY(pathOfNodes.nodes[i].lat));
-
-        }
         //Shows what was drawn
         SDL_RenderPresent(renderer);
 
     }
+    if(showPath)
+        animatePath(renderer);
 
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
