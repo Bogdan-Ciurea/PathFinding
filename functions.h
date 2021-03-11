@@ -61,21 +61,6 @@ Nodes listOfNodes;
 Nodes pathOfNodes;
 Links listOfLinks;
 
-//Variables for drawing the image
-const float scaler;
-const int width ;
-const int mapWidth;
-const int height;
-const int mapHeight;
-const int distToBoxWidth;
-const int distToBoxHeight;
-const int distFromBoxWidth;
-const int distFromBoxHeight;
-const int smallLine;
-const int distBetweenLinesBot;
-const int distBetweenLinesLeft;
-const int boxWidth;
-const int boxHeight;
 
 /*==============
     Functions

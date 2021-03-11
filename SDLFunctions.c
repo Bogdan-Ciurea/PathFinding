@@ -10,8 +10,8 @@
     Date Work Commenced: 3rd Mar 2021
 *************************************************************************/
 
-#include <SDL.h>
-#include <SDL_image.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 //#include <SDL_ttf.h>
 
 #include <string.h>
@@ -21,20 +21,36 @@
 
 //These distances are taken from the image that we where given
 //They can be changed by changing the value of the scaler
-extern const float scaler = 1.5;
-extern const int width = 640 * scaler;
-extern const int mapWidth = 421 * scaler;
-extern const int height = 480 * scaler;
-extern const int mapHeight = 358 * scaler;
-extern const int distToBoxWidth = 107 * scaler;
-extern const int distToBoxHeight = 24 * scaler;
-extern const int distFromBoxWidth = 20 * scaler;
-extern const int distFromBoxHeight = 40 * scaler;
-extern const int smallLine = 5 * scaler;
-extern const int distBetweenLinesBot = 100 * scaler;
-extern const int distBetweenLinesLeft = 38 * scaler;
-extern const int boxWidth = 500 * scaler;
-extern const int boxHeight = 420 * scaler;
+int width;
+int mapWidth;
+int height;
+int mapHeight;
+int distToBoxWidth;
+int distToBoxHeight;
+int distFromBoxWidth;
+int distFromBoxHeight;
+int smallLine;
+int distBetweenLinesBot;
+int distBetweenLinesLeft;
+int boxWidth;
+int boxHeight;
+
+void initValues1(){
+    float scaler = 1.5;
+    width = 640 * scaler;
+    mapWidth = 421 * scaler;
+    height = 480 * scaler;
+    mapHeight = 358 * scaler;
+    distToBoxWidth = 107 * scaler;
+    distToBoxHeight = 24 * scaler;
+    distFromBoxWidth = 20 * scaler;
+    distFromBoxHeight = 40 * scaler;
+    smallLine = 5 * scaler;
+    distBetweenLinesBot = 100 * scaler;
+    distBetweenLinesLeft = 38 * scaler;
+    boxWidth = 500 * scaler;
+    boxHeight = 420 * scaler;
+}
 
 extern double maxLat, maxLon, minLat, minLon;
 extern Nodes pathOfNodes;
@@ -113,6 +129,7 @@ int relativePozY(double y){
 
 //Draws the map
 void showMap(int showPath){
+    initValues1();
 
     SDL_Init(SDL_INIT_VIDEO);
 

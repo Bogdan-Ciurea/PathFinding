@@ -18,7 +18,8 @@
 //A function that will check if a point exists
 int nodeInNodes(double x, double y){
     extern Nodes listOfNodes;
-    for(int i = 0; i < listOfNodes.numberOfNodes; i++)
+    int i;
+    for(i = 0; i < listOfNodes.numberOfNodes; i++)
         if(listOfNodes.nodes[i].lat == x && listOfNodes.nodes[i].lon == y)
             return listOfNodes.nodes[i].matrixId;
     printf("Node not found! Try again.\n");
@@ -26,7 +27,8 @@ int nodeInNodes(double x, double y){
 }
 
 int inputIsNumber(char* input){
-    for(int i = 0; i < strlen(input); i++)
+    int i;
+    for(i = 0; i < strlen(input); i++)
         if(strchr("1234567890.", input[i]) == NULL)
             if(! (i == 0 && input[0] == '-') ){
             printf("Invalid format! Try again.\n");

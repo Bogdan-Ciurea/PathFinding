@@ -3,7 +3,7 @@
 
 EXE_DIR = .
 EXE = $(EXE_DIR)/path
-SRC= main.c readding.c SDLFunctions.c
+SRC= main.c readding.c SDLFunctions.c Dijkstra.c globalFunctions.c
 
 # generic build details
 
@@ -30,5 +30,5 @@ clean:
 
 # dependencies
 
-main.c readding.c SDLFunctions.o:  main.c readding.c SDLFunctions.c  
+main.o readding.o SDLFunctions.o Dijkstra.o globalFunctions.o :  main.c readding.c SDLFunctions.c Dijkstra.c globalFunctions.c 
 

@@ -41,8 +41,9 @@ void completeLinks(){
 //or the index otherwise
 int nodeInLinks(int Id){
     extern Links listOfLinks;
+    int i;
 
-    for(int i = 0; i < listOfLinks.numberOfLinks; i++)
+    for(i = 0; i < listOfLinks.numberOfLinks; i++)
         if(listOfLinks.links[i].node1.id == Id || listOfLinks.links[i].node2.id == Id)
             return 1;
     return 0;

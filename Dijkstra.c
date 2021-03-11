@@ -18,8 +18,8 @@
 
 #include <time.h> //To make the animation
 
-#include <SDL.h>
-#include <SDL_image.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 
 #include "functions.h"
 /*
@@ -38,21 +38,38 @@ extern Links listOfLinks;
 extern Nodes pathOfNodes;
 extern Nodes listOfNodes;
 
-//Variables that will draw the map
-extern const float scaler;
-extern const int width;
-extern const int mapWidth;
-extern const int height;
-extern const int mapHeight;
-extern const int distToBoxWidth;
-extern const int distToBoxHeight;
-extern const int distFromBoxWidth;
-extern const int distFromBoxHeight;
-extern const int smallLine;
-extern const int distBetweenLinesBot;
-extern const int distBetweenLinesLeft;
-extern const int boxWidth;
-extern const int boxHeight;
+//These distances are taken from the image that we where given
+//They can be changed by changing the value of the scaler
+int width;
+int mapWidth;
+int height;
+int mapHeight;
+int distToBoxWidth;
+int distToBoxHeight;
+int distFromBoxWidth;
+int distFromBoxHeight;
+int smallLine;
+int distBetweenLinesBot;
+int distBetweenLinesLeft;
+int boxWidth;
+int boxHeight;
+
+void initValues(){
+    float scaler = 1.5;
+    width = 640 * scaler;
+    mapWidth = 421 * scaler;
+    height = 480 * scaler;
+    mapHeight = 358 * scaler;
+    distToBoxWidth = 107 * scaler;
+    distToBoxHeight = 24 * scaler;
+    distFromBoxWidth = 20 * scaler;
+    distFromBoxHeight = 40 * scaler;
+    smallLine = 5 * scaler;
+    distBetweenLinesBot = 100 * scaler;
+    distBetweenLinesLeft = 38 * scaler;
+    boxWidth = 500 * scaler;
+    boxHeight = 420 * scaler;
+}
 
 void wait(float seconds){
     int millSec = 1000 * seconds;
@@ -62,7 +79,8 @@ void wait(float seconds){
 }
 
 void completePath(){
-    for(int i = 0; i < pathOfNodes.numberOfNodes; i++){
+    int i;
+    for(i = 0; i < pathOfNodes.numberOfNodes; i++){
         pathOfNodes.nodes[i].id = listOfNodes.nodes[pathOfNodes.nodes[i].matrixId].id;
         pathOfNodes.nodes[i].lat = listOfNodes.nodes[pathOfNodes.nodes[i].matrixId].lat;
         pathOfNodes.nodes[i].lon = listOfNodes.nodes[pathOfNodes.nodes[i].matrixId].lon;
@@ -70,7 +88,8 @@ void completePath(){
 }
 
 double distBetweenNodes(int node1, int node2){
-    for(int i = 0 ;i < listOfLinks.numberOfLinks; i++)
+    int i;
+    for(i = 0 ;i < listOfLinks.numberOfLinks; i++)
         if(listOfLinks.links[i].node1.matrixId == node1 && listOfLinks.links[i].node2.matrixId == node2)
             return listOfLinks.links[i].length;
         else if(listOfLinks.links[i].node1.matrixId == node2 && listOfLinks.links[i].node2.matrixId == node1)
@@ -97,6 +116,7 @@ void drawInitialFrame(SDL_Renderer *renderer){
 }
 
 void animatePath(SDL_Renderer *renderer){
+    initValues();
     int running = 1, i, j;
     SDL_Event event;
 
@@ -170,7 +190,7 @@ void animatePath(SDL_Renderer *renderer){
 int dijkstra(int animation){
     //Initialize the variables
     SDL_Event event;
-    extern int indexStart, indexFinish;
+    extern int indexStart; //indexFinish;
 
     int n = listOfNodes.numberOfNodes, i, j, lastNode;
 	double distance[n], mindistance;
