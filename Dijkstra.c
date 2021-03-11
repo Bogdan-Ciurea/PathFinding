@@ -72,10 +72,12 @@ void initValues(){
 }
 
 void wait(float seconds){
-    int millSec = 1000 * seconds;
+    int millSec = 10000 * seconds;
     clock_t startTime = clock();
 
-    while(clock() < startTime + millSec);
+    while(clock() < startTime + millSec){
+
+    }
 }
 
 void completePath(){
