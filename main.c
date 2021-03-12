@@ -129,10 +129,29 @@ int main(void){
         }
         else if(!strcmp("bellman-ford", path)){
             if(hasReadNodes){
-                hasMadeAPath = 1;
+
+                printf("This algorithm has an animation that will show how it works.\nDo you want to use this option? (yes/no)\n");
+                do{
+                    printf("\n>>>");scanf(" %[^\n]", path);
+                    if(strcmp(path, "yes") == 0)
+                        answer = 1;
+                    else if(strcmp(path, "no") == 0)
+                        answer = 0;
+                    else{
+                        printf("Unrecognised command!\n");
+                        answer = -1;
+                    }
+
+                }while(answer == -1);
+
+                printf("Loading...\n");
+                if(bellmanFord(answer))
+                   hasMadeAPath = 1;
+                else
+                    printf("Error while applying Bellman-Ford.\n");
             }
             else
-                printf("You first have to read the Start and Finish nodes.\n");;
+                printf("You first have to read the Start and Finish nodes.\n");
         }
         else
             printf("Unrecognised command!\n");

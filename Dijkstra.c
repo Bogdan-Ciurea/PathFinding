@@ -16,8 +16,6 @@
 #include <stdlib.h>
 #include <float.h>
 
-#include <time.h> //To make the animation
-
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
@@ -37,34 +35,6 @@ yes
 extern Links listOfLinks;
 extern Nodes pathOfNodes;
 extern Nodes listOfNodes;
-
-void wait(float seconds){
-    int millSec = 10000 * seconds;
-    clock_t startTime = clock();
-
-    while(clock() < startTime + millSec){
-
-    }
-}
-
-void completePath(){
-    int i;
-    for(i = 0; i < pathOfNodes.numberOfNodes; i++){
-        pathOfNodes.nodes[i].id = listOfNodes.nodes[pathOfNodes.nodes[i].matrixId].id;
-        pathOfNodes.nodes[i].lat = listOfNodes.nodes[pathOfNodes.nodes[i].matrixId].lat;
-        pathOfNodes.nodes[i].lon = listOfNodes.nodes[pathOfNodes.nodes[i].matrixId].lon;
-    }
-}
-
-double distBetweenNodes(int node1, int node2){
-    int i;
-    for(i = 0 ;i < listOfLinks.numberOfLinks; i++)
-        if(listOfLinks.links[i].node1.matrixId == node1 && listOfLinks.links[i].node2.matrixId == node2)
-            return listOfLinks.links[i].length;
-        else if(listOfLinks.links[i].node1.matrixId == node2 && listOfLinks.links[i].node2.matrixId == node1)
-            return listOfLinks.links[i].length;
-    return DBL_MAX;
-}
 
 void drawInitialFrame(SDL_Renderer *renderer){
     int i;
@@ -117,7 +87,7 @@ void animatePath(SDL_Renderer *renderer){
             drawLine(renderer, relativePozX(pathOfNodes.nodes[i - 1].lon), relativePozX(pathOfNodes.nodes[i].lon),
                 relativePozY(pathOfNodes.nodes[i - 1].lat), relativePozY(pathOfNodes.nodes[i].lat));
 
-            wait(0.2);
+            wait(0.13);
             SDL_RenderPresent(renderer);
         }
 
@@ -156,24 +126,24 @@ void animatePath(SDL_Renderer *renderer){
 }
 
 int dijkstra(int animation){
-    //Initialize the variables
+    // Initialize the variables
     initValues();
     SDL_Event event;
-    extern int indexStart, height, width; //indexFinish;
+    extern int indexStart, height, width, indexFinish;
 
     int n = listOfNodes.numberOfNodes, i, j, lastNode;
 	double distance[n], mindistance;
 	int visited[n], count, nextnode, pred[n];
 
 
-    //Initialize the SDL Window to show how the algorithm works
-    //It has to be initialized even if we do not need it
+    // Initialize the SDL Window to show how the algorithm works
+    // It has to be initialized even if we do not need it
     SDL_Init(SDL_INIT_VIDEO);
     SDL_Window *window = SDL_CreateWindow("Dijkstra", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_OPENGL);
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
     if(!animation){
-        //Destroy the window that shows how the algorithm works
+        // Destroy the window that shows how the algorithm works
         SDL_DestroyRenderer(renderer);
         SDL_DestroyWindow(window);
         SDL_Quit();
@@ -181,13 +151,13 @@ int dijkstra(int animation){
 
     if(animation){
 
-        //Make the frame
+        // Make the frame
         SDL_SetRenderDrawColor(renderer, 255, 255 ,255, 255); //White
         SDL_RenderClear(renderer);
         makeFrame(renderer); //Draw the plot (color is black)
         SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255); //Red
 
-        //Draw the initial state of the frame
+        // Draw the initial state of the frame
         drawInitialFrame(renderer);
 
         SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255); //Blue
@@ -195,19 +165,13 @@ int dijkstra(int animation){
         SDL_RenderPresent(renderer);
     }
 
-	//pred[] stores the predecessor of each node
-	//count gives the number of nodes seen so far
-	//create the cost matrix
-
-
-
-	//Initialize pred[],distance[] and visited[]
+	// Step 1: Initialize pred[],distance[] and visited[]
 	for(i = 0; i < n; i++){
 		distance[i] = distBetweenNodes(indexStart, i);
 		pred[i] = indexStart;
 		visited[i] = 0;
 
-		//Draw the pint in green and then change it to red
+		// Draw the pint in green and then change it to red
 		/*if(indexStart != i){
             SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255); //Green
             drawPoint(relativePozX(listOfNodes.nodes[i].lon), relativePozY(listOfNodes.nodes[i].lat), renderer);
@@ -223,6 +187,7 @@ int dijkstra(int animation){
 	count = 1;
 	nextnode = indexStart;
 
+	// Step 2: Relax all edges
 	while(count < n - 1 && visited[indexFinish] == 0){
 		mindistance = DBL_MAX;
         lastNode = nextnode;
@@ -243,7 +208,7 @@ int dijkstra(int animation){
                             return 0;
                         }
 
-                    //draw the searched node
+                    // Draw the searched node
                     SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255); //Green
                     drawPoint(relativePozX(listOfNodes.nodes[i].lon), relativePozY(listOfNodes.nodes[i].lat), renderer);
                     SDL_RenderPresent(renderer);
@@ -259,12 +224,12 @@ int dijkstra(int animation){
             SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255); //Blue
             drawPoint(relativePozX(listOfNodes.nodes[nextnode].lon), relativePozY(listOfNodes.nodes[nextnode].lat), renderer);
             //printf("%i %i %i", lastNode, nextnode, listOfNodes.numberOfNodes);
-            //drawLine(renderer, relativePozX(pathOfNodes.nodes[lastNode].lon), relativePozX(pathOfNodes.nodes[nextnode].lon),
-                     //relativePozY(pathOfNodes.nodes[lastNode].lat), relativePozY(pathOfNodes.nodes[nextnode].lat));
+            //drawLine(renderer, relativePozX(listOfNodes.nodes[lastNode].lon), relativePozX(listOfNodes.nodes[nextnode].lon),
+                     //relativePozY(listOfNodes.nodes[lastNode].lat), relativePozY(listOfNodes.nodes[nextnode].lat));
         }
 
 
-        //check if a better path exists through nextnode
+        // Check if a better path exists through nextnode
         visited[nextnode] = 1;
         for(i = 0; i < n; i++){
             if(!visited[i]){
@@ -277,7 +242,8 @@ int dijkstra(int animation){
 		count++;
 	}
 
-	//If there is a path, the program will make a list of nodes that will be used in the "show path" command
+    // Step 3: Make the path
+	// If there is a path, the program will make a list of nodes that will be used in the "show path" command
     if(distance[indexFinish] != DBL_MAX){
         pathOfNodes.numberOfNodes = 1;
         printf("The distance between the node Node %i and the Node %i is %f\n", listOfNodes.nodes[indexStart].id, listOfNodes.nodes[indexFinish].id, distance[indexFinish]);
@@ -289,7 +255,7 @@ int dijkstra(int animation){
             pathOfNodes.numberOfNodes++;
         }while(j != indexStart);
 
-        //Builds the pathOfNode
+        // Builds the pathOfNode
         pathOfNodes.nodes = calloc(pathOfNodes.numberOfNodes, sizeof(Node));
         i = 0;
         pathOfNodes.nodes[i++].matrixId = indexFinish;
@@ -299,17 +265,17 @@ int dijkstra(int animation){
             j = pred[j];
             pathOfNodes.nodes[i++].matrixId = j;
         }while(j != indexStart);
-        //Adds the information to the path
+        // Adds the information to the path
         completePath();
 
-        //Shows the path of nodes
+        // Shows the path of nodes
         printf("Path: %i", pathOfNodes.nodes[pathOfNodes.numberOfNodes - 1].id);
         for(i = pathOfNodes.numberOfNodes - 2; i >=0 ; i--)
             printf(" -> %i", pathOfNodes.nodes[i].id);
         printf("\n");
 
         if(animation){
-            //Animates the path with a green color
+            // Animates the path with a green color
             animatePath(renderer);
         }
 
@@ -320,7 +286,7 @@ int dijkstra(int animation){
     }
 
     if(animation){
-        //Destroy the window that shows how the algorithm works
+        // Destroy the window that shows how the algorithm works
         SDL_DestroyRenderer(renderer);
         SDL_DestroyWindow(window);
         SDL_Quit();

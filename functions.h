@@ -77,10 +77,20 @@ void showMap(int showPath);
 int relativePozY(double y);
 int relativePozX(double x);
 
+//Equivalent of time.sleep() in python it is used for making an animation
+void wait(float seconds);
+
+//Completes adds the rest of the information to the path
+void completePath();
+
+//A function that will return the distance between two nodes
+double distBetweenNodes(int ndoe1, int node2);
+
 //A function that will get the two points' coordinates
 int getCoordinatesStFin();
 
 //The function that will make Dijkstra's algorithm and show the process
-int dijkstra();
+int dijkstra(int animation);
+int bellmanFord(int animation);
 
 #endif

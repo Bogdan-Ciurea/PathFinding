@@ -1,5 +1,5 @@
 # Introduction
-This software was made by Bogdan Alexandru Ciurea Alexandru
+This software was made by Bogdan Alexandru Ciurea
 
 University of Leeds
 
@@ -23,9 +23,18 @@ The project contains 8 files:
 ```
 Makefile;
 Final_Map.map
-main.c; Djikstra.c; globalFunctions.c; readding.c; SDLFunctions;
+main.c; globalFunctions.c; readding.c;
+Dijkstra.c; BellmanFord.c
+SDLFunctions;
 functions.h
 ```
+
+<br>
+
+## Drawbacks
+In the current state of the program will not make the path between the two points if you use Bellman-Ford algoritm but it will make the shortest path.
+
+The animations **do not work** on **Linux**.
 
 <br>
 

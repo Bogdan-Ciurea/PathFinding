@@ -13,6 +13,8 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <float.h>
+#include <time.h>
 #include "functions.h"
 
 //A function that will check if a point exists
@@ -93,4 +95,38 @@ int getCoordinatesStFin(){
 
 
     return 1;
+}
+
+double distBetweenNodes(int node1, int node2){
+    int i;
+    extern Links listOfLinks;
+
+    for(i = 0 ;i < listOfLinks.numberOfLinks; i++)
+        if(listOfLinks.links[i].node1.matrixId == node1 && listOfLinks.links[i].node2.matrixId == node2)
+            return listOfLinks.links[i].length;
+        else if(listOfLinks.links[i].node1.matrixId == node2 && listOfLinks.links[i].node2.matrixId == node1)
+            return listOfLinks.links[i].length;
+    return DBL_MAX;
+}
+
+
+void wait(float seconds){
+    int millSec = 1000 * seconds;
+    clock_t startTime = clock();
+
+    while(clock() < startTime + millSec){
+
+    }
+}
+
+void completePath(){
+    extern Nodes pathOfNodes;
+    extern Nodes listOfNodes;
+    int i;
+
+    for(i = 0; i < pathOfNodes.numberOfNodes; i++){
+        pathOfNodes.nodes[i].id = listOfNodes.nodes[pathOfNodes.nodes[i].matrixId].id;
+        pathOfNodes.nodes[i].lat = listOfNodes.nodes[pathOfNodes.nodes[i].matrixId].lat;
+        pathOfNodes.nodes[i].lon = listOfNodes.nodes[pathOfNodes.nodes[i].matrixId].lon;
+    }
 }
