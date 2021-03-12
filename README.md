@@ -25,14 +25,18 @@ Makefile;
 Final_Map.map
 main.c; globalFunctions.c; readding.c;
 Dijkstra.c; BellmanFord.c
-SDLFunctions;
+SDLFunctions.c;
 functions.h
 ```
+
+It would be recommended to also have the `SDL2.dll` file in the directory to be sure everything runs as intended. 
+
+The program can be run by typing `make`, followed by `./path` in the console.
 
 <br>
 
 ## Drawbacks
-In the current state of the program will not make the path between the two points if you use Bellman-Ford algoritm but it will make the shortest path.
+In the current state of the program will not make the path between the two points if you use Bellman-Ford algorithm but it will make the shortest path.
 
 The animations **do not work** on **Linux**.
 
@@ -42,13 +46,13 @@ The animations **do not work** on **Linux**.
 When the program is first launched the user has one option: to type the file's name, in this case `Final_Map.map`.
 
 If the program cannot open the file, it will not proceed to the next commands.
-If the file can be opend, then the program will proceed in readding the data and store the nodes' values and links' values. 
+If the file can be opened, then the program will proceed in readding the data and store the nodes' values and links' values. 
 
 <br>
 
 ## Main menu
 
-After the file from which we will read the information from has executed corectly, the user will be prompted to select from the following commands:
+After the file from which we will read the information from has executed correctly, the user will be prompted to select from the following commands:
 
 * [Show Command](#show-command)
 * [Read Nodes Command](#read-nodes-command)
@@ -63,7 +67,7 @@ After the file from which we will read the information from has executed corectl
 
 After the file has been read, the user can chose to visualize how the map looks.
 
-This command can be accessed by typeing `show` into the CMD.
+This command can be accessed by typing `show` into the CMD.
 
 
 <br>
@@ -72,17 +76,17 @@ This command can be accessed by typeing `show` into the CMD.
 
 If the user wants to see the distance between two points, he needs to insert the coordinates of these two points (_start_ and _end_ points ).
 
-This command can be accessed by typeing `read nodes` into the CMD.
+This command can be accessed by typing `read nodes` into the CMD.
 
 If the user has chosen to use this command, he will be asked to insert the following information: 
 
-- startNode's Latitude ;
+- start Node’s Latitude ;
 
-- startNode's Longitude;
+- start Node’s Longitude;
 
-- endNode's Latitude;
+- end Node’s Latitude;
 
-- endNode's Longitude;
+- end Node’s Longitude;
 
 If the coordinates are not exactly the same as the Node in the database, the user will not be able to proceed. Also, if the user inserted invalid characters, he will need to type again the coordinates.
 
@@ -105,12 +109,12 @@ There are a couple of algorithms that the user will be able to chose from:
 
 - Bellman-Ford algorithm;
 
-He can chose of o these by typeing `dijkstra` or `bellman-ford` respectively in the CMD. 
+He can chose of o these by typing `dijkstra` or `bellman-ford` respectively in the CMD. 
 After the user has chosen an algorithm, another information will be required: if an animation of the algorithm wants to be shown.
 
 If **yes**, the program will open a window in which the user can visualize how the computer does the algorithm (this process will take a little more time compared to the other option).
 
-If **not**, the program will purcede with finding the shortest path between the two points.
+If **not**, the program will proceed with finding the shortest path between the two points.
 
 <br>
 
