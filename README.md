@@ -29,9 +29,10 @@ SDLFunctions.c;
 functions.h
 ```
 
-It would be recommended to also have the `SDL2.dll` file in the directory to be sure everything runs as intended. 
+On the **Feng Linux** machine that the University provides us with, the sotware can be built by using `make` command, followed by `./path` in the console.
 
-The program can be run by typing `make`, followed by `./path` in the console.
+If you want to run this software on **Windows** you will have to just run the `.exe` file.
+It would be recommended to also have the `SDL2.dll` file in the directory to be sure everything runs as intended. 
 
 <br>
 
