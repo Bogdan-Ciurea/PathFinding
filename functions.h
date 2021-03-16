@@ -91,6 +91,6 @@ int getCoordinatesStFin();
 
 //The function that will make Dijkstra's algorithm and show the process
 int dijkstra(int animation);
-int bellmanFord(int animation);
+int bellmanFord();
 
 #endif

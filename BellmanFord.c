@@ -18,7 +18,7 @@ read nodes
 53.808649
 -1.544174
 bellman-ford
-no
+yes
 
  */
 
@@ -27,8 +27,8 @@ no
 #include <stdlib.h>
 #include <float.h>
 
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#include <SDL.h>
+#include <SDL_image.h>
 
 #include "functions.h"
 
@@ -37,28 +37,25 @@ extern Nodes pathOfNodes;
 extern Nodes listOfNodes;
 extern int indexStart, height, width, indexFinish;
 
-void findPath(){
 
-}
-
-int bellmanFord(int animation){
+int bellmanFord(){
     initValues();
     SDL_Event event;
 
 
-    int n = listOfNodes.numberOfNodes, i, j, lastNode;
-	double distance[n], weight;
+    int i, j, lastNode;
+	double distance[listOfNodes.numberOfNodes], weight;
 
 
     // Step 1: Initialize distances from src to all other vertices
-    for (i = 0; i < n; i++)
+    for (i = 0; i < listOfNodes.numberOfNodes; i++)
         distance[i] = DBL_MAX;
     distance[indexStart] = 0;
 
 
 
     // Step 2: Relax all edges |listOfNodes.numberOfNodes| - 1 times
-    for (i = 1; i < n; i++) {
+    for (i = 1; i < listOfNodes.numberOfNodes; i++) {
         for (j = 0; j < listOfLinks.numberOfLinks; j++) {
             weight = listOfLinks.links[j].length;
             if (distance[listOfLinks.links[j].node1.matrixId] != DBL_MAX && distance[listOfLinks.links[j].node1.matrixId] + weight < distance[listOfLinks.links[j].node2.matrixId])
@@ -76,21 +73,18 @@ int bellmanFord(int animation){
             printf("Graph contains negative weight cycle");
             return 0;
         }
-        /*else if (distance[listOfLinks.links[j].node2.matrixId] != DBL_MAX && distance[listOfLinks.links[j].node2.matrixId] + weight < distance[listOfLinks.links[j].node1.matrixId]){
+        else if (distance[listOfLinks.links[j].node2.matrixId] != DBL_MAX && distance[listOfLinks.links[j].node2.matrixId] + weight < distance[listOfLinks.links[j].node1.matrixId]){
             printf("Graph contains negative weight cycle");
             return 0;
         }
     }*/
 
-    if(distance[indexFinish] != DBL_MAX){
-        printf("The distance between the node Node %i and the Node %i is %f\n", listOfNodes.nodes[indexStart].id, listOfNodes.nodes[indexFinish].id, distance[indexFinish]);
-
-        // Step 4: Make the path
-        findPath(distance[indexFinish]);
-
-        return 1;
-    }
-    else
+    //Return 0 if there is no path between the two nodes
+    if(distance[indexFinish] == DBL_MAX)
         return 0;
+
+    printf("The distance between the node Node %i and the Node %i is %f\n", listOfNodes.nodes[indexStart].id, listOfNodes.nodes[indexFinish].id, distance[indexFinish]);
+
+    return 1;
 }
 

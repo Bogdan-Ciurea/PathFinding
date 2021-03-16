@@ -10,9 +10,9 @@
     Date Work Commenced: 3rd Mar 2021
 *************************************************************************/
 
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
-//#include <SDL_ttf.h>
+#include <SDL.h>
+#include <SDL_image.h>
+#include <SDL_ttf.h>
 
 #include <string.h>
 #include <stdio.h>
@@ -109,7 +109,7 @@ void makeFrame(SDL_Renderer *renderer){
         drawLine(renderer, distToBoxWidth + i*distBetweenLinesBot - 1, distToBoxWidth + i*distBetweenLinesBot - 1,
                  distToBoxHeight + smallLine, distToBoxHeight);
     }
-    //SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+
     for(i = 1; i <= 10; i++){
         drawLine(renderer, distToBoxWidth, distToBoxWidth + smallLine, distToBoxHeight + i*distBetweenLinesLeft - 1, distToBoxHeight + i*distBetweenLinesLeft - 1);
         drawLine(renderer, distToBoxWidth + boxWidth - 2 - smallLine, distToBoxWidth + boxWidth - 1,

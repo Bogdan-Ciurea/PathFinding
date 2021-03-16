@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <float.h>
 #include "functions.h"
 
 
@@ -30,16 +31,16 @@ void showAvailableCommands(int start){
     if(start){
     printf("You have the following commands:\n1) 'show' - to show the map\n2) 'read nodes' - to read the Start and Finish nodes\n");
     printf("3) 'show path' - to view the shortest path | You first have to use an algorithm!\n");
-    printf("4) 'dijkstra' - to visualize Dijkstra's algorithm | You first have to read the two points\n");
-    printf("5) 'bellman-ford' - to visualize Bellman-Ford algorithm | You first have to read the two points\n");
-    printf("6) 'exit' - to exit the program\n");
+    printf("4) 'find path' - to find the path using Dijkstra's algorithm | You first have to read the two points\n");
+    printf("5) 'find distance' - to find the shortest distance (does not tell you the path) using Bellman-Ford algorithm | You first have to read the two points\n");
+    printf("6) 'exit' - to exit the program\n\n");
     printf("Keep in mind that, for every algorithm, the distance will be showed in the CMD as well as the path\nThe path will also be displayed visually.\n");
     }
     else{
     printf("You have the following commands:\n1) 'show' - to show the map\n2) 'read nodes' - to read the Start and Finish nodes\n");
     printf("3) 'show path' - to view the shortest path\n");
-    printf("4) 'dijkstra' - to visualize Dijkstra's algorithm\n");
-    printf("5) 'bellman-ford' - to visualize Bellman-Ford algorithm\n");
+    printf("4) 'find path' - to find the path\n");
+    printf("5) 'find distance' - to find the shortest distance\n");
     printf("6) 'exit' - to exit the program\n");
     }
 }
@@ -62,12 +63,13 @@ int main(void){
         printf("\n>>>"); scanf(" %[^\n]", path);
         if(!strcmp(path, "exit"))
 			exit(1);
-        a = tryToOpenFile(path);
+        if(!(a = tryToOpenFile(path)))
+            printf("File not found!\n");
 	}while(!a);
 
 
 	if(readFromFile(path))
-		printf("File successfully read.\n");
+		printf("File successfully read.\n\n");
 
 
     int hasMadeAPath = 0, hasReadNodes = 0;
@@ -86,10 +88,10 @@ int main(void){
             showMap(0);
         }
         else if(!strcmp("read nodes", path)){
-            if(getCoordinatesStFin())
+            if(getCoordinatesStFin()){
                 hasReadNodes = 1;
-            else
-                printf("Error while reading the nodes.\n");
+                hasMadeAPath = 0;
+            }
 
         }
         else if(!strcmp("show path", path)){
@@ -97,10 +99,10 @@ int main(void){
                 showMap(1);
             }
             else{
-                printf("You first need to chose an algorithm before showing the path.\n");
+                printf("\nYou first need to find the path using the 'find path' command.\n");
             }
         }
-        else if(!strcmp("dijkstra", path)){
+        else if(!strcmp("find path", path)){
             if(hasReadNodes){
 
                 printf("This algorithm has an animation that will show how it works.\nDo you want to use this option? (yes/no)\n");
@@ -117,7 +119,7 @@ int main(void){
 
                 }while(answer == -1);
 
-                printf("Loading...\n");
+                printf("Loading...\n\n");
                 if(dijkstra(answer))
                    hasMadeAPath = 1;
                 else
@@ -127,27 +129,10 @@ int main(void){
                 printf("You first have to read the Start and Finish nodes.\n");
 
         }
-        else if(!strcmp("bellman-ford", path)){
+        else if(!strcmp("find distance", path)){
             if(hasReadNodes){
-
-                printf("This algorithm has an animation that will show how it works.\nDo you want to use this option? (yes/no)\n");
-                do{
-                    printf("\n>>>");scanf(" %[^\n]", path);
-                    if(strcmp(path, "yes") == 0)
-                        answer = 1;
-                    else if(strcmp(path, "no") == 0)
-                        answer = 0;
-                    else{
-                        printf("Unrecognised command!\n");
-                        answer = -1;
-                    }
-
-                }while(answer == -1);
-
-                printf("Loading...\n");
-                if(bellmanFord(answer))
-                   hasMadeAPath = 1;
-                else
+                printf("Loading...\n\n");
+                if(!bellmanFord())
                     printf("Error while applying Bellman-Ford.\n");
             }
             else

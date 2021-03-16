@@ -16,8 +16,8 @@
 #include <stdlib.h>
 #include <float.h>
 
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#include <SDL.h>
+#include <SDL_image.h>
 
 #include "functions.h"
 /*
@@ -48,6 +48,12 @@ void drawInitialFrame(SDL_Renderer *renderer){
     for(i = 0; i < listOfLinks.numberOfLinks; i++)
         drawLine(renderer, relativePozX(listOfLinks.links[i].node1.lon), relativePozX(listOfLinks.links[i].node2.lon),
             relativePozY(listOfLinks.links[i].node1.lat), relativePozY(listOfLinks.links[i].node2.lat));
+
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); //Black
+    drawPoint(listOfNodes.nodes[indexFinish].lon);
+    drawPoint(relativePozX(listOfNodes.nodes[indexStart].lon), relativePozY(listOfNodes.nodes[indexStart].lat), renderer);
+    drawPoint(relativePozX(listOfNodes.nodes[indexFinish].lon), relativePozY(listOfNodes.nodes[indexFinish].lat), renderer);
+    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255); //Red
 
     //Draw the initial state of the frame
     SDL_RenderPresent(renderer);

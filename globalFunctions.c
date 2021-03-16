@@ -45,22 +45,28 @@ int getCoordinatesStFin(){
     double x, y;
     char input[100], *firstElem;
 
+    printf("Keep in mind that you can also type 'back' to return to the Main Menu.\n");
+
     //Read the coordinates for the first point
     do{
         //The X-axis
-        printf("Type the coordinates of the start node:\nLongitude/X-Axis\n");
+        printf("Type the coordinates of the start node:\n\nLongitude/X-Axis\n");
 
         do{
-            printf(">>>"); scanf(" %[^\n]", input);
+            printf("\n>>>"); scanf(" %[^\n]", input);
             firstElem = strtok(input, " ");
+            if(!strcmp(firstElem, "back"))
+                return 0;
         }while(!inputIsNumber(firstElem));
         x = atof(firstElem);
 
-        printf("The start node's Longitude was read successfully!\nLatitude/Y-Axis\n");
+        printf("The start node's Longitude was read successfully!\n\nLatitude/Y-Axis\n");
         //The Y-axis
         do{
-            printf(">>>"); scanf(" %[^\n]", input);
+            printf("\n>>>"); scanf(" %[^\n]", input);
             firstElem = strtok(input, " ");
+            if(!strcmp(firstElem, "back"))
+                return 0;
         }while(!inputIsNumber(firstElem));
         y = atof(firstElem);
 
@@ -72,20 +78,24 @@ int getCoordinatesStFin(){
     //Read the coordinates for the second point
     do{
         //The X-axis
-        printf("Type the coordinates of the finish node:\nLongitude/X-Axis\n");
+        printf("Type the coordinates of the finish node:\n\nLongitude/X-Axis\n");
 
         do{
-            printf(">>>"); scanf(" %[^\n]", input);
+            printf("\n>>>"); scanf(" %[^\n]", input);
             firstElem = strtok(input, " ");
+            if(!strcmp(firstElem, "back"))
+                return 0;
         }while(!inputIsNumber(firstElem));
         x = atof(firstElem);
 
-        printf("The finish node's Longitude was read successfully!\nLatitude/Y-Axis\n");
+        printf("The finish node's Longitude was read successfully!\n\nLatitude/Y-Axis\n");
 
         //The Y-axis
         do{
-            printf(">>>"); scanf(" %[^\n]", input);
+            printf("\n>>>"); scanf(" %[^\n]", input);
             firstElem = strtok(input, " ");
+            if(!strcmp(firstElem, "back"))
+                return 0;
         }while(!inputIsNumber(firstElem));
         y = atof(firstElem);
 
