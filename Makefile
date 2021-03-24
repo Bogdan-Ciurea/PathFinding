@@ -3,13 +3,13 @@
 
 EXE_DIR = .
 EXE = $(EXE_DIR)/path
-SRC= main.c readding.c SDLFunctions.c Dijkstra.c BellmanFord.c globalFunctions.c
+SRC= main.c reading.c SDLFunctions.c Dijkstra.c BellmanFord.c globalFunctions.c
 
 # generic build details
 
 CC =     gcc
 CFLAGS = -Wall -O
-LIBS =   -lSDL2 -lSDL2_image
+LIBS =   -lSDL2 -lSDL2_image -lSDL2_ttf
 
 # compile to  object code
 
@@ -30,5 +30,5 @@ clean:
 
 # dependencies
 
-main.o readding.o SDLFunctions.o Dijkstra.o BellmanFord.o globalFunctions.o :  main.c readding.c SDLFunctions.c Dijkstra.c BellmanFord.c globalFunctions.c 
+main.o reading.o SDLFunctions.o Dijkstra.o BellmanFord.o globalFunctions.o :  main.c reading.c SDLFunctions.c Dijkstra.c BellmanFord.c globalFunctions.c 
 

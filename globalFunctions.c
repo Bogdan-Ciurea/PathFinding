@@ -30,12 +30,15 @@ int nodeInNodes(double x, double y){
 
 int inputIsNumber(char* input){
     int i;
-    for(i = 0; i < strlen(input); i++)
-        if(strchr("1234567890.", input[i]) == NULL)
+    for(i = 0; i < strlen(input); i++){
+        if(strchr("1234567890.", input[i]) == NULL){
             if(! (i == 0 && input[0] == '-') ){
-            printf("Invalid format! Try again.\n");
-            return 0;
+                printf("Invalid format! Try again.\n");
+                return 0;
+            }
         }
+    }
+
     return 1;
 }
 

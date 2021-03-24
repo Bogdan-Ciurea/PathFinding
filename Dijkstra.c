@@ -93,7 +93,7 @@ void animatePath(SDL_Renderer *renderer){
             drawLine(renderer, relativePozX(pathOfNodes.nodes[i - 1].lon), relativePozX(pathOfNodes.nodes[i].lon),
                 relativePozY(pathOfNodes.nodes[i - 1].lat), relativePozY(pathOfNodes.nodes[i].lat));
 
-            wait(0.13);
+            //wait(0.13);
             SDL_RenderPresent(renderer);
         }
 

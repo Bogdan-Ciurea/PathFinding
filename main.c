@@ -61,15 +61,20 @@ int main(void){
 
 	do{
         printf("\n>>>"); scanf(" %[^\n]", path);
-        if(!strcmp(path, "exit"))
-			exit(1);
-        if(!(a = tryToOpenFile(path)))
+        if(!strcmp(path, "exit")){
+            exit(1);
+        }
+        if(!(a = tryToOpenFile(path))){
             printf("File not found!\n");
+        }
 	}while(!a);
 
 
-	if(readFromFile(path))
-		printf("File successfully read.\n\n");
+	if(readFromFile(path)){
+        printf("File successfully read.\n\n");
+	}
+	else
+        return 0;
 
 
     int hasMadeAPath = 0, hasReadNodes = 0;
@@ -82,8 +87,9 @@ int main(void){
     while(1){
         printf("\n>>>");
         scanf(" %[^\n]", path);
-        if(!strcmp("exit", path))
+        if(!strcmp("exit", path)){
             exit(1);
+        }
         else if(!strcmp("show", path)){
             showMap(0);
         }
@@ -120,26 +126,38 @@ int main(void){
                 }while(answer == -1);
 
                 printf("Loading...\n\n");
-                if(dijkstra(answer))
-                   hasMadeAPath = 1;
-                else
+                if(dijkstra(answer)){
+                    hasMadeAPath = 1;
+                }
+
+                else{
                     printf("Error while applying Dijkstra.\n");
+                }
+
             }
-            else
+            else{
                 printf("You first have to read the Start and Finish nodes.\n");
+            }
+
 
         }
         else if(!strcmp("find distance", path)){
             if(hasReadNodes){
                 printf("Loading...\n\n");
-                if(!bellmanFord())
+                if(!bellmanFord()){
                     printf("Error while applying Bellman-Ford.\n");
+                }
+
             }
-            else
+            else{
                 printf("You first have to read the Start and Finish nodes.\n");
+            }
+
         }
-        else
+        else{
             printf("Unrecognised command!\n");
+        }
+
         printf("\n");showAvailableCommands(0);
 
     }

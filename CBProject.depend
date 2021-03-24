@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1615820184 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\main.c
+1616528841 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\main.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -53,9 +53,9 @@
 	<time.h>
 	"functions.h"
 
-1615742557 c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\functions.h
+1616527796 c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\functions.h
 
-1615742542 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\dijkstra.c
+1616581353 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\dijkstra.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -101,5 +101,11 @@
 	<float.h>
 	<SDL.h>
 	<SDL_image.h>
+	"functions.h"
+
+1616526925 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\reading.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
 	"functions.h"
 

@@ -73,6 +73,8 @@ int readFromFile(char* input);
 //A function that will show the map on the points
 void showMap(int showPath);
 
+int inputIsNumber(char* input);
+
 //Shows the relative position to the window that we want to show
 int relativePozY(double y);
 int relativePozX(double x);
@@ -84,7 +86,7 @@ void wait(float seconds);
 void completePath();
 
 //A function that will return the distance between two nodes
-double distBetweenNodes(int ndoe1, int node2);
+double distBetweenNodes(int node1, int node2);
 
 //A function that will get the two points' coordinates
 int getCoordinatesStFin();
