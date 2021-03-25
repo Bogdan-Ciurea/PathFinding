@@ -1,111 +1,51 @@
 # depslib dependency file v1.0
-1616528841 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\main.c
+1616684667 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\bellmanford.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<float.h>
+	<SDL.h>
+	<SDL_image.h>
+	"functions.h"
+
+1616620149 c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\functions.h
+
+1616684676 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\dijkstra.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<float.h>
+	<SDL.h>
+	<SDL_image.h>
+	"functions.h"
+
+1616620588 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\globalfunctions.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<float.h>
+	<time.h>
+	"functions.h"
+
+1616669349 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\main.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 	<float.h>
 	"functions.h"
 
-1615121279 c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\globalfunctions.h
-
-1615480911 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\readding.c
+1616669256 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\reading.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 	"functions.h"
 
-1615899955 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\sdlfunctions.c
+1616689207 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\sdlfunctions.c
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_ttf.h>
 	<string.h>
 	<stdio.h>
-	<stdlib.h>
-	"functions.h"
-
-1615042492 source:/home/cserv1_a/soc_ug/sc20bac/Desktop/Programs/COMP1921 CWK2/comp1921-cwk2/readding.c
-	<stdio.h>
-	<string.h>
-	<stdlib.h>
-	"globalFunctions.h"
-
-1615042492 /home/cserv1_a/soc_ug/sc20bac/Desktop/Programs/COMP1921 CWK2/comp1921-cwk2/globalFunctions.h
-
-1615044376 source:/home/cserv1_a/soc_ug/sc20bac/Desktop/Programs/COMP1921 CWK2/comp1921-cwk2/SDLFunctions.c
-	<SDL2/SDL.h>
-	<SDL2/SDL_image.h>
-	<string.h>
-	<stdio.h>
-	<stdlib.h>
-	"globalFunctions.h"
-
-1615044376 source:/home/cserv1_a/soc_ug/sc20bac/Desktop/Programs/COMP1921 CWK2/comp1921-cwk2/main.c
-	<stdio.h>
-	<string.h>
-	<stdlib.h>
-	"globalFunctions.h"
-
-1615757392 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\globalfunctions.c
-	<string.h>
-	<stdio.h>
-	<stdlib.h>
-	<float.h>
-	<time.h>
-	"functions.h"
-
-1616527796 c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\functions.h
-
-1616581353 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\dijkstra.c
-	<stdio.h>
-	<string.h>
-	<stdlib.h>
-	<float.h>
-	<SDL.h>
-	<SDL_image.h>
-	"functions.h"
-
-1615479031 source:/home/cserv1_a/soc_ug/sc20bac/Desktop/Programs/comp1921-cwk2/globalFunctions.c
-	<string.h>
-	<stdio.h>
-	<stdlib.h>
-	"functions.h"
-
-1615477842 /home/cserv1_a/soc_ug/sc20bac/Desktop/Programs/comp1921-cwk2/functions.h
-
-1615477256 source:/home/cserv1_a/soc_ug/sc20bac/Desktop/Programs/comp1921-cwk2/main.c
-	<stdio.h>
-	<string.h>
-	<stdlib.h>
-	"functions.h"
-
-1615479081 source:/home/cserv1_a/soc_ug/sc20bac/Desktop/Programs/comp1921-cwk2/Dijkstra.c
-	<stdio.h>
-	<string.h>
-	<stdlib.h>
-	<float.h>
-	<time.h>
-	<SDL2/SDL.h>
-	<SDL2/SDL_image.h>
-	"functions.h"
-
-1615477674 source:/home/cserv1_a/soc_ug/sc20bac/Desktop/Programs/comp1921-cwk2/readding.c
-	<stdio.h>
-	<string.h>
-	<stdlib.h>
-	"functions.h"
-
-1615742513 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\bellmanford.c
-	<stdio.h>
-	<string.h>
-	<stdlib.h>
-	<float.h>
-	<SDL.h>
-	<SDL_image.h>
-	"functions.h"
-
-1616526925 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\reading.c
-	<stdio.h>
-	<string.h>
 	<stdlib.h>
 	"functions.h"
 

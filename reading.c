@@ -19,7 +19,6 @@
 int validDataFromFile(char *input, char *expected){
     if(strcmp(input, expected) == 0)
         return 1;
-    printf("File has invalid stored data!\n");
     return 0;
 }
 
@@ -59,6 +58,10 @@ int nodeInLinks(int Id){
 //Reads the information from the file
 int readFromFile(char* path){
     FILE* file = fopen(path, "r");
+    if(file == NULL){
+        printf("File not found!\n");
+        return 0;
+    }
     char line[605] ,*arg;
     double x, y;
     int a,i=0;
@@ -69,42 +72,43 @@ int readFromFile(char* path){
     //See how many Links are there and store the data of Lat and Lon
     while(fscanf(file, "%[^\n]\n", line) != EOF){
         arg = strtok(line, " =");
-        if(!validDataFromFile("<bounding",arg) && i++ == 0){return 0;}
+        if(!validDataFromFile("<bounding",arg) && i == 0){printf("File has invalid stored data!\n");return 0;}
 
         if(!strcmp("<bounding", arg)){
             arg = strtok(NULL," =");
-            if(!validDataFromFile("minLat",arg)){return 0;}
+            if(!validDataFromFile("minLat",arg)){printf("File has invalid stored data!\n");return 0;}
             arg = strtok(NULL," =");
-            if(!inputIsNumber(arg)){return 0;}
+            if(!inputIsNumber(arg)){printf("File has invalid stored data!\n");return 0;}
             minLat = atof(arg);
 
             arg = strtok(NULL," =");
-            if(!validDataFromFile("minLon",arg)){return 0;}
+            if(!validDataFromFile("minLon",arg)){printf("File has invalid stored data!\n");return 0;}
             arg = strtok(NULL," =");
             if(!inputIsNumber(arg)){return 0;}
             minLon = atof(arg);
 
             arg = strtok(NULL," =");
-            if(!validDataFromFile("maxLat",arg)){return 0;}
+            if(!validDataFromFile("maxLat",arg)){printf("File has invalid stored data!\n");return 0;}
             arg = strtok(NULL," =");
             if(!inputIsNumber(arg)){return 0;}
             maxLat = atof(arg);
 
             arg = strtok(NULL," =");
-            if(!validDataFromFile("maxLon",arg)){return 0;}
+            if(!validDataFromFile("maxLon",arg)){printf("File has invalid stored data!\n");return 0;}
             arg = strtok(NULL," =");
-            if(!inputIsNumber(arg)){return 0;}
+            if(!inputIsNumber(arg)){printf("File has invalid stored data!\n");return 0;}
             maxLon = atof(arg);
 
         }
-        else if(!validDataFromFile("<link", arg) && i == 1){
-            return 0;
-        }
+        //else if(!validDataFromFile("<link", arg) && i == 1){
+            //return 0;
+        //}
         else if(!strcmp("<link", arg)){
             links++;
         }
 
         else break;
+        i++;
 
     }
     fclose(file);
@@ -115,6 +119,7 @@ int readFromFile(char* path){
     listOfLinks.links = calloc(links, sizeof(Link));
     links = 0;
 
+
     //Store the information for the listOfLinks and see what Nodes are valid
     file = fopen(path, "r");
     while(fscanf(file, "%[^\n]\n", line) != EOF){
@@ -123,49 +128,49 @@ int readFromFile(char* path){
 
         else if(!strcmp("<link", arg)){
             arg = strtok(NULL, "= ");
-            if(!validDataFromFile("id",arg)){return 0;}
+            if(!validDataFromFile("id",arg)){printf("File has invalid stored data!\n");return 0;}
             arg = strtok(NULL, "= ");
-            if(!inputIsNumber(arg)){return 0;}
+            if(!inputIsNumber(arg)){printf("File has invalid stored data!\n");return 0;}
             listOfLinks.links[links].id = atoi(arg);
 
             arg = strtok(NULL, "= ");
-            if(!validDataFromFile("node",arg)){return 0;}
+            if(!validDataFromFile("node",arg)){printf("File has invalid stored data!\n");return 0;}
             arg = strtok(NULL, "= ");
-            if(!inputIsNumber(arg)){return 0;}
+            if(!inputIsNumber(arg)){printf("File has invalid stored data!\n");return 0;}
             listOfLinks.links[links].node1.id = atoi(arg);
 
             arg = strtok(NULL, "= ");
-            if(!validDataFromFile("node",arg)){return 0;}
+            if(!validDataFromFile("node",arg)){printf("File has invalid stored data!\n");return 0;}
             arg = strtok(NULL, "= ");
-            if(!inputIsNumber(arg)){return 0;}
+            if(!inputIsNumber(arg)){printf("File has invalid stored data!\n");return 0;}
             listOfLinks.links[links].node2.id = atoi(arg);
 
             arg = strtok(NULL, "= ");
             arg = strtok(NULL, "= ");
             arg = strtok(NULL, "= ");
-            if(!validDataFromFile("length",arg)){return 0;}
+            if(!validDataFromFile("length",arg)){printf("File has invalid stored data!\n");return 0;}
             arg = strtok(NULL, "= ");
-            if(!inputIsNumber(arg)){return 0;}
+            if(!inputIsNumber(arg)){printf("File has invalid stored data!\n");return 0;}
             listOfLinks.links[links++].length = atof(arg);
         }
 
         else if(!strcmp("<node", arg)){
             arg = strtok(NULL, "= ");
-            if(!validDataFromFile("id",arg)){return 0;}
+            if(!validDataFromFile("id",arg)){printf("File has invalid stored data!\n");return 0;}
             arg = strtok(NULL, "= ");
-            if(!inputIsNumber(arg)){return 0;}
+            if(!inputIsNumber(arg)){printf("File has invalid stored data!\n");return 0;}
             a = atoi(arg);
 
             arg = strtok(NULL, "= ");
-            if(!validDataFromFile("lat",arg)){return 0;}
+            if(!validDataFromFile("lat",arg)){printf("File has invalid stored data!\n");return 0;}
             arg = strtok(NULL, "= ");
-            if(!inputIsNumber(arg)){return 0;}
+            if(!inputIsNumber(arg)){printf("File has invalid stored data!\n");return 0;}
             x = atof(arg);
 
             arg = strtok(NULL, "= ");
-            if(!validDataFromFile("lon",arg)){return 0;}
+            if(!validDataFromFile("lon",arg)){printf("File has invalid stored data!\n");return 0;}
             arg = strtok(NULL, "= ");
-            if(!inputIsNumber(arg)){return 0;}
+            if(!inputIsNumber(arg)){printf("File has invalid stored data!\n");return 0;}
             y = atof(arg);
 
             if(minLat <= x && x <= maxLat && minLon <= y && y <= maxLon && nodeInLinks(a))

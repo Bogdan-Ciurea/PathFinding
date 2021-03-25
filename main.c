@@ -18,15 +18,6 @@
 #include "functions.h"
 
 
-int tryToOpenFile(char * text){
-	FILE *file = fopen(text, "r");
-	fclose(file);
-	if(file == NULL)
-		return 0;
-	else
-		return 1;
-}
-
 void showAvailableCommands(int start){
     if(start){
     printf("You have the following commands:\n1) 'show' - to show the map\n2) 'read nodes' - to read the Start and Finish nodes\n");
@@ -64,17 +55,10 @@ int main(void){
         if(!strcmp(path, "exit")){
             exit(1);
         }
-        if(!(a = tryToOpenFile(path))){
-            printf("File not found!\n");
-        }
+        a = readFromFile(path);
 	}while(!a);
 
-
-	if(readFromFile(path)){
-        printf("File successfully read.\n\n");
-	}
-	else
-        return 0;
+    printf("File successfully read.\n\n");
 
 
     int hasMadeAPath = 0, hasReadNodes = 0;

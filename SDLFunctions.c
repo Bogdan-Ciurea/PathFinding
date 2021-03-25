@@ -21,6 +21,7 @@
 
 //These distances are taken from the image that we where given
 //They can be changed by changing the value of the scaler
+float scaler = 1.5;
 extern int width;
 int mapWidth;
 extern int height;
@@ -36,7 +37,6 @@ int boxWidth;
 int boxHeight;
 
 void initValues(){
-    float scaler = 1.5;
     width = 640 * scaler;
     mapWidth = 421 * scaler;
     height = 480 * scaler;
@@ -46,8 +46,8 @@ void initValues(){
     distFromBoxWidth = 20 * scaler;
     distFromBoxHeight = 40 * scaler;
     smallLine = 5 * scaler;
-    distBetweenLinesBot = 100 * scaler;
-    distBetweenLinesLeft = 38 * scaler;
+    distBetweenLinesBot = mapWidth/5;
+    distBetweenLinesLeft = mapHeight/10;
     boxWidth = 500 * scaler;
     boxHeight = 420 * scaler;
 }
@@ -95,6 +95,19 @@ void drawLine(SDL_Renderer *renderer, int x1, int x2, int y1, int y2){
 
 void makeFrame(SDL_Renderer *renderer){
 
+    //Creates the font
+    TTF_Init();
+    TTF_Font* Sans = TTF_OpenFont("OpenSans.ttf", 24);
+    if(Sans == NULL)
+        printf("No font!");
+    SDL_Color Black = {0, 0, 0};
+    SDL_Surface* surfaceMessage;
+    SDL_Texture* Message;
+
+    SDL_Rect Message_rect;
+    Message_rect.w = 54 * scaler;
+    Message_rect.h = 12 * scaler;
+
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
     SDL_Rect rect = { distToBoxWidth, distToBoxHeight, boxWidth, boxHeight};
     SDL_RenderDrawRect(renderer, &rect);
@@ -103,18 +116,39 @@ void makeFrame(SDL_Renderer *renderer){
     //are there to correct the differences between some values
 
     int i;
-    for(i = 1; i <= 4; i++){
+    for(i = 0; i <= 5; i++){
         drawLine(renderer, distToBoxWidth + i*distBetweenLinesBot - 1, distToBoxWidth + i*distBetweenLinesBot - 1,
                  boxHeight + distToBoxHeight - smallLine - 1, boxHeight + distToBoxHeight - 1);
         drawLine(renderer, distToBoxWidth + i*distBetweenLinesBot - 1, distToBoxWidth + i*distBetweenLinesBot - 1,
                  distToBoxHeight + smallLine, distToBoxHeight);
+
+        surfaceMessage = TTF_RenderText_Solid(Sans, "23.5", Black);
+        Message = SDL_CreateTextureFromSurface(renderer, surfaceMessage);
+
+        Message_rect.x = distToBoxWidth - Message_rect.w/2 + i*distBetweenLinesBot;
+        Message_rect.y = distToBoxHeight + boxHeight + 10;
+
+        SDL_RenderCopy(renderer, Message, NULL, &Message_rect);
     }
 
     for(i = 1; i <= 10; i++){
         drawLine(renderer, distToBoxWidth, distToBoxWidth + smallLine, distToBoxHeight + i*distBetweenLinesLeft - 1, distToBoxHeight + i*distBetweenLinesLeft - 1);
         drawLine(renderer, distToBoxWidth + boxWidth - 2 - smallLine, distToBoxWidth + boxWidth - 1,
                  distToBoxHeight + i*distBetweenLinesLeft - 1, distToBoxHeight + i*distBetweenLinesLeft - 1);
+
+        surfaceMessage = TTF_RenderText_Solid(Sans, "23.5", Black);
+        Message = SDL_CreateTextureFromSurface(renderer, surfaceMessage);
+
+        Message_rect.x = distToBoxWidth - Message_rect.w - 14;
+        Message_rect.y = distToBoxHeight + i*distBetweenLinesLeft - Message_rect.h/2;
+
+        SDL_RenderCopy(renderer, Message, NULL, &Message_rect);
     }
+
+
+
+
+
 
 }
 
@@ -131,11 +165,11 @@ int relativePozY(double y){
 void showMap(int showPath){
     initValues();
 
+    //Creates the map
     SDL_Init(SDL_INIT_VIDEO);
-
     SDL_Window *window = SDL_CreateWindow("Map", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_OPENGL);
-
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+
 
     int running = 1;
     SDL_Event event;
@@ -152,31 +186,30 @@ void showMap(int showPath){
     extern Nodes listOfNodes;
     extern Links listOfLinks;
 
-    while(running && !showPath){
 
-        while(SDL_PollEvent(&event))
-            if(event.type == SDL_QUIT)
-                running = 0;
-
-        //Draws all the points
+    if(!showPath){
         SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
-
-
 
         //Draw the points
         for(i = 0; i < listOfNodes.numberOfNodes; i++)
             drawPoint(relativePozX(listOfNodes.nodes[i].lon), relativePozY(listOfNodes.nodes[i].lat), renderer);
 
-
-
         for(i = 0; i < listOfLinks.numberOfLinks; i++)
             drawLine(renderer, relativePozX(listOfLinks.links[i].node1.lon), relativePozX(listOfLinks.links[i].node2.lon),
-                     relativePozY(listOfLinks.links[i].node1.lat), relativePozY(listOfLinks.links[i].node2.lat));
+                relativePozY(listOfLinks.links[i].node1.lat), relativePozY(listOfLinks.links[i].node2.lat));
 
         //Shows what was drawn
         SDL_RenderPresent(renderer);
 
+        while(running){
+            while(SDL_PollEvent(&event))
+                if(event.type == SDL_QUIT)
+                    running = 0;
+        }
+
     }
+
+
     if(showPath)
         animatePath(renderer);
 
