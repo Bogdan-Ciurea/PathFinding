@@ -46,8 +46,8 @@ void initValues(){
     distFromBoxWidth = 20 * scaler;
     distFromBoxHeight = 40 * scaler;
     smallLine = 5 * scaler;
-    distBetweenLinesBot = mapWidth/5;
-    distBetweenLinesLeft = mapHeight/10;
+    distBetweenLinesBot = mapWidth/4;
+    distBetweenLinesLeft = mapHeight/9;
     boxWidth = 500 * scaler;
     boxHeight = 420 * scaler;
 }
@@ -95,6 +95,10 @@ void drawLine(SDL_Renderer *renderer, int x1, int x2, int y1, int y2){
 
 void makeFrame(SDL_Renderer *renderer){
 
+    char num[100];
+    float heightDist =  (maxLat - minLat)/9, widthDist = (maxLon - minLon)/4;
+
+
     //Creates the font
     TTF_Init();
     TTF_Font* Sans = TTF_OpenFont("OpenSans.ttf", 24);
@@ -116,40 +120,38 @@ void makeFrame(SDL_Renderer *renderer){
     //are there to correct the differences between some values
 
     int i;
-    for(i = 0; i <= 5; i++){
-        drawLine(renderer, distToBoxWidth + i*distBetweenLinesBot - 1, distToBoxWidth + i*distBetweenLinesBot - 1,
+    for(i = 0; i < 5; i++){
+        drawLine(renderer, distToBoxWidth + i*distBetweenLinesBot + distFromBoxWidth, distToBoxWidth + distFromBoxWidth + i*distBetweenLinesBot,
                  boxHeight + distToBoxHeight - smallLine - 1, boxHeight + distToBoxHeight - 1);
-        drawLine(renderer, distToBoxWidth + i*distBetweenLinesBot - 1, distToBoxWidth + i*distBetweenLinesBot - 1,
+        drawLine(renderer, distToBoxWidth + i*distBetweenLinesBot + distFromBoxWidth, distToBoxWidth + i*distBetweenLinesBot + distFromBoxWidth,
                  distToBoxHeight + smallLine, distToBoxHeight);
 
-        surfaceMessage = TTF_RenderText_Solid(Sans, "23.5", Black);
+
+        sprintf(num, "%lf", minLon + i*widthDist);
+        surfaceMessage = TTF_RenderText_Solid(Sans, num, Black);
         Message = SDL_CreateTextureFromSurface(renderer, surfaceMessage);
 
-        Message_rect.x = distToBoxWidth - Message_rect.w/2 + i*distBetweenLinesBot;
+        Message_rect.x = distToBoxWidth - Message_rect.w/2 + i*distBetweenLinesBot + distFromBoxWidth;
         Message_rect.y = distToBoxHeight + boxHeight + 10;
 
         SDL_RenderCopy(renderer, Message, NULL, &Message_rect);
     }
 
-    for(i = 1; i <= 10; i++){
-        drawLine(renderer, distToBoxWidth, distToBoxWidth + smallLine, distToBoxHeight + i*distBetweenLinesLeft - 1, distToBoxHeight + i*distBetweenLinesLeft - 1);
+    for(i = 0; i < 10; i++){
+        drawLine(renderer, distToBoxWidth, distToBoxWidth + smallLine,
+                 distToBoxHeight + i*distBetweenLinesLeft + distFromBoxHeight, distToBoxHeight + i*distBetweenLinesLeft + distFromBoxHeight);
         drawLine(renderer, distToBoxWidth + boxWidth - 2 - smallLine, distToBoxWidth + boxWidth - 1,
-                 distToBoxHeight + i*distBetweenLinesLeft - 1, distToBoxHeight + i*distBetweenLinesLeft - 1);
+                 distToBoxHeight + i*distBetweenLinesLeft + distFromBoxHeight, distToBoxHeight + i*distBetweenLinesLeft + distFromBoxHeight);
 
-        surfaceMessage = TTF_RenderText_Solid(Sans, "23.5", Black);
+        sprintf(num, "%lf", minLat + i*heightDist);
+        surfaceMessage = TTF_RenderText_Solid(Sans, num, Black);
         Message = SDL_CreateTextureFromSurface(renderer, surfaceMessage);
 
         Message_rect.x = distToBoxWidth - Message_rect.w - 14;
-        Message_rect.y = distToBoxHeight + i*distBetweenLinesLeft - Message_rect.h/2;
+        Message_rect.y = distToBoxHeight + i*distBetweenLinesLeft - Message_rect.h/2 + distFromBoxHeight;
 
         SDL_RenderCopy(renderer, Message, NULL, &Message_rect);
     }
-
-
-
-
-
-
 }
 
 //Shows the relative position to the window that we want to show
@@ -170,10 +172,8 @@ void showMap(int showPath){
     SDL_Window *window = SDL_CreateWindow("Map", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_OPENGL);
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
-
     int running = 1;
     SDL_Event event;
-
 
     //The main window
     SDL_SetRenderDrawColor(renderer, 255, 255 ,255, 255);
@@ -185,7 +185,6 @@ void showMap(int showPath){
     int i;
     extern Nodes listOfNodes;
     extern Links listOfLinks;
-
 
     if(!showPath){
         SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
@@ -206,16 +205,13 @@ void showMap(int showPath){
                 if(event.type == SDL_QUIT)
                     running = 0;
         }
-
     }
-
 
     if(showPath)
         animatePath(renderer);
 
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
-    //TTF_Quit();
+    TTF_Quit();
     SDL_Quit();
-
 }
