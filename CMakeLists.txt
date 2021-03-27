@@ -14,17 +14,17 @@ set(CMAKE_C_FLAGS "-std=c99 -fdump-rtl-expand")
 include_directories(unity/include)
 include_directories(unity/src)
 
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/Final_Map.map
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets/Final_Map.map
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/SDL2.dll
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets/SDL2.dll
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/SDL2_ttf.dll
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets/SDL2_ttf.dll
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/libfreetype-6.dll
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets/libfreetype-6.dll
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/zlib1.dll
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets/zlib1.dll
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/OpenSans.ttf
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets/OpenSans.ttf
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(path main.c reading.c SDLFunctions.c Dijkstra.c BellmanFord.c globalFunctions.c)
