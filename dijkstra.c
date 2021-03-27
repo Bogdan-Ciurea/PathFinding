@@ -3,7 +3,7 @@
     School of Computing
     COMP1921 - Programming project
     Coursework 2
-    File: Dijkstra.c
+    File: dijkstra.c
     Student Name: Bogdan Alexandru Ciurea
     Student ID: 201438333
     Email: sc20bac@leeds.ac.uk
@@ -183,8 +183,7 @@ int dijkstra(int animation){
         SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255); //Blue
         drawPoint(relativePozX(listOfNodes.nodes[indexStart].lon), relativePozY(listOfNodes.nodes[indexStart].lat), renderer);
         SDL_RenderPresent(renderer);
-    }
-    
+    } 
 
 	// Step 1: Initialize pred[],distance[] and visited[]
 	for(i = 0; i < n; i++){

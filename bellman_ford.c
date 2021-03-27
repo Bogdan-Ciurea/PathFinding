@@ -3,7 +3,7 @@
     School of Computing
     COMP1921 - Programming project
     Coursework 2
-    File: BellmanFord.c
+    File: bellman_ford.c
     Student Name: Bogdan Alexandru Ciurea
     Student ID: 201438333
     Email: sc20bac@leeds.ac.uk
