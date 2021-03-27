@@ -37,7 +37,13 @@ extern Nodes pathOfNodes;
 extern Nodes listOfNodes;
 extern int indexStart, height, width, indexFinish;
 
-
+// The purpose of this function is to find the shortest distance from node x to node y using Bellman-Ford's Algorith
+// If the function worked properly, and the path is found, then it will return 1 indicating succes
+// If the function did not work as intended, it will return 0 indicating an error
+// The function will have three steps:
+// Step 1: Initialize distances from the start node to all other nodes
+// Step 2: Relax all edges |listOfNodes.numberOfNodes| - 1 times 
+// Disclaimer!: The function is not ment fo find the path so it will just show the distance
 int bellmanFord(){
     initValues();
     SDL_Event event;
@@ -45,7 +51,7 @@ int bellmanFord(){
     int i, j, lastNode;
 	double distance[listOfNodes.numberOfNodes], weight;
 
-    // Step 1: Initialize distances from src to all other vertices
+    // Step 1: Initialize distances from the start node to all other nodes
     for (i = 0; i < listOfNodes.numberOfNodes; i++)
         distance[i] = DBL_MAX;
     distance[indexStart] = 0;
@@ -61,7 +67,7 @@ int bellmanFord(){
         }
     }
 
-    // Step 3: check for negative-weight cycles
+    // Step 3: Check for negative-weight cycles
     /*for (i = 0; i < listOfLinks.numberOfLinks; i++) {
         weight = listOfLinks.links[j].length;
         if (distance[listOfLinks.links[i].node1.matrixId] != DBL_MAX && distance[listOfLinks.links[i].node1.matrixId] + weight < distance[listOfLinks.links[i].node2.matrixId]) {

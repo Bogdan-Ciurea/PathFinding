@@ -26,7 +26,10 @@
 
 
 
-//A function that will check if a point exists
+// The purpose of this function is to see if a node has the given coordinates
+// The function will take two double variables, representing the x and y coordinates of the suposed node
+// If the given coordinates have a coresponding node, the function will return 1
+// If the given coordinates do not have a coresponding node, the function will return 0
 int nodeInNodes(double x, double y){
     extern Nodes listOfNodes;
     int i;
@@ -37,6 +40,9 @@ int nodeInNodes(double x, double y){
     return -1;
 }
 
+// The purpose of this function is to chose two random nodes from the list
+// If the function worked properly, and the two random nodes where selected, then it will return 1 indicating succes
+// If the function did not work as intended, it will return 0 indicating an error
 int randomNodes(){
     extern int indexStart, indexFinish;
     extern Nodes listOfNodes;
@@ -52,6 +58,10 @@ int randomNodes(){
     return 1;
 }
 
+// The purpose of this function is to see if the input is a number or not
+// The function will take a char pointer as a parameter
+// If the input is a number, the function will return 1
+// If the input is not a number, the function will return 0
 int inputIsNumber(char* input){
     int i;
     for(i = 0; i < strlen(input); i++){
@@ -66,7 +76,13 @@ int inputIsNumber(char* input){
     return 1;
 }
 
-//A function that will read the coordinates and validate them
+//The function that will get the two points' coordinates
+// The purpose of this function is to get the two nodes  
+// If the function worked properly, and the nodes have been read successfully, then it will return 1 indicating succes
+// If the function did not work as intended, it will return 0 indicating an error
+// The user will be asked to give the coordinates of the nodes
+// The function will read the input and validate it (if it is a number)
+// If the input is valid the function will try to find the nodes
 int getCoordinatesStFin(){
     extern int indexStart, indexFinish;
     double x, y;
@@ -134,6 +150,10 @@ int getCoordinatesStFin(){
     return 1;
 }
 
+// The purpose of this function is to find the distance between two nodes that are connected with one edge
+// The function will take two integers as parameters. These parameters represent the matrixId.
+// If the function worked properly, and the node have an edge connecting them, then it will return the weight of the edge indicating succes
+// If the function did not work as intended, it will return DBL_MAX indicating an error
 double distBetweenNodes(int node1, int node2){
     int i;
     extern Links listOfLinks;
@@ -146,7 +166,9 @@ double distBetweenNodes(int node1, int node2){
     return DBL_MAX;
 }
 
-
+// The purpose of this function is to wait a specific number of seconds
+// The function will take one float value as a parameter, this representing the seconds we want to wait
+// It is an equivalent of time.sleep in python
 void wait(float seconds){
     #ifdef _WIN32
     Sleep(1000 * seconds);
@@ -155,6 +177,9 @@ void wait(float seconds){
     #endif
 }
 
+// The purpose of this function is to add information to the pathOfNodes from the listOfNodes
+// After the path is build, it will only store the id in matrix of each node
+// So, we add the information to the pathOfNodes
 void completePath(){
     extern Nodes pathOfNodes;
     extern Nodes listOfNodes;

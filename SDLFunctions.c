@@ -36,6 +36,7 @@ int distBetweenLinesLeft;
 int boxWidth;
 int boxHeight;
 
+// The purpose of this function is to initialize the sizes of the lines, boxes etc to build the frame
 void initValues(){
     width = 640 * scaler;
     mapWidth = 421 * scaler;
@@ -55,7 +56,9 @@ void initValues(){
 extern double maxLat, maxLon, minLat, minLon;
 extern Nodes pathOfNodes;
 
-//Shows the points in a star like formation
+// The purpose of this function is to draw a small star around a node
+// The third parameter will be an SDL_Renderer pointer
+// The first and second parameters will be the x and y coordinates of the node
 void drawPoint(int x, int y, SDL_Renderer *renderer){
     SDL_RenderDrawPoint(renderer, x, y);
 
@@ -88,11 +91,16 @@ void drawPoint(int x, int y, SDL_Renderer *renderer){
     SDL_RenderDrawPoint(renderer, x, y + 3);
 }
 
-// Draws a line between two points
+// The purpose of this function is to draw a line between two nodes
+// The first parameter will be an SDL_Renderer pointer
+// The second and forth parameters will be the x and y coordinates of the first node
+// The third and fith parameters will be the x and y coordinates of the second node
 void drawLine(SDL_Renderer *renderer, int x1, int x2, int y1, int y2){
     SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
 }
 
+// The purpose of this function is to draw the boxes, lines and numbers
+// The function will take take an SDL_Renderer pointer as a parameter 
 void makeFrame(SDL_Renderer *renderer){
 
     char num[100];
@@ -157,16 +165,23 @@ void makeFrame(SDL_Renderer *renderer){
     }
 }
 
-//Shows the relative position to the window that we want to show
+// The purpose of this function is to give the position of a node relative to the window that we render
+// The function will take one double value as a parameter, this representing the longitude of the node
+// The function will return the integer value of the relative value to the window
 int relativePozX(double x){
     return (int) ((x - minLon)*mapWidth/(maxLon-minLon) + distToBoxWidth + distFromBoxWidth);
 }
 
+// The purpose of this function is to give the position of a node relative to the window that we render
+// The function will take one double value as a parameter, this representing the latitude of the node
+// The function will return the integer value of the relative value to the window
 int relativePozY(double y){
     return (int) (height - ((y - minLat)*mapHeight/(maxLat-minLat) + distToBoxHeight + distFromBoxHeight));
 }
 
-//Draws the map
+// The purpose of this function is to show the map of the nodes and edges
+// The function will take an integer as a parameter, this representing if the function should also show the path
+// If the user has read two points, these two points will be colored black
 void showMap(int showPath){
     initValues();
 

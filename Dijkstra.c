@@ -41,6 +41,9 @@ extern Links listOfLinks;
 extern Nodes pathOfNodes;
 extern Nodes listOfNodes;
 
+
+// The purpose of this function is to draw the first state of the frame (red dots and edges and the legend)
+// This function will take an SDL_Renderer pointer as a parameter 
 void drawInitialFrame(SDL_Renderer *renderer){
     int i;
 
@@ -52,42 +55,47 @@ void drawInitialFrame(SDL_Renderer *renderer){
         drawLine(renderer, relativePozX(listOfLinks.links[i].node1.lon), relativePozX(listOfLinks.links[i].node2.lon),
             relativePozY(listOfLinks.links[i].node1.lat), relativePozY(listOfLinks.links[i].node2.lat));
 
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); //Black
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); //Color is Black
     drawPoint(listOfNodes.nodes[indexFinish].lon);
     drawPoint(relativePozX(listOfNodes.nodes[indexStart].lon), relativePozY(listOfNodes.nodes[indexStart].lat), renderer);
     drawPoint(relativePozX(listOfNodes.nodes[indexFinish].lon), relativePozY(listOfNodes.nodes[indexFinish].lat), renderer);
-    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255); //Red
+    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255); //Color is Red
 
     //Draw the initial state of the frame
     SDL_RenderPresent(renderer);
 }
 
+// The purpose of this function is to make an animation of the path from node x to node y
+// This function will take an SDL_Renderer pointer as a parameter
+// The animation will consist of two parts:
+// The first part is to connect every pont, from node x to node y
+// The second part is to make the nodes flash, in a blue color there, three times
 void animatePath(SDL_Renderer *renderer){
     int running = 1, i, j;
     SDL_Event event;
 
-    //Show the path with a green color
+    // Show the path with a blue color
 
-    //Clear the rendered image and render one from scratch
+    // Clear the rendered image and render one from scratch
     SDL_SetRenderDrawColor(renderer, 255, 255 ,255, 255);
     SDL_RenderClear(renderer);
-    makeFrame(renderer); //Draw the plot (color is black)
+    makeFrame(renderer); // Draw the plot (color is black)
 
     while(running){
 
         SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255); // Color is red
         drawInitialFrame(renderer);
 
-        //Draw the path with a blue color
+        // Draw the path with a blue color
         SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
 
-        //drawPoint(relativePozX(pathOfNodes.nodes[pathOfNodes.numberOfNodes - 1].lon), relativePozY(pathOfNodes.nodes[pathOfNodes.numberOfNodes - 1].lat),renderer);
-
+        // First part
         for(i = pathOfNodes.numberOfNodes - 1; i > 0 && running == 1 ; i--){
-            while(SDL_PollEvent(&event))
+            while(SDL_PollEvent(&event)) // Checks if the window is closed
                 if(event.type == SDL_QUIT)
                     running = 0;
 
+            
             drawPoint(relativePozX(pathOfNodes.nodes[i].lon), relativePozY(pathOfNodes.nodes[i].lat),renderer);
             drawLine(renderer, relativePozX(pathOfNodes.nodes[i - 1].lon), relativePozX(pathOfNodes.nodes[i].lon),
                 relativePozY(pathOfNodes.nodes[i - 1].lat), relativePozY(pathOfNodes.nodes[i].lat));
@@ -96,8 +104,9 @@ void animatePath(SDL_Renderer *renderer){
             SDL_RenderPresent(renderer);
         }
 
+        // Second part
         for(j = 0; j < 3 && running == 1; j++){
-            while(SDL_PollEvent(&event))
+            while(SDL_PollEvent(&event)) // Checks if the window is closed
                 if(event.type == SDL_QUIT)
                     running = 0;
 
@@ -110,8 +119,9 @@ void animatePath(SDL_Renderer *renderer){
             SDL_RenderPresent(renderer);
             drawPoint(relativePozX(pathOfNodes.nodes[pathOfNodes.numberOfNodes - 1].lon), relativePozY(pathOfNodes.nodes[pathOfNodes.numberOfNodes - 1].lat),renderer);
 
+            // Draws all of the points
             for(i = pathOfNodes.numberOfNodes - 2; i > 0 && running == 1 ; i--){
-                while(SDL_PollEvent(&event))
+                while(SDL_PollEvent(&event)) // Checks if the window is closed
                     if(event.type == SDL_QUIT)
                         running = 0;
 
@@ -127,6 +137,15 @@ void animatePath(SDL_Renderer *renderer){
     }
 }
 
+// The purpose of this function is to find the shortest path and shortest distance from node x to node y using Dijkstra's Algorith
+// The function will take an integer as a parameter. This value indicates if the user wants to see how the algorithm works
+// If the function worked properly, and the path is found, then it will return 1 indicating succes
+// If the function did not work as intended, it will return 0 indicating an error
+// The function will have three steps:
+// Step 1: Initialise the predecesor, the distance and the visited matrices
+// Step 2: Relax all the edges
+// Step 3: Make the path
+// If the user chooses to see the animation, during the 2nd step, the viseded nodes will be collored in blue and the comared one in green
 int dijkstra(int animation){
     // Initialize the variables
     initValues();
@@ -191,7 +210,7 @@ int dijkstra(int animation){
 				nextnode = i;
 
 				if(animation){
-                    while(SDL_PollEvent(&event))
+                    while(SDL_PollEvent(&event)) // Checks if the window is closed
                         if(event.type == SDL_QUIT){
                             SDL_DestroyRenderer(renderer);
                             SDL_DestroyWindow(window);
