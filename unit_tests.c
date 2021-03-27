@@ -53,7 +53,6 @@ void test_reading_nodes(){
 
     TEST_ASSERT_MESSAGE( nodeInNodes(53.801600, -1.564000) == -1, "Node does not exist!" ); //node at the edge
     TEST_ASSERT_MESSAGE( nodeInNodes(100, -1) == -1,"Node does not exist!" ); //node outside
-    TEST_ASSERT_MESSAGE( nodeInNodes("123", "123") == -1,"Node does not exist!" ); //not number
     TEST_ASSERT_MESSAGE( nodeInNodes(53.802060, -1.547648) == -1,"Node does not exist!" ); //node inside
 
     TEST_ASSERT_MESSAGE( nodeInNodes(53.802724, -1.548592) != -1, "Node exists!" );
@@ -68,7 +67,7 @@ void test_nonexistent_file(){
 }
 
 void setUp(){
-    
+
 }
 void tearDown(){
 

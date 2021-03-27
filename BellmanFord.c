@@ -27,8 +27,8 @@ yes
 #include <stdlib.h>
 #include <float.h>
 
-#include <SDL.h>
-#include <SDL_image.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 
 #include "functions.h"
 
@@ -42,7 +42,7 @@ extern int indexStart, height, width, indexFinish;
 // If the function did not work as intended, it will return 0 indicating an error
 // The function will have three steps:
 // Step 1: Initialize distances from the start node to all other nodes
-// Step 2: Relax all edges |listOfNodes.numberOfNodes| - 1 times 
+// Step 2: Relax all edges |listOfNodes.numberOfNodes| - 1 times
 // Disclaimer!: The function is not ment fo find the path so it will just show the distance
 int bellmanFord(){
     initValues();

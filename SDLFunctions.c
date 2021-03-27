@@ -10,9 +10,9 @@
     Date Work Commenced: 3rd Mar 2021
 *************************************************************************/
 
-#include <SDL.h>
-#include <SDL_image.h>
-#include <SDL_ttf.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
+#include <SDL2/SDL_ttf.h>
 
 #include <string.h>
 #include <stdio.h>
@@ -100,7 +100,7 @@ void drawLine(SDL_Renderer *renderer, int x1, int x2, int y1, int y2){
 }
 
 // The purpose of this function is to draw the boxes, lines and numbers
-// The function will take take an SDL_Renderer pointer as a parameter 
+// The function will take take an SDL_Renderer pointer as a parameter
 void makeFrame(SDL_Renderer *renderer){
 
     char num[100];

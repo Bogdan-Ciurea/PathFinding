@@ -16,8 +16,8 @@
 #include <stdlib.h>
 #include <float.h>
 
-#include <SDL.h>
-#include <SDL_image.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 
 #include "functions.h"
 /*
@@ -43,7 +43,7 @@ extern Nodes listOfNodes;
 
 
 // The purpose of this function is to draw the first state of the frame (red dots and edges and the legend)
-// This function will take an SDL_Renderer pointer as a parameter 
+// This function will take an SDL_Renderer pointer as a parameter
 void drawInitialFrame(SDL_Renderer *renderer){
     int i;
 
@@ -95,7 +95,7 @@ void animatePath(SDL_Renderer *renderer){
                 if(event.type == SDL_QUIT)
                     running = 0;
 
-            
+
             drawPoint(relativePozX(pathOfNodes.nodes[i].lon), relativePozY(pathOfNodes.nodes[i].lat),renderer);
             drawLine(renderer, relativePozX(pathOfNodes.nodes[i - 1].lon), relativePozX(pathOfNodes.nodes[i].lon),
                 relativePozY(pathOfNodes.nodes[i - 1].lat), relativePozY(pathOfNodes.nodes[i].lat));
