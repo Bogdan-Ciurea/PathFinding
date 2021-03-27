@@ -19,13 +19,14 @@
 	<SDL_image.h>
 	"functions.h"
 
-1616766113 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\globalfunctions.c
+1616848650 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\globalfunctions.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
 	<float.h>
-	<time.h>
 	<math.h>
+	<windows.h>
+	<unistd.h>
 	"functions.h"
 
 1616766161 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\main.c

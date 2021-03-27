@@ -17,7 +17,7 @@
 #include <math.h>
 
 #ifdef _WIN32
-#include <time.h>
+#include <windows.h>
 #else
 #include <unistd.h>
 #endif
@@ -149,12 +149,9 @@ double distBetweenNodes(int node1, int node2){
 
 void wait(float seconds){
     #ifdef _WIN32
-    float millSec = 1000 * seconds;
-    clock_t startTime = clock();
-
-    while(clock() < startTime + millSec){}
+    Sleep(1000 * seconds);
     #else
-    Sleep(seconds);
+    usleep(1000000 * seconds);
     #endif
 }
 
