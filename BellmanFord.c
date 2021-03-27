@@ -42,17 +42,13 @@ int bellmanFord(){
     initValues();
     SDL_Event event;
 
-
     int i, j, lastNode;
 	double distance[listOfNodes.numberOfNodes], weight;
-
 
     // Step 1: Initialize distances from src to all other vertices
     for (i = 0; i < listOfNodes.numberOfNodes; i++)
         distance[i] = DBL_MAX;
     distance[indexStart] = 0;
-
-
 
     // Step 2: Relax all edges |listOfNodes.numberOfNodes| - 1 times
     for (i = 1; i < listOfNodes.numberOfNodes; i++) {
@@ -63,7 +59,6 @@ int bellmanFord(){
             else if (distance[listOfLinks.links[j].node2.matrixId] != DBL_MAX && distance[listOfLinks.links[j].node2.matrixId] + weight < distance[listOfLinks.links[j].node1.matrixId])
                 distance[listOfLinks.links[j].node1.matrixId] = distance[listOfLinks.links[j].node2.matrixId] + weight;
         }
-
     }
 
     // Step 3: check for negative-weight cycles

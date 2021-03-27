@@ -14,8 +14,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <float.h>
+#include <math.h>
+
+#ifdef _WIN32
 #include <time.h>
+#else
+#include <unistd.h>
+#endif
+
 #include "functions.h"
+
+
 
 //A function that will check if a point exists
 int nodeInNodes(double x, double y){
@@ -26,6 +35,21 @@ int nodeInNodes(double x, double y){
             return listOfNodes.nodes[i].matrixId;
     printf("Node not found! Try again.\n");
     return -1;
+}
+
+int randomNodes(){
+    extern int indexStart, indexFinish;
+    extern Nodes listOfNodes;
+
+    indexStart = rand()%listOfNodes.numberOfNodes;
+    indexFinish = rand()%listOfNodes.numberOfNodes;
+    indexStart = rand()%listOfNodes.numberOfNodes;
+    indexFinish = rand()%listOfNodes.numberOfNodes;
+    while(indexStart == indexFinish){
+        indexFinish = rand()%listOfNodes.numberOfNodes;
+    }
+
+    return 1;
 }
 
 int inputIsNumber(char* input){
@@ -124,12 +148,14 @@ double distBetweenNodes(int node1, int node2){
 
 
 void wait(float seconds){
-    int millSec = 1000 * seconds;
+    #ifdef _WIN32
+    float millSec = 1000 * seconds;
     clock_t startTime = clock();
 
-    while(clock() < startTime + millSec){
-
-    }
+    while(clock() < startTime + millSec){}
+    #else
+    Sleep(seconds);
+    #endif
 }
 
 void completePath(){

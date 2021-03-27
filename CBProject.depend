@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1616684667 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\bellmanford.c
+1616766087 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\bellmanford.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -8,9 +8,9 @@
 	<SDL_image.h>
 	"functions.h"
 
-1616620149 c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\functions.h
+1616764458 c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\functions.h
 
-1616684676 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\dijkstra.c
+1616845924 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\dijkstra.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -19,15 +19,16 @@
 	<SDL_image.h>
 	"functions.h"
 
-1616620588 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\globalfunctions.c
+1616766113 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\globalfunctions.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
 	<float.h>
 	<time.h>
+	<math.h>
 	"functions.h"
 
-1616669349 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\main.c
+1616766161 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\main.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -40,7 +41,7 @@
 	<stdlib.h>
 	"functions.h"
 
-1616694483 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\sdlfunctions.c
+1616845422 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\sdlfunctions.c
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_ttf.h>

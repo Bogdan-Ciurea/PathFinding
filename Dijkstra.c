@@ -30,6 +30,11 @@ read nodes
 dijkstra
 yes
 
+Final_Map.map
+random nodes
+find path
+no
+
  */
 
 extern Links listOfLinks;
@@ -43,8 +48,6 @@ void drawInitialFrame(SDL_Renderer *renderer){
     for(i = 0; i < listOfNodes.numberOfNodes; i++)
         drawPoint(relativePozX(listOfNodes.nodes[i].lon), relativePozY(listOfNodes.nodes[i].lat), renderer);
 
-
-
     for(i = 0; i < listOfLinks.numberOfLinks; i++)
         drawLine(renderer, relativePozX(listOfLinks.links[i].node1.lon), relativePozX(listOfLinks.links[i].node2.lon),
             relativePozY(listOfLinks.links[i].node1.lat), relativePozY(listOfLinks.links[i].node2.lat));
@@ -57,13 +60,11 @@ void drawInitialFrame(SDL_Renderer *renderer){
 
     //Draw the initial state of the frame
     SDL_RenderPresent(renderer);
-
 }
 
 void animatePath(SDL_Renderer *renderer){
     int running = 1, i, j;
     SDL_Event event;
-
 
     //Show the path with a green color
 
@@ -71,8 +72,6 @@ void animatePath(SDL_Renderer *renderer){
     SDL_SetRenderDrawColor(renderer, 255, 255 ,255, 255);
     SDL_RenderClear(renderer);
     makeFrame(renderer); //Draw the plot (color is black)
-
-
 
     while(running){
 
@@ -82,9 +81,9 @@ void animatePath(SDL_Renderer *renderer){
         //Draw the path with a blue color
         SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
 
-        drawPoint(relativePozX(pathOfNodes.nodes[pathOfNodes.numberOfNodes - 1].lon), relativePozY(pathOfNodes.nodes[pathOfNodes.numberOfNodes - 1].lat),renderer);
+        //drawPoint(relativePozX(pathOfNodes.nodes[pathOfNodes.numberOfNodes - 1].lon), relativePozY(pathOfNodes.nodes[pathOfNodes.numberOfNodes - 1].lat),renderer);
 
-        for(i = pathOfNodes.numberOfNodes - 2; i > 0 && running ==1 ; i--){
+        for(i = pathOfNodes.numberOfNodes - 1; i > 0 && running == 1 ; i--){
             while(SDL_PollEvent(&event))
                 if(event.type == SDL_QUIT)
                     running = 0;
@@ -93,7 +92,7 @@ void animatePath(SDL_Renderer *renderer){
             drawLine(renderer, relativePozX(pathOfNodes.nodes[i - 1].lon), relativePozX(pathOfNodes.nodes[i].lon),
                 relativePozY(pathOfNodes.nodes[i - 1].lat), relativePozY(pathOfNodes.nodes[i].lat));
 
-            //wait(0.13);
+            wait(0.13);
             SDL_RenderPresent(renderer);
         }
 
@@ -104,7 +103,6 @@ void animatePath(SDL_Renderer *renderer){
 
             SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255); // Color is red
             drawInitialFrame(renderer);
-
 
             //Draw the path with a blue color
             SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
@@ -120,8 +118,6 @@ void animatePath(SDL_Renderer *renderer){
                 drawPoint(relativePozX(pathOfNodes.nodes[i].lon), relativePozY(pathOfNodes.nodes[i].lat),renderer);
                 drawLine(renderer, relativePozX(pathOfNodes.nodes[i - 1].lon), relativePozX(pathOfNodes.nodes[i].lon),
                     relativePozY(pathOfNodes.nodes[i - 1].lat), relativePozY(pathOfNodes.nodes[i].lat));
-
-
             }
             SDL_RenderPresent(renderer);
             wait(0.4);
@@ -176,16 +172,6 @@ int dijkstra(int animation){
 		distance[i] = distBetweenNodes(indexStart, i);
 		pred[i] = indexStart;
 		visited[i] = 0;
-
-		// Draw the pint in green and then change it to red
-		/*if(indexStart != i){
-            SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255); //Green
-            drawPoint(relativePozX(listOfNodes.nodes[i].lon), relativePozY(listOfNodes.nodes[i].lat), renderer);
-            SDL_RenderPresent(renderer);
-            //SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255); //Red
-            //drawPoint(relativePozX(listOfNodes.nodes[i].lon), relativePozY(listOfNodes.nodes[i].lat), renderer);
-        }*/
-
 	}
 
 	distance[indexStart] = 0;
@@ -197,7 +183,6 @@ int dijkstra(int animation){
 	while(count < n - 1 && visited[indexFinish] == 0){
 		mindistance = DBL_MAX;
         lastNode = nextnode;
-
 
 		//nextnode stores the node at the smallest distance
 		for(i = 0; i < n; i++){
@@ -221,17 +206,12 @@ int dijkstra(int animation){
                     SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255); //Red
                     drawPoint(relativePozX(listOfNodes.nodes[i].lon), relativePozY(listOfNodes.nodes[i].lat), renderer);
 				}
-
 			}
         }
 
         if(animation){
-
             SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255); //Blue
             drawPoint(relativePozX(listOfNodes.nodes[nextnode].lon), relativePozY(listOfNodes.nodes[nextnode].lat), renderer);
-            //printf("%i %i %i", lastNode, nextnode, listOfNodes.numberOfNodes);
-            //drawLine(renderer, relativePozX(listOfNodes.nodes[lastNode].lon), relativePozX(listOfNodes.nodes[nextnode].lon),
-                     //relativePozY(listOfNodes.nodes[lastNode].lat), relativePozY(listOfNodes.nodes[nextnode].lat));
         }
 
 
@@ -284,8 +264,6 @@ int dijkstra(int animation){
             // Animates the path with a green color
             animatePath(renderer);
         }
-
-
 	}
     else{
         printf("There is no connection between the two points");
@@ -297,10 +275,6 @@ int dijkstra(int animation){
         SDL_DestroyWindow(window);
         SDL_Quit();
     }
-
-
-
-
 
 	return 1;
 }

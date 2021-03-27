@@ -98,19 +98,18 @@ void makeFrame(SDL_Renderer *renderer){
     char num[100];
     float heightDist =  (maxLat - minLat)/9, widthDist = (maxLon - minLon)/4;
 
-
     //Creates the font
     TTF_Init();
     TTF_Font* Sans = TTF_OpenFont("OpenSans.ttf", 24);
-    if(Sans == NULL)
+    if(Sans == NULL){
         printf("No font!");
+    }
+
     SDL_Color Black = {0, 0, 0};
     SDL_Surface* surfaceMessage;
     SDL_Texture* Message;
 
     SDL_Rect Message_rect;
-    Message_rect.w = 54 * scaler;
-    Message_rect.h = 12 * scaler;
 
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
     SDL_Rect rect = { distToBoxWidth, distToBoxHeight, boxWidth, boxHeight};
@@ -128,6 +127,8 @@ void makeFrame(SDL_Renderer *renderer){
 
 
         sprintf(num, "%lf", minLon + i*widthDist);
+        Message_rect.w = strlen(num) * 6 * scaler;
+        Message_rect.h = strlen(num) * 3 * scaler;
         surfaceMessage = TTF_RenderText_Solid(Sans, num, Black);
         Message = SDL_CreateTextureFromSurface(renderer, surfaceMessage);
 
@@ -144,6 +145,8 @@ void makeFrame(SDL_Renderer *renderer){
                  distToBoxHeight + i*distBetweenLinesLeft + distFromBoxHeight, distToBoxHeight + i*distBetweenLinesLeft + distFromBoxHeight);
 
         sprintf(num, "%lf", minLat + i*heightDist);
+        Message_rect.w = strlen(num) * 6 * scaler;
+        Message_rect.h = strlen(num) * 3 * scaler;
         surfaceMessage = TTF_RenderText_Solid(Sans, num, Black);
         Message = SDL_CreateTextureFromSurface(renderer, surfaceMessage);
 
@@ -185,30 +188,44 @@ void showMap(int showPath){
     int i;
     extern Nodes listOfNodes;
     extern Links listOfLinks;
+    extern int hasReadNodes;
 
     if(!showPath){
         SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
 
         //Draw the points
-        for(i = 0; i < listOfNodes.numberOfNodes; i++)
+        for(i = 0; i < listOfNodes.numberOfNodes; i++){
             drawPoint(relativePozX(listOfNodes.nodes[i].lon), relativePozY(listOfNodes.nodes[i].lat), renderer);
+        }
 
-        for(i = 0; i < listOfLinks.numberOfLinks; i++)
+        for(i = 0; i < listOfLinks.numberOfLinks; i++){
             drawLine(renderer, relativePozX(listOfLinks.links[i].node1.lon), relativePozX(listOfLinks.links[i].node2.lon),
                 relativePozY(listOfLinks.links[i].node1.lat), relativePozY(listOfLinks.links[i].node2.lat));
+        }
+
+
+        if(hasReadNodes){
+            extern int indexStart, indexFinish;
+            SDL_SetRenderDrawColor(renderer, 0, 0 ,0 ,255);
+            drawPoint(relativePozX(listOfNodes.nodes[indexStart].lon), relativePozY(listOfNodes.nodes[indexStart].lat), renderer);
+            drawPoint(relativePozX(listOfNodes.nodes[indexFinish].lon), relativePozY(listOfNodes.nodes[indexFinish].lat), renderer);
+        }
 
         //Shows what was drawn
         SDL_RenderPresent(renderer);
 
         while(running){
-            while(SDL_PollEvent(&event))
-                if(event.type == SDL_QUIT)
+            while(SDL_PollEvent(&event)){
+                if(event.type == SDL_QUIT){
                     running = 0;
+                }
+            }
         }
     }
 
-    if(showPath)
+    if(showPath){
         animatePath(renderer);
+    }
 
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);

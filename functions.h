@@ -58,6 +58,7 @@ typedef struct{
 double minLat, maxLat, minLon, maxLon;
 int width, height;
 int indexStart, indexFinish;
+int hasReadNodes;
 Nodes listOfNodes;
 Nodes pathOfNodes;
 Links listOfLinks;
@@ -81,6 +82,9 @@ int relativePozX(double x);
 
 //Equivalent of time.sleep() in python it is used for making an animation
 void wait(float seconds);
+
+//Will chose two nodes from the map
+int randomNodes();
 
 //Completes adds the rest of the information to the path
 void completePath();

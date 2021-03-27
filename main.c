@@ -21,18 +21,20 @@
 void showAvailableCommands(int start){
     if(start){
     printf("You have the following commands:\n1) 'show' - to show the map\n2) 'read nodes' - to read the Start and Finish nodes\n");
-    printf("3) 'show path' - to view the shortest path | You first have to use an algorithm!\n");
-    printf("4) 'find path' - to find the path using Dijkstra's algorithm | You first have to read the two points\n");
-    printf("5) 'find distance' - to find the shortest distance (does not tell you the path) using Bellman-Ford algorithm | You first have to read the two points\n");
-    printf("6) 'exit' - to exit the program\n\n");
+    printf("3) 'random nodes' - will chose two random nodes from the map\n");
+    printf("4) 'show path' - to view the shortest path | You first have to use an algorithm!\n");
+    printf("5) 'find path' - to find the path using Dijkstra's algorithm | You first have to read the two nodes\n");
+    printf("6) 'find distance' - to find the shortest distance (does not tell you the path) using Bellman-Ford algorithm | You first have to read the two nodes\n");
+    printf("7) 'exit' - to exit the program\n\n");
     printf("Keep in mind that, for every algorithm, the distance will be showed in the CMD as well as the path\nThe path will also be displayed visually.\n");
     }
     else{
     printf("You have the following commands:\n1) 'show' - to show the map\n2) 'read nodes' - to read the Start and Finish nodes\n");
-    printf("3) 'show path' - to view the shortest path\n");
-    printf("4) 'find path' - to find the path\n");
-    printf("5) 'find distance' - to find the shortest distance\n");
-    printf("6) 'exit' - to exit the program\n");
+    printf("3) 'random nodes' - will chose two random nodes from the map\n");
+    printf("4) 'show path' - to view the shortest path\n");
+    printf("5) 'find path' - to find the path\n");
+    printf("6) 'find distance' - to find the shortest distance\n");
+    printf("7) 'exit' - to exit the program\n");
     }
 }
 
@@ -44,7 +46,6 @@ int main(void){
 
 	char path[50];
 	int a, answer;
-
 
 	//Reading the input for the file.
 	printf("Type the name of the file you want to open.\nBe careful to also type the extension of the file.\n");
@@ -60,13 +61,11 @@ int main(void){
 
     printf("File successfully read.\n\n");
 
-
-    int hasMadeAPath = 0, hasReadNodes = 0;
-
-
+    int hasMadeAPath = 0;
+    extern int hasReadNodes;
+    hasReadNodes = 0;
 
     showAvailableCommands(1);
-
 
     while(1){
         printf("\n>>>");
@@ -82,7 +81,15 @@ int main(void){
                 hasReadNodes = 1;
                 hasMadeAPath = 0;
             }
-
+        }
+        else if(!strcmp("random nodes", path)){
+            if(randomNodes()){
+                hasReadNodes = 1;
+                hasMadeAPath = 0;
+                printf("Nodes chosen successfully.\n");
+            }else{
+                printf("Error while choosing the nodes!\n");
+            }
         }
         else if(!strcmp("show path", path)){
             if(hasMadeAPath){
@@ -113,17 +120,13 @@ int main(void){
                 if(dijkstra(answer)){
                     hasMadeAPath = 1;
                 }
-
                 else{
                     printf("Error while applying Dijkstra.\n");
                 }
-
             }
             else{
                 printf("You first have to read the Start and Finish nodes.\n");
             }
-
-
         }
         else if(!strcmp("find distance", path)){
             if(hasReadNodes){
@@ -131,19 +134,16 @@ int main(void){
                 if(!bellmanFord()){
                     printf("Error while applying Bellman-Ford.\n");
                 }
-
             }
             else{
                 printf("You first have to read the Start and Finish nodes.\n");
             }
-
         }
         else{
             printf("Unrecognised command!\n");
         }
 
         printf("\n");showAvailableCommands(0);
-
     }
 
 	return 0;
