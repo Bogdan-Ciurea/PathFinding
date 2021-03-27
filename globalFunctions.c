@@ -28,8 +28,8 @@
 
 // The purpose of this function is to see if a node has the given coordinates
 // The function will take two double variables, representing the x and y coordinates of the suposed node
-// If the given coordinates have a coresponding node, the function will return 1
-// If the given coordinates do not have a coresponding node, the function will return 0
+// If the given coordinates have a coresponding node, the function will return the index if the node the coordinates corespond with
+// If the given coordinates do not have a coresponding node, the function will return -1
 int nodeInNodes(double x, double y){
     extern Nodes listOfNodes;
     int i;
@@ -47,12 +47,12 @@ int randomNodes(){
     extern int indexStart, indexFinish;
     extern Nodes listOfNodes;
 
-    indexStart = rand()%listOfNodes.numberOfNodes;
-    indexFinish = rand()%listOfNodes.numberOfNodes;
-    indexStart = rand()%listOfNodes.numberOfNodes;
-    indexFinish = rand()%listOfNodes.numberOfNodes;
+    indexStart = rand()%(listOfNodes.numberOfNodes - 1);
+    indexFinish = rand()%(listOfNodes.numberOfNodes - 1);
+    indexStart = rand()%(listOfNodes.numberOfNodes - 1);
+    indexFinish = rand()%(listOfNodes.numberOfNodes - 1);
     while(indexStart == indexFinish){
-        indexFinish = rand()%listOfNodes.numberOfNodes;
+        indexFinish = rand()%(listOfNodes.numberOfNodes - 1);
     }
 
     return 1;

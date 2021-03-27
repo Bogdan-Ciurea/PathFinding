@@ -94,6 +94,12 @@ void wait(float seconds);
 //The function that will choose two random nodes from the map if the user does not want to input two points
 int randomNodes();
 
+// The purpose of this function is to see if a node has the given coordinates
+// The function will take two double variables, representing the x and y coordinates of the suposed node
+// If the given coordinates have a coresponding node, the function will return the index if the node the coordinates corespond with
+// If the given coordinates do not have a coresponding node, the function will return -1
+int nodeInNodes(double x, double y);
+
 // The purpose of this function is to add information to the pathOfNodes from the listOfNodes
 // After the path is build, it will only store the id in matrix of each node
 // So, we add the information to the pathOfNodes
