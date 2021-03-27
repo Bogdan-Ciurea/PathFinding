@@ -1,0 +1,2 @@
+/home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/build/CMakeFiles/path.dir
+/home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/build/CMakeFiles/unit_tests.dir

@@ -20,6 +20,8 @@ file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets/SDL2.dll
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets/SDL2_ttf.dll
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets/SDL2_image.dll
+     DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets/libfreetype-6.dll
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets/zlib1.dll
@@ -27,8 +29,8 @@ file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets/zlib1.dll
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets/OpenSans.ttf
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
-add_executable(path main.c reading.c SDLFunctions.c Dijkstra.c BellmanFord.c globalFunctions.c)
-add_executable(unit_tests unit_tests.c reading.c SDLFunctions.c Dijkstra.c BellmanFord.c globalFunctions.c unity/src/unity.c)
+add_executable(path main.c reading.c sdl_functions.c dijkstra.c bellman_ford.c globalFunctions.c)
+add_executable(unit_tests unit_tests.c reading.c sdl_functions.c dijkstra.c bellman_ford.c globalFunctions.c unity/src/unity.c)
 
 target_include_directories(path PRIVATE include ${SDL2_INCLUDE_DIRS} ${SDL2IMAGE_INCLUDE_DIRS} ${SDL2TTF_INCLUDE_DIRS})
 target_link_libraries(path PRIVATE ${SDL2_LIBRARIES} ${SDL2IMAGE_LIBRARIES} ${SDL2TTF_LIBRARIES})

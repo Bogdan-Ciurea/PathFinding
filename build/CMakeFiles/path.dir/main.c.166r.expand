@@ -1,0 +1,1349 @@
+
+;; Function showAvailableCommands (showAvailableCommands, funcdef_no=0, decl_uid=2195, cgraph_uid=0)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 23 from 6 to 7.
+Merging block 6 into block 5...
+Merged blocks 5 and 6.
+Merged 5 and 6 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 start+0 S4 A32])
+        (reg:SI 5 di [ start ])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:22 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [0 start+0 S4 A32])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:23 -1
+     (nil))
+(jump_insn 7 6 8 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 25)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:23 -1
+     (nil)
+ -> 25)
+(note 8 7 9 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 9 8 10 4 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7feeae7cf4c0 *.LC0>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:24 -1
+     (nil))
+(call_insn 10 9 11 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:24 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 11 10 12 4 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7feeae7cf558 *.LC1>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:25 -1
+     (nil))
+(call_insn 12 11 13 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:25 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 13 12 14 4 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7feeae7cf5f0 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:26 -1
+     (nil))
+(call_insn 14 13 15 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:26 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 15 14 16 4 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7feeae7cf688 *.LC3>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:27 -1
+     (nil))
+(call_insn 16 15 17 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:27 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 17 16 18 4 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7feeae7cf720 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:28 -1
+     (nil))
+(call_insn 18 17 19 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:28 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 19 18 20 4 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7feeae7cf7b8 *.LC5>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:29 -1
+     (nil))
+(call_insn 20 19 21 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:29 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 21 20 22 4 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7feeae7cf850 *.LC6>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:30 -1
+     (nil))
+(call_insn 22 21 23 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:30 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(jump_insn 23 22 24 4 (set (pc)
+        (label_ref:DI 41)) 650 {jump}
+     (nil)
+ -> 41)
+(barrier 24 23 25)
+(code_label 25 24 26 5 2 "" [1 uses])
+(note 26 25 27 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 5 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7feeae7cf4c0 *.LC0>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:33 -1
+     (nil))
+(call_insn 28 27 29 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:33 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 29 28 30 5 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7feeae7cf558 *.LC1>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:34 -1
+     (nil))
+(call_insn 30 29 31 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:34 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 31 30 32 5 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x7feeae7cf8e8 *.LC7>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:35 -1
+     (nil))
+(call_insn 32 31 33 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:35 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 33 32 34 5 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x7feeae7cf980 *.LC8>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:36 -1
+     (nil))
+(call_insn 34 33 35 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:36 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 35 34 36 5 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x7feeae7cfa18 *.LC9>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:37 -1
+     (nil))
+(call_insn 36 35 37 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:37 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 37 36 38 5 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x7feeae7cfab0 *.LC10>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:38 -1
+     (nil))
+(call_insn 38 37 41 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:38 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(code_label 41 38 42 7 1 "" [1 uses])
+(note 42 41 0 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+
+;; Function main (main, funcdef_no=1, decl_uid=2198, cgraph_uid=1)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+
+;; Generating RTL for gimple basic block 20
+
+;; Generating RTL for gimple basic block 21
+
+;; Generating RTL for gimple basic block 22
+
+;; Generating RTL for gimple basic block 23
+
+;; Generating RTL for gimple basic block 24
+
+;; Generating RTL for gimple basic block 25
+
+;; Generating RTL for gimple basic block 26
+
+;; Generating RTL for gimple basic block 27
+
+;; Generating RTL for gimple basic block 28
+
+;; Generating RTL for gimple basic block 29
+
+;; Generating RTL for gimple basic block 30
+
+;; Generating RTL for gimple basic block 31
+
+;; Generating RTL for gimple basic block 32
+
+;; Generating RTL for gimple basic block 33
+
+;; Generating RTL for gimple basic block 34
+
+;; Generating RTL for gimple basic block 35
+
+;; Generating RTL for gimple basic block 36
+
+;; Generating RTL for gimple basic block 37
+
+;; Generating RTL for gimple basic block 38
+
+;; Generating RTL for gimple basic block 39
+
+;; Generating RTL for gimple basic block 40
+
+;; Generating RTL for gimple basic block 41
+
+;; Generating RTL for gimple basic block 42
+
+;; Generating RTL for gimple basic block 43
+
+;; Generating RTL for gimple basic block 44
+
+;; Generating RTL for gimple basic block 45
+
+;; Generating RTL for gimple basic block 46
+
+;; Generating RTL for gimple basic block 47
+
+;; Generating RTL for gimple basic block 48
+deleting block 51
+deleting block 50
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 13->15 redirected to 49
+Merging block 15 into block 14...
+Merged blocks 14 and 15.
+Merged 14 and 15 without moving.
+Redirecting jump 126 from 20 to 49.
+Merging block 20 into block 19...
+Merged blocks 19 and 20.
+Merged 19 and 20 without moving.
+Redirecting jump 151 from 25 to 49.
+Merging block 25 into block 24...
+Merged blocks 24 and 25.
+Merged 24 and 25 without moving.
+Redirecting jump 231 from 38 to 49.
+Merging block 38 into block 37...
+Merged blocks 37 and 38.
+Merged 37 and 38 without moving.
+Redirecting jump 239 from 40 to 49.
+Merging block 40 into block 39...
+Merged blocks 39 and 40.
+Merged 39 and 40 without moving.
+Edge 43->45 redirected to 49
+Merging block 45 into block 44...
+Merged blocks 44 and 45.
+Merged 44 and 45 without moving.
+Redirecting jump 275 from 47 to 49.
+Merging block 47 into block 46...
+Merged blocks 46 and 47.
+Merged 46 and 47 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7feeae7df260 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:45 -1
+     (nil))
+(call_insn 6 5 7 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:45 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 7 6 8 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x7feeae7df2f8 *.LC12>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:46 -1
+     (nil))
+(call_insn 8 7 9 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:46 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 9 8 10 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x7feeae7df390 *.LC13>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:52 -1
+     (nil))
+(call_insn 10 9 11 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:52 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 11 10 12 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x7feeae7df428 *.LC14>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:53 -1
+     (nil))
+(call_insn 12 11 40 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:53 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(code_label 40 12 13 4 6 "" [1 uses])
+(note 13 40 14 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 14 13 15 4 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x7feeae7df4c0 *.LC15>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:56 -1
+     (nil))
+(insn 15 14 16 4 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:56 -1
+     (nil))
+(call_insn 16 15 17 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7feeae68e800 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:56 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (nil))))
+(insn 17 16 18 4 (parallel [
+            (set (reg:DI 76)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -64 [0xffffffffffffffc0])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:56 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:DI 4 si)
+        (reg:DI 76)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:56 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC16") [flags 0x2]  <var_decl 0x7feeae7df558 *.LC16>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:56 -1
+     (nil))
+(insn 20 19 21 4 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:56 -1
+     (nil))
+(call_insn 21 20 22 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_scanf") [flags 0x41]  <function_decl 0x7feeae692100 scanf>) [0 __builtin_scanf S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:56 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+                (nil)))))
+(insn 22 21 23 4 (parallel [
+            (set (reg:DI 77)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -64 [0xffffffffffffffc0])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:57 -1
+     (nil))
+(insn 23 22 24 4 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC17") [flags 0x2]  <var_decl 0x7feeae7df5f0 *.LC17>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:57 -1
+     (nil))
+(insn 24 23 25 4 (set (reg:DI 5 di)
+        (reg:DI 77)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:57 -1
+     (nil))
+(call_insn/i 25 24 26 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7feeae685e00 strcmp>) [0 __builtin_strcmp S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:57 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 26 25 27 4 (set (reg:SI 59 [ D.2294 ])
+        (reg:SI 0 ax)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:57 -1
+     (nil))
+(insn 27 26 28 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 59 [ D.2294 ])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:57 -1
+     (nil))
+(jump_insn 28 27 29 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 33)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:57 -1
+     (nil)
+ -> 33)
+(note 29 28 30 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 5 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:58 -1
+     (nil))
+(call_insn 31 30 32 5 (call (mem:QI (symbol_ref:DI ("exit") [flags 0x41]  <function_decl 0x7feeae6a2900 exit>) [0 __builtin_exit S1 A8])
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:58 -1
+     (expr_list:REG_NORETURN (const_int 0 [0])
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:REG_BR_PRED (use (reg:SI 5 di))
+        (nil)))
+(barrier 32 31 33)
+(code_label 33 32 34 6 5 "" [1 uses])
+(note 34 33 35 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 36 6 (parallel [
+            (set (reg:DI 78)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -64 [0xffffffffffffffc0])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:60 -1
+     (nil))
+(insn 36 35 37 6 (set (reg:DI 5 di)
+        (reg:DI 78)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:60 -1
+     (nil))
+(call_insn 37 36 38 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("readFromFile") [flags 0x41]  <function_decl 0x7feeae7b2100 readFromFile>) [0 readFromFile S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:60 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 38 37 39 6 (set (reg:SI 79)
+        (reg:SI 0 ax)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:60 -1
+     (nil))
+(insn 39 38 41 6 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [0 a+0 S4 A32])
+        (reg:SI 79)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:60 -1
+     (nil))
+(insn 41 39 42 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [0 a+0 S4 A32])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:61 -1
+     (nil))
+(jump_insn 42 41 43 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 40)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:61 -1
+     (nil)
+ -> 40)
+(note 43 42 44 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 44 43 45 7 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC18") [flags 0x2]  <var_decl 0x7feeae7df688 *.LC18>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:63 -1
+     (nil))
+(call_insn 45 44 46 7 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:63 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 46 45 47 7 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 hasMadeAPath+0 S4 A32])
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:65 -1
+     (nil))
+(insn 47 46 48 7 (set (mem/c:SI (symbol_ref:DI ("hasReadNodes")  <var_decl 0x7feeae7acab0 hasReadNodes>) [0 hasReadNodes+0 S4 A32])
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:67 -1
+     (nil))
+(insn 48 47 49 7 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:69 -1
+     (nil))
+(call_insn 49 48 295 7 (call (mem:QI (symbol_ref:DI ("showAvailableCommands") [flags 0x3]  <function_decl 0x7feeae7b2e00 showAvailableCommands>) [0 showAvailableCommands S1 A8])
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:69 -1
+     (nil)
+    (expr_list:REG_BR_PRED (use (reg:SI 5 di))
+        (nil)))
+(code_label 295 49 50 8 31 "" [1 uses])
+(note 50 295 51 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 51 50 52 8 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x7feeae7df4c0 *.LC15>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:72 -1
+     (nil))
+(insn 52 51 53 8 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:72 -1
+     (nil))
+(call_insn 53 52 54 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7feeae68e800 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:72 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (nil))))
+(insn 54 53 55 8 (parallel [
+            (set (reg:DI 80)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -64 [0xffffffffffffffc0])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:73 -1
+     (nil))
+(insn 55 54 56 8 (set (reg:DI 4 si)
+        (reg:DI 80)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:73 -1
+     (nil))
+(insn 56 55 57 8 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC16") [flags 0x2]  <var_decl 0x7feeae7df558 *.LC16>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:73 -1
+     (nil))
+(insn 57 56 58 8 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:73 -1
+     (nil))
+(call_insn 58 57 59 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_scanf") [flags 0x41]  <function_decl 0x7feeae692100 scanf>) [0 __builtin_scanf S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:73 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+                (nil)))))
+(insn 59 58 60 8 (parallel [
+            (set (reg:DI 81)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -64 [0xffffffffffffffc0])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:74 -1
+     (nil))
+(insn 60 59 61 8 (set (reg:DI 4 si)
+        (reg:DI 81)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:74 -1
+     (nil))
+(insn 61 60 62 8 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC17") [flags 0x2]  <var_decl 0x7feeae7df5f0 *.LC17>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:74 -1
+     (nil))
+(call_insn/i 62 61 63 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7feeae685e00 strcmp>) [0 __builtin_strcmp S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:74 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 63 62 64 8 (set (reg:SI 60 [ D.2294 ])
+        (reg:SI 0 ax)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:74 -1
+     (nil))
+(insn 64 63 65 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 60 [ D.2294 ])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:74 -1
+     (nil))
+(jump_insn 65 64 66 8 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 70)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:74 -1
+     (nil)
+ -> 70)
+(note 66 65 67 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 67 66 68 9 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:75 -1
+     (nil))
+(call_insn 68 67 69 9 (call (mem:QI (symbol_ref:DI ("exit") [flags 0x41]  <function_decl 0x7feeae6a2900 exit>) [0 __builtin_exit S1 A8])
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:75 -1
+     (expr_list:REG_NORETURN (const_int 0 [0])
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:REG_BR_PRED (use (reg:SI 5 di))
+        (nil)))
+(barrier 69 68 70)
+(code_label 70 69 71 10 7 "" [1 uses])
+(note 71 70 72 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 72 71 73 10 (parallel [
+            (set (reg:DI 82)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -64 [0xffffffffffffffc0])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:77 -1
+     (nil))
+(insn 73 72 74 10 (set (reg:DI 4 si)
+        (reg:DI 82)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:77 -1
+     (nil))
+(insn 74 73 75 10 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC19") [flags 0x2]  <var_decl 0x7feeae7df720 *.LC19>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:77 -1
+     (nil))
+(call_insn/i 75 74 76 10 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7feeae685e00 strcmp>) [0 __builtin_strcmp S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:77 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 76 75 77 10 (set (reg:SI 61 [ D.2294 ])
+        (reg:SI 0 ax)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:77 -1
+     (nil))
+(insn 77 76 78 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 61 [ D.2294 ])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:77 -1
+     (nil))
+(jump_insn 78 77 79 10 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 84)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:77 -1
+     (nil)
+ -> 84)
+(note 79 78 80 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 80 79 81 11 (set (reg:SI 5 di)
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:78 -1
+     (nil))
+(call_insn 81 80 82 11 (call (mem:QI (symbol_ref:DI ("showMap") [flags 0x41]  <function_decl 0x7feeae7b2200 showMap>) [0 showMap S1 A8])
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:78 -1
+     (nil)
+    (expr_list:REG_BR_PRED (use (reg:SI 5 di))
+        (nil)))
+(jump_insn 82 81 83 11 (set (pc)
+        (label_ref 289)) -1
+     (nil)
+ -> 289)
+(barrier 83 82 84)
+(code_label 84 83 85 12 8 "" [1 uses])
+(note 85 84 86 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 86 85 87 12 (parallel [
+            (set (reg:DI 83)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -64 [0xffffffffffffffc0])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:80 -1
+     (nil))
+(insn 87 86 88 12 (set (reg:DI 4 si)
+        (reg:DI 83)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:80 -1
+     (nil))
+(insn 88 87 89 12 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC20") [flags 0x2]  <var_decl 0x7feeae7df7b8 *.LC20>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:80 -1
+     (nil))
+(call_insn/i 89 88 90 12 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7feeae685e00 strcmp>) [0 __builtin_strcmp S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:80 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 90 89 91 12 (set (reg:SI 62 [ D.2294 ])
+        (reg:SI 0 ax)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:80 -1
+     (nil))
+(insn 91 90 92 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 62 [ D.2294 ])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:80 -1
+     (nil))
+(jump_insn 92 91 93 12 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 106)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:80 -1
+     (nil)
+ -> 106)
+(note 93 92 94 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 94 93 95 13 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:81 -1
+     (nil))
+(call_insn 95 94 96 13 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("getCoordinatesStFin") [flags 0x41]  <function_decl 0x7feeae7b2b00 getCoordinatesStFin>) [0 getCoordinatesStFin S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:81 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (nil)))
+(insn 96 95 97 13 (set (reg:SI 63 [ D.2294 ])
+        (reg:SI 0 ax)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:81 -1
+     (nil))
+(insn 97 96 98 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 63 [ D.2294 ])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:81 -1
+     (nil))
+(jump_insn 98 97 99 13 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 289)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:81 612 {*jcc_1}
+     (nil)
+ -> 289)
+(note 99 98 100 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 100 99 101 14 (set (mem/c:SI (symbol_ref:DI ("hasReadNodes")  <var_decl 0x7feeae7acab0 hasReadNodes>) [0 hasReadNodes+0 S4 A32])
+        (const_int 1 [0x1])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:82 -1
+     (nil))
+(insn 101 100 104 14 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 hasMadeAPath+0 S4 A32])
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:83 -1
+     (nil))
+(jump_insn 104 101 105 14 (set (pc)
+        (label_ref 289)) -1
+     (nil)
+ -> 289)
+(barrier 105 104 106)
+(code_label 106 105 107 16 10 "" [1 uses])
+(note 107 106 108 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 108 107 109 16 (parallel [
+            (set (reg:DI 84)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -64 [0xffffffffffffffc0])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:86 -1
+     (nil))
+(insn 109 108 110 16 (set (reg:DI 4 si)
+        (reg:DI 84)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:86 -1
+     (nil))
+(insn 110 109 111 16 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC21") [flags 0x2]  <var_decl 0x7feeae7df850 *.LC21>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:86 -1
+     (nil))
+(call_insn/i 111 110 112 16 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7feeae685e00 strcmp>) [0 __builtin_strcmp S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:86 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 112 111 113 16 (set (reg:SI 64 [ D.2294 ])
+        (reg:SI 0 ax)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:86 -1
+     (nil))
+(insn 113 112 114 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 64 [ D.2294 ])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:86 -1
+     (nil))
+(jump_insn 114 113 115 16 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 136)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:86 -1
+     (nil)
+ -> 136)
+(note 115 114 116 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 116 115 117 17 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:87 -1
+     (nil))
+(call_insn 117 116 118 17 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("randomNodes") [flags 0x41]  <function_decl 0x7feeae7b2700 randomNodes>) [0 randomNodes S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:87 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (nil)))
+(insn 118 117 119 17 (set (reg:SI 65 [ D.2294 ])
+        (reg:SI 0 ax)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:87 -1
+     (nil))
+(insn 119 118 120 17 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 65 [ D.2294 ])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:87 -1
+     (nil))
+(jump_insn 120 119 121 17 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 128)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:87 -1
+     (nil)
+ -> 128)
+(note 121 120 122 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 122 121 123 18 (set (mem/c:SI (symbol_ref:DI ("hasReadNodes")  <var_decl 0x7feeae7acab0 hasReadNodes>) [0 hasReadNodes+0 S4 A32])
+        (const_int 1 [0x1])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:88 -1
+     (nil))
+(insn 123 122 124 18 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 hasMadeAPath+0 S4 A32])
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:89 -1
+     (nil))
+(insn 124 123 125 18 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC22") [flags 0x2]  <var_decl 0x7feeae7df8e8 *.LC22>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:90 -1
+     (nil))
+(call_insn 125 124 126 18 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:90 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(jump_insn 126 125 127 18 (set (pc)
+        (label_ref:DI 289)) 650 {jump}
+     (nil)
+ -> 289)
+(barrier 127 126 128)
+(code_label 128 127 129 19 13 "" [1 uses])
+(note 129 128 130 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 130 129 131 19 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC23") [flags 0x2]  <var_decl 0x7feeae7df980 *.LC23>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:92 -1
+     (nil))
+(call_insn 131 130 134 19 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:92 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(jump_insn 134 131 135 19 (set (pc)
+        (label_ref 289)) -1
+     (nil)
+ -> 289)
+(barrier 135 134 136)
+(code_label 136 135 137 21 12 "" [1 uses])
+(note 137 136 138 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 138 137 139 21 (parallel [
+            (set (reg:DI 85)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -64 [0xffffffffffffffc0])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:95 -1
+     (nil))
+(insn 139 138 140 21 (set (reg:DI 4 si)
+        (reg:DI 85)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:95 -1
+     (nil))
+(insn 140 139 141 21 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC24") [flags 0x2]  <var_decl 0x7feeae7dfa18 *.LC24>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:95 -1
+     (nil))
+(call_insn/i 141 140 142 21 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7feeae685e00 strcmp>) [0 __builtin_strcmp S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:95 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 142 141 143 21 (set (reg:SI 66 [ D.2294 ])
+        (reg:SI 0 ax)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:95 -1
+     (nil))
+(insn 143 142 144 21 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 66 [ D.2294 ])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:95 -1
+     (nil))
+(jump_insn 144 143 145 21 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 161)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:95 -1
+     (nil)
+ -> 161)
+(note 145 144 146 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 146 145 147 22 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [0 hasMadeAPath+0 S4 A32])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:96 -1
+     (nil))
+(jump_insn 147 146 148 22 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 153)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:96 -1
+     (nil)
+ -> 153)
+(note 148 147 149 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 149 148 150 23 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:97 -1
+     (nil))
+(call_insn 150 149 151 23 (call (mem:QI (symbol_ref:DI ("showMap") [flags 0x41]  <function_decl 0x7feeae7b2200 showMap>) [0 showMap S1 A8])
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:97 -1
+     (nil)
+    (expr_list:REG_BR_PRED (use (reg:SI 5 di))
+        (nil)))
+(jump_insn 151 150 152 23 (set (pc)
+        (label_ref:DI 289)) 650 {jump}
+     (nil)
+ -> 289)
+(barrier 152 151 153)
+(code_label 153 152 154 24 16 "" [1 uses])
+(note 154 153 155 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 155 154 156 24 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC25") [flags 0x2]  <var_decl 0x7feeae7dfab0 *.LC25>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:100 -1
+     (nil))
+(call_insn 156 155 159 24 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:100 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(jump_insn 159 156 160 24 (set (pc)
+        (label_ref 289)) -1
+     (nil)
+ -> 289)
+(barrier 160 159 161)
+(code_label 161 160 162 26 15 "" [1 uses])
+(note 162 161 163 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(insn 163 162 164 26 (parallel [
+            (set (reg:DI 86)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -64 [0xffffffffffffffc0])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:103 -1
+     (nil))
+(insn 164 163 165 26 (set (reg:DI 4 si)
+        (reg:DI 86)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:103 -1
+     (nil))
+(insn 165 164 166 26 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC26") [flags 0x2]  <var_decl 0x7feeae7dfb48 *.LC26>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:103 -1
+     (nil))
+(call_insn/i 166 165 167 26 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7feeae685e00 strcmp>) [0 __builtin_strcmp S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:103 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 167 166 168 26 (set (reg:SI 67 [ D.2294 ])
+        (reg:SI 0 ax)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:103 -1
+     (nil))
+(insn 168 167 169 26 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 67 [ D.2294 ])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:103 -1
+     (nil))
+(jump_insn 169 168 170 26 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 249)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:103 -1
+     (nil)
+ -> 249)
+(note 170 169 171 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(insn 171 170 172 27 (set (reg:SI 68 [ hasReadNodes.0 ])
+        (mem/c:SI (symbol_ref:DI ("hasReadNodes")  <var_decl 0x7feeae7acab0 hasReadNodes>) [0 hasReadNodes+0 S4 A32])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:104 -1
+     (nil))
+(insn 172 171 173 27 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 68 [ hasReadNodes.0 ])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:104 -1
+     (nil))
+(jump_insn 173 172 174 27 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 241)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:104 -1
+     (nil)
+ -> 241)
+(note 174 173 175 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
+(insn 175 174 176 28 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC27") [flags 0x2]  <var_decl 0x7feeae7dfbe0 *.LC27>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:106 -1
+     (nil))
+(call_insn 176 175 217 28 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:106 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(code_label 217 176 177 29 23 "" [1 uses])
+(note 177 217 178 29 [bb 29] NOTE_INSN_BASIC_BLOCK)
+(insn 178 177 179 29 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x7feeae7df4c0 *.LC15>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:108 -1
+     (nil))
+(insn 179 178 180 29 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:108 -1
+     (nil))
+(call_insn 180 179 181 29 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7feeae68e800 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:108 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (nil))))
+(insn 181 180 182 29 (parallel [
+            (set (reg:DI 87)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -64 [0xffffffffffffffc0])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:108 -1
+     (nil))
+(insn 182 181 183 29 (set (reg:DI 4 si)
+        (reg:DI 87)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:108 -1
+     (nil))
+(insn 183 182 184 29 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC16") [flags 0x2]  <var_decl 0x7feeae7df558 *.LC16>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:108 -1
+     (nil))
+(insn 184 183 185 29 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:108 -1
+     (nil))
+(call_insn 185 184 186 29 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_scanf") [flags 0x41]  <function_decl 0x7feeae692100 scanf>) [0 __builtin_scanf S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:108 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+                (nil)))))
+(insn 186 185 187 29 (parallel [
+            (set (reg:DI 88)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -64 [0xffffffffffffffc0])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:109 -1
+     (nil))
+(insn 187 186 188 29 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC28") [flags 0x2]  <var_decl 0x7feeae7dfc78 *.LC28>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:109 -1
+     (nil))
+(insn 188 187 189 29 (set (reg:DI 5 di)
+        (reg:DI 88)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:109 -1
+     (nil))
+(call_insn/i 189 188 190 29 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7feeae685e00 strcmp>) [0 __builtin_strcmp S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:109 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 190 189 191 29 (set (reg:SI 69 [ D.2294 ])
+        (reg:SI 0 ax)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:109 -1
+     (nil))
+(insn 191 190 192 29 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 69 [ D.2294 ])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:109 -1
+     (nil))
+(jump_insn 192 191 193 29 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 197)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:109 -1
+     (nil)
+ -> 197)
+(note 193 192 194 30 [bb 30] NOTE_INSN_BASIC_BLOCK)
+(insn 194 193 195 30 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 answer+0 S4 A32])
+        (const_int 1 [0x1])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:110 -1
+     (nil))
+(jump_insn 195 194 196 30 (set (pc)
+        (label_ref 215)) -1
+     (nil)
+ -> 215)
+(barrier 196 195 197)
+(code_label 197 196 198 31 20 "" [1 uses])
+(note 198 197 199 31 [bb 31] NOTE_INSN_BASIC_BLOCK)
+(insn 199 198 200 31 (parallel [
+            (set (reg:DI 89)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -64 [0xffffffffffffffc0])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:111 -1
+     (nil))
+(insn 200 199 201 31 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC29") [flags 0x2]  <var_decl 0x7feeae7dfd10 *.LC29>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:111 -1
+     (nil))
+(insn 201 200 202 31 (set (reg:DI 5 di)
+        (reg:DI 89)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:111 -1
+     (nil))
+(call_insn/i 202 201 203 31 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7feeae685e00 strcmp>) [0 __builtin_strcmp S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:111 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 203 202 204 31 (set (reg:SI 70 [ D.2294 ])
+        (reg:SI 0 ax)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:111 -1
+     (nil))
+(insn 204 203 205 31 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 70 [ D.2294 ])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:111 -1
+     (nil))
+(jump_insn 205 204 206 31 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 210)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:111 -1
+     (nil)
+ -> 210)
+(note 206 205 207 32 [bb 32] NOTE_INSN_BASIC_BLOCK)
+(insn 207 206 208 32 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 answer+0 S4 A32])
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:112 -1
+     (nil))
+(jump_insn 208 207 209 32 (set (pc)
+        (label_ref 215)) -1
+     (nil)
+ -> 215)
+(barrier 209 208 210)
+(code_label 210 209 211 33 22 "" [1 uses])
+(note 211 210 212 33 [bb 33] NOTE_INSN_BASIC_BLOCK)
+(insn 212 211 213 33 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC30") [flags 0x2]  <var_decl 0x7feeae7dfda8 *.LC30>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:114 -1
+     (nil))
+(call_insn 213 212 214 33 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:114 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 214 213 215 33 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 answer+0 S4 A32])
+        (const_int -1 [0xffffffffffffffff])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:115 -1
+     (nil))
+(code_label 215 214 216 34 21 "" [2 uses])
+(note 216 215 218 34 [bb 34] NOTE_INSN_BASIC_BLOCK)
+(insn 218 216 219 34 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [0 answer+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:118 -1
+     (nil))
+(jump_insn 219 218 220 34 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 217)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:118 -1
+     (nil)
+ -> 217)
+(note 220 219 221 35 [bb 35] NOTE_INSN_BASIC_BLOCK)
+(insn 221 220 222 35 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC31") [flags 0x2]  <var_decl 0x7feeae7dfe40 *.LC31>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:120 -1
+     (nil))
+(call_insn 222 221 223 35 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:120 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 223 222 224 35 (set (reg:SI 90)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 answer+0 S4 A32])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:121 -1
+     (nil))
+(insn 224 223 225 35 (set (reg:SI 5 di)
+        (reg:SI 90)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:121 -1
+     (nil))
+(call_insn 225 224 226 35 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("dijkstra") [flags 0x41]  <function_decl 0x7feeae7b2c00 dijkstra>) [0 dijkstra S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:121 -1
+     (nil)
+    (expr_list:REG_BR_PRED (use (reg:SI 5 di))
+        (nil)))
+(insn 226 225 227 35 (set (reg:SI 71 [ D.2294 ])
+        (reg:SI 0 ax)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:121 -1
+     (nil))
+(insn 227 226 228 35 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 71 [ D.2294 ])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:121 -1
+     (nil))
+(jump_insn 228 227 229 35 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 233)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:121 -1
+     (nil)
+ -> 233)
+(note 229 228 230 36 [bb 36] NOTE_INSN_BASIC_BLOCK)
+(insn 230 229 231 36 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 hasMadeAPath+0 S4 A32])
+        (const_int 1 [0x1])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:122 -1
+     (nil))
+(jump_insn 231 230 232 36 (set (pc)
+        (label_ref:DI 289)) 650 {jump}
+     (nil)
+ -> 289)
+(barrier 232 231 233)
+(code_label 233 232 234 37 24 "" [1 uses])
+(note 234 233 235 37 [bb 37] NOTE_INSN_BASIC_BLOCK)
+(insn 235 234 236 37 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC32") [flags 0x2]  <var_decl 0x7feeae7dfed8 *.LC32>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:125 -1
+     (nil))
+(call_insn 236 235 239 37 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:125 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(jump_insn 239 236 240 37 (set (pc)
+        (label_ref:DI 289)) 650 {jump}
+     (nil)
+ -> 289)
+(barrier 240 239 241)
+(code_label 241 240 242 39 19 "" [1 uses])
+(note 242 241 243 39 [bb 39] NOTE_INSN_BASIC_BLOCK)
+(insn 243 242 244 39 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC33") [flags 0x2]  <var_decl 0x7feeae7ee000 *.LC33>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:129 -1
+     (nil))
+(call_insn 244 243 247 39 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:129 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(jump_insn 247 244 248 39 (set (pc)
+        (label_ref 289)) -1
+     (nil)
+ -> 289)
+(barrier 248 247 249)
+(code_label 249 248 250 41 18 "" [1 uses])
+(note 250 249 251 41 [bb 41] NOTE_INSN_BASIC_BLOCK)
+(insn 251 250 252 41 (parallel [
+            (set (reg:DI 91)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -64 [0xffffffffffffffc0])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:132 -1
+     (nil))
+(insn 252 251 253 41 (set (reg:DI 4 si)
+        (reg:DI 91)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:132 -1
+     (nil))
+(insn 253 252 254 41 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC34") [flags 0x2]  <var_decl 0x7feeae7ee098 *.LC34>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:132 -1
+     (nil))
+(call_insn/i 254 253 255 41 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7feeae685e00 strcmp>) [0 __builtin_strcmp S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:132 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 255 254 256 41 (set (reg:SI 72 [ D.2294 ])
+        (reg:SI 0 ax)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:132 -1
+     (nil))
+(insn 256 255 257 41 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 72 [ D.2294 ])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:132 -1
+     (nil))
+(jump_insn 257 256 258 41 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 285)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:132 -1
+     (nil)
+ -> 285)
+(note 258 257 259 42 [bb 42] NOTE_INSN_BASIC_BLOCK)
+(insn 259 258 260 42 (set (reg:SI 73 [ hasReadNodes.1 ])
+        (mem/c:SI (symbol_ref:DI ("hasReadNodes")  <var_decl 0x7feeae7acab0 hasReadNodes>) [0 hasReadNodes+0 S4 A32])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:133 -1
+     (nil))
+(insn 260 259 261 42 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 73 [ hasReadNodes.1 ])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:133 -1
+     (nil))
+(jump_insn 261 260 262 42 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 277)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:133 -1
+     (nil)
+ -> 277)
+(note 262 261 263 43 [bb 43] NOTE_INSN_BASIC_BLOCK)
+(insn 263 262 264 43 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC31") [flags 0x2]  <var_decl 0x7feeae7dfe40 *.LC31>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:134 -1
+     (nil))
+(call_insn 264 263 265 43 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:134 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 265 264 266 43 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:135 -1
+     (nil))
+(call_insn 266 265 267 43 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("bellmanFord") [flags 0x41]  <function_decl 0x7feeae7b2d00 bellmanFord>) [0 bellmanFord S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:135 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (nil)))
+(insn 267 266 268 43 (set (reg:SI 74 [ D.2294 ])
+        (reg:SI 0 ax)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:135 -1
+     (nil))
+(insn 268 267 269 43 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 74 [ D.2294 ])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:135 -1
+     (nil))
+(jump_insn 269 268 270 43 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 289)
+            (pc))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:135 612 {*jcc_1}
+     (nil)
+ -> 289)
+(note 270 269 271 44 [bb 44] NOTE_INSN_BASIC_BLOCK)
+(insn 271 270 272 44 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC35") [flags 0x2]  <var_decl 0x7feeae7ee130 *.LC35>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:136 -1
+     (nil))
+(call_insn 272 271 275 44 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:136 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(jump_insn 275 272 276 44 (set (pc)
+        (label_ref:DI 289)) 650 {jump}
+     (nil)
+ -> 289)
+(barrier 276 275 277)
+(code_label 277 276 278 46 28 "" [1 uses])
+(note 278 277 279 46 [bb 46] NOTE_INSN_BASIC_BLOCK)
+(insn 279 278 280 46 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC33") [flags 0x2]  <var_decl 0x7feeae7ee000 *.LC33>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:140 -1
+     (nil))
+(call_insn 280 279 283 46 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:140 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(jump_insn 283 280 284 46 (set (pc)
+        (label_ref 289)) -1
+     (nil)
+ -> 289)
+(barrier 284 283 285)
+(code_label 285 284 286 48 27 "" [1 uses])
+(note 286 285 287 48 [bb 48] NOTE_INSN_BASIC_BLOCK)
+(insn 287 286 288 48 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC30") [flags 0x2]  <var_decl 0x7feeae7dfda8 *.LC30>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:144 -1
+     (nil))
+(call_insn 288 287 289 48 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7feeae68ed00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:144 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(code_label 289 288 290 49 9 "" [13 uses])
+(note 290 289 291 49 [bb 49] NOTE_INSN_BASIC_BLOCK)
+(insn 291 290 292 49 (set (reg:SI 5 di)
+        (const_int 10 [0xa])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:147 -1
+     (nil))
+(call_insn 292 291 293 49 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("putchar") [flags 0x41]  <function_decl 0x7feeae68ea00 __builtin_putchar>) [0 __builtin_putchar S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:147 -1
+     (nil)
+    (expr_list:REG_BR_PRED (use (reg:SI 5 di))
+        (nil)))
+(insn 293 292 294 49 (set (reg:SI 5 di)
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:147 -1
+     (nil))
+(call_insn 294 293 296 49 (call (mem:QI (symbol_ref:DI ("showAvailableCommands") [flags 0x3]  <function_decl 0x7feeae7b2e00 showAvailableCommands>) [0 showAvailableCommands S1 A8])
+        (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:147 -1
+     (nil)
+    (expr_list:REG_BR_PRED (use (reg:SI 5 di))
+        (nil)))
+(jump_insn 296 294 297 49 (set (pc)
+        (label_ref 295)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/main.c:148 -1
+     (nil)
+ -> 295)
+(barrier 297 296 0)
