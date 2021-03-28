@@ -55,7 +55,6 @@ void test_reading_nodes(){
     TEST_ASSERT_MESSAGE( nodeInNodes(100, -1) == -1,"Node does not exist!" ); //node outside
     TEST_ASSERT_MESSAGE( nodeInNodes(53.802060, -1.547648) == -1,"Node does not exist!" ); //node inside
 
-    TEST_ASSERT_MESSAGE( nodeInNodes(53.802724, -1.548592) != -1, "Node exists!" );
     TEST_ASSERT_MESSAGE( nodeInNodes(53.802793, -1.548657) != -1, "Node exists!" );
     TEST_ASSERT_MESSAGE( nodeInNodes(53.803873, -1.549117) != -1, "Node exists!" );
     TEST_ASSERT_MESSAGE( nodeInNodes(53.801418, -1.553514) != -1, "Node exists!" );

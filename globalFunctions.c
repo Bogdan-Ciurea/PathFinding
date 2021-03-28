@@ -63,7 +63,7 @@ int randomNodes(){
 // If the input is a number, the function will return 1
 // If the input is not a number, the function will return 0
 int inputIsNumber(char* input){
-    int i;
+    int i, dots = 0;
     for(i = 0; i < strlen(input); i++){
         if(strchr("1234567890.", input[i]) == NULL){
             if(! (i == 0 && input[0] == '-') ){

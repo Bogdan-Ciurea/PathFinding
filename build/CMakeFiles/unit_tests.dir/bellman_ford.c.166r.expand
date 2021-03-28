@@ -109,13 +109,13 @@ Forwarding edge 29->30 to 33 failed.
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:48 -1
      (nil))
 (call_insn 8 7 9 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("initValues") [flags 0x41]  <function_decl 0x7fac3fe9c500 initValues>) [0 initValues S1 A8])
+        (call (mem:QI (symbol_ref:DI ("initValues") [flags 0x41]  <function_decl 0x7fc9d994f500 initValues>) [0 initValues S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:48 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
         (nil)))
 (insn 9 8 10 2 (set (reg:SI 61 [ D.9295 ])
-        (mem/j/c:SI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7fac3fe99260 listOfNodes>) [0 listOfNodes.numberOfNodes+0 S4 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:52 -1
+        (mem/j/c:SI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7fc9d994c260 listOfNodes>) [0 listOfNodes.numberOfNodes+0 S4 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:52 -1
      (nil))
 (insn 10 9 11 2 (set (reg:DI 62 [ D.9296 ])
         (sign_extend:DI (reg:SI 61 [ D.9295 ]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:52 -1
@@ -300,7 +300,7 @@ Forwarding edge 29->30 to 33 failed.
 (code_label 46 45 47 5 2 "" [1 uses])
 (note 47 46 48 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
 (insn 48 47 50 5 (set (reg:SI 74 [ D.9295 ])
-        (mem/j/c:SI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7fac3fe99260 listOfNodes>) [0 listOfNodes.numberOfNodes+0 S4 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:55 -1
+        (mem/j/c:SI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7fc9d994c260 listOfNodes>) [0 listOfNodes.numberOfNodes+0 S4 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:55 -1
      (nil))
 (insn 50 48 51 5 (set (reg:CCGC 17 flags)
         (compare:CCGC (reg:SI 74 [ D.9295 ])
@@ -316,7 +316,7 @@ Forwarding edge 29->30 to 33 failed.
  -> 49)
 (note 52 51 53 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
 (insn 53 52 54 6 (set (reg:SI 75 [ indexStart.1 ])
-        (mem/c:SI (symbol_ref:DI ("indexStart")  <var_decl 0x7fac3fe99098 indexStart>) [0 indexStart+0 S4 A32])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:57 -1
+        (mem/c:SI (symbol_ref:DI ("indexStart")  <var_decl 0x7fc9d994c098 indexStart>) [0 indexStart+0 S4 A32])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:57 -1
      (nil))
 (insn 54 53 55 6 (set (reg/f:DI 177)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -356,7 +356,7 @@ Forwarding edge 29->30 to 33 failed.
 (code_label 205 64 65 8 12 "" [1 uses])
 (note 65 205 66 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
 (insn 66 65 67 8 (set (reg/f:DI 78 [ D.9299 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fac3fe99390 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fc9d994c390 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:62 -1
      (nil))
 (insn 67 66 68 8 (set (reg:SI 180)
@@ -389,7 +389,7 @@ Forwarding edge 29->30 to 33 failed.
         (reg:DF 181)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:62 -1
      (nil))
 (insn 73 72 74 8 (set (reg/f:DI 82 [ D.9299 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fac3fe99390 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fc9d994c390 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:63 -1
      (nil))
 (insn 74 73 75 8 (set (reg:SI 182)
@@ -461,7 +461,7 @@ Forwarding edge 29->30 to 33 failed.
 (code_label 297 87 89 12 18 "" [2 uses])
 (note 89 297 90 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
 (insn 90 89 91 12 (set (reg/f:DI 88 [ D.9299 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fac3fe99390 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fc9d994c390 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:63 -1
      (nil))
 (insn 91 90 92 12 (set (reg:SI 185)
@@ -507,7 +507,7 @@ Forwarding edge 29->30 to 33 failed.
                     (const_int -32 [0xffffffffffffffe0])) [0 weight+0 S8 A64]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:63 -1
      (nil))
 (insn 100 99 101 12 (set (reg/f:DI 95 [ D.9299 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fac3fe99390 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fc9d994c390 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:63 -1
      (nil))
 (insn 101 100 102 12 (set (reg:SI 188)
@@ -567,7 +567,7 @@ Forwarding edge 29->30 to 33 failed.
 (code_label 298 112 114 15 19 "" [1 uses])
 (note 114 298 115 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
 (insn 115 114 116 15 (set (reg/f:DI 101 [ D.9299 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fac3fe99390 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fc9d994c390 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:64 -1
      (nil))
 (insn 116 115 117 15 (set (reg:SI 191)
@@ -596,7 +596,7 @@ Forwarding edge 29->30 to 33 failed.
                 (const_int 44 [0x2c])) [0 _56->node2.matrixId+0 S4 A32])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:64 -1
      (nil))
 (insn 121 120 122 15 (set (reg/f:DI 106 [ D.9299 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fac3fe99390 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fc9d994c390 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:64 -1
      (nil))
 (insn 122 121 123 15 (set (reg:SI 192)
@@ -661,7 +661,7 @@ Forwarding edge 29->30 to 33 failed.
 (code_label 136 135 137 16 6 "" [2 uses])
 (note 137 136 138 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
 (insn 138 137 139 16 (set (reg/f:DI 113 [ D.9299 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fac3fe99390 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fc9d994c390 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:65 -1
      (nil))
 (insn 139 138 140 16 (set (reg:SI 197)
@@ -733,7 +733,7 @@ Forwarding edge 29->30 to 33 failed.
 (code_label 299 152 154 20 20 "" [2 uses])
 (note 154 299 155 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
 (insn 155 154 156 20 (set (reg/f:DI 119 [ D.9299 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fac3fe99390 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fc9d994c390 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:65 -1
      (nil))
 (insn 156 155 157 20 (set (reg:SI 200)
@@ -779,7 +779,7 @@ Forwarding edge 29->30 to 33 failed.
                     (const_int -32 [0xffffffffffffffe0])) [0 weight+0 S8 A64]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:65 -1
      (nil))
 (insn 165 164 166 20 (set (reg/f:DI 126 [ D.9299 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fac3fe99390 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fc9d994c390 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:65 -1
      (nil))
 (insn 166 165 167 20 (set (reg:SI 203)
@@ -839,7 +839,7 @@ Forwarding edge 29->30 to 33 failed.
 (code_label 300 177 179 23 21 "" [1 uses])
 (note 179 300 180 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
 (insn 180 179 181 23 (set (reg/f:DI 132 [ D.9299 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fac3fe99390 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fc9d994c390 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:66 -1
      (nil))
 (insn 181 180 182 23 (set (reg:SI 206)
@@ -868,7 +868,7 @@ Forwarding edge 29->30 to 33 failed.
                 (const_int 20 [0x14])) [0 _87->node1.matrixId+0 S4 A32])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:66 -1
      (nil))
 (insn 186 185 187 23 (set (reg/f:DI 137 [ D.9299 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fac3fe99390 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fc9d994c390 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:66 -1
      (nil))
 (insn 187 186 188 23 (set (reg:SI 207)
@@ -939,7 +939,7 @@ Forwarding edge 29->30 to 33 failed.
 (code_label 202 201 203 25 5 "" [1 uses])
 (note 203 202 204 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
 (insn 204 203 206 25 (set (reg:SI 77 [ D.9295 ])
-        (mem/j/c:SI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fac3fe99390 listOfLinks>) [0 listOfLinks.numberOfLinks+0 S4 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:61 -1
+        (mem/j/c:SI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7fc9d994c390 listOfLinks>) [0 listOfLinks.numberOfLinks+0 S4 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:61 -1
      (nil))
 (insn 206 204 207 25 (set (reg:CCGC 17 flags)
         (compare:CCGC (reg:SI 77 [ D.9295 ])
@@ -966,7 +966,7 @@ Forwarding edge 29->30 to 33 failed.
 (code_label 210 209 211 27 4 "" [1 uses])
 (note 211 210 212 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
 (insn 212 211 214 27 (set (reg:SI 76 [ D.9295 ])
-        (mem/j/c:SI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7fac3fe99260 listOfNodes>) [0 listOfNodes.numberOfNodes+0 S4 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:60 -1
+        (mem/j/c:SI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7fc9d994c260 listOfNodes>) [0 listOfNodes.numberOfNodes+0 S4 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:60 -1
      (nil))
 (insn 214 212 215 27 (set (reg:CCGC 17 flags)
         (compare:CCGC (reg:SI 76 [ D.9295 ])
@@ -982,7 +982,7 @@ Forwarding edge 29->30 to 33 failed.
  -> 213)
 (note 216 215 217 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
 (insn 217 216 218 28 (set (reg:SI 144 [ indexFinish.2 ])
-        (mem/c:SI (symbol_ref:DI ("indexFinish")  <var_decl 0x7fac3fe99130 indexFinish>) [0 indexFinish+0 S4 A32])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:84 -1
+        (mem/c:SI (symbol_ref:DI ("indexFinish")  <var_decl 0x7fc9d994c130 indexFinish>) [0 indexFinish+0 S4 A32])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:84 -1
      (nil))
 (insn 218 217 219 28 (set (reg/f:DI 212)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -1038,7 +1038,7 @@ Forwarding edge 29->30 to 33 failed.
 (code_label 232 231 233 33 14 "" [2 uses])
 (note 233 232 234 33 [bb 33] NOTE_INSN_BASIC_BLOCK)
 (insn 234 233 235 33 (set (reg:SI 146 [ indexFinish.3 ])
-        (mem/c:SI (symbol_ref:DI ("indexFinish")  <var_decl 0x7fac3fe99130 indexFinish>) [0 indexFinish+0 S4 A32])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:87 -1
+        (mem/c:SI (symbol_ref:DI ("indexFinish")  <var_decl 0x7fc9d994c130 indexFinish>) [0 indexFinish+0 S4 A32])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:87 -1
      (nil))
 (insn 235 234 236 33 (set (reg/f:DI 214)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -1053,11 +1053,11 @@ Forwarding edge 29->30 to 33 failed.
                 (reg/f:DI 214)) [0 *distance.0_20 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:87 -1
      (nil))
 (insn 238 237 239 33 (set (reg/f:DI 148 [ D.9302 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7fac3fe99260 listOfNodes>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7fc9d994c260 listOfNodes>)
                     (const_int 8 [0x8]))) [0 listOfNodes.nodes+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:87 -1
      (nil))
 (insn 239 238 240 33 (set (reg:SI 149 [ indexFinish.4 ])
-        (mem/c:SI (symbol_ref:DI ("indexFinish")  <var_decl 0x7fac3fe99130 indexFinish>) [0 indexFinish+0 S4 A32])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:87 -1
+        (mem/c:SI (symbol_ref:DI ("indexFinish")  <var_decl 0x7fc9d994c130 indexFinish>) [0 indexFinish+0 S4 A32])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:87 -1
      (nil))
 (insn 240 239 241 33 (set (reg:DI 150 [ D.9300 ])
         (sign_extend:DI (reg:SI 149 [ indexFinish.4 ]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:87 -1
@@ -1107,11 +1107,11 @@ Forwarding edge 29->30 to 33 failed.
         (mem/j:SI (reg/f:DI 152 [ D.9302 ]) [0 _107->id+0 S4 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:87 -1
      (nil))
 (insn 249 248 250 33 (set (reg/f:DI 154 [ D.9302 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7fac3fe99260 listOfNodes>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7fc9d994c260 listOfNodes>)
                     (const_int 8 [0x8]))) [0 listOfNodes.nodes+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:87 -1
      (nil))
 (insn 250 249 251 33 (set (reg:SI 155 [ indexStart.5 ])
-        (mem/c:SI (symbol_ref:DI ("indexStart")  <var_decl 0x7fac3fe99098 indexStart>) [0 indexStart+0 S4 A32])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:87 -1
+        (mem/c:SI (symbol_ref:DI ("indexStart")  <var_decl 0x7fc9d994c098 indexStart>) [0 indexStart+0 S4 A32])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:87 -1
      (nil))
 (insn 251 250 252 33 (set (reg:DI 156 [ D.9300 ])
         (sign_extend:DI (reg:SI 155 [ indexStart.5 ]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:87 -1
@@ -1170,13 +1170,13 @@ Forwarding edge 29->30 to 33 failed.
         (reg:SI 159 [ D.9295 ])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:87 -1
      (nil))
 (insn 263 262 264 33 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7fac3feb31c8 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:87 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7fc9d99661c8 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:87 -1
      (nil))
 (insn 264 263 265 33 (set (reg:QI 0 ax)
         (const_int 1 [0x1])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:87 -1
      (nil))
 (call_insn 265 264 266 33 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7fac40436800 printf>) [0 __builtin_printf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7fc9d9ee9800 printf>) [0 __builtin_printf S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/bellman_ford.c:87 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))

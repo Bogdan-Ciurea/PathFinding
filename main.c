@@ -102,14 +102,15 @@ int main(void){
         }
         else if(!strcmp("find path", path)){
             if(hasReadNodes){
-
                 printf("This algorithm has an animation that will show how it works.\nDo you want to use this option? (yes/no)\n");
                 do{
                     printf("\n>>>");scanf(" %[^\n]", path);
-                    if(strcmp(path, "yes") == 0)
+                    if(strcmp(path, "yes") == 0){
                         answer = 1;
-                    else if(strcmp(path, "no") == 0)
+                    }
+                    else if(strcmp(path, "no") == 0){
                         answer = 0;
+                    }
                     else{
                         printf("Unrecognised command!\n");
                         answer = -1;

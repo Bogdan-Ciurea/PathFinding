@@ -55,7 +55,7 @@ try_optimize_cfg iteration 2
         (reg:DI 63)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:24 -1
      (nil))
 (call_insn/i 11 10 12 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f80459b7e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f5056c4fe00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:24 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -171,7 +171,7 @@ try_optimize_cfg iteration 2
 (code_label 163 11 12 5 9 "" [1 uses])
 (note 12 163 13 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
 (insn 13 12 14 5 (set (reg/f:DI 61 [ D.2547 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f8045adbc78 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f5056d73c78 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:37 -1
      (nil))
 (insn 14 13 15 5 (set (reg:SI 135)
@@ -200,7 +200,7 @@ try_optimize_cfg iteration 2
                 (const_int 16 [0x10])) [0 _10->node1.id+0 S4 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:37 -1
      (nil))
 (insn 19 18 20 5 (set (reg/f:DI 66 [ D.2549 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f8045adbb48 listOfNodes>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f5056d73b48 listOfNodes>)
                     (const_int 8 [0x8]))) [0 listOfNodes.nodes+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:37 -1
      (nil))
 (insn 20 19 21 5 (set (reg:SI 136)
@@ -267,7 +267,7 @@ try_optimize_cfg iteration 2
  -> 84)
 (note 32 31 33 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
 (insn 33 32 34 6 (set (reg/f:DI 71 [ D.2547 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f8045adbc78 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f5056d73c78 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:38 -1
      (nil))
 (insn 34 33 35 6 (set (reg:SI 139)
@@ -292,7 +292,7 @@ try_optimize_cfg iteration 2
         ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:38 -1
      (nil))
 (insn 38 37 39 6 (set (reg/f:DI 75 [ D.2549 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f8045adbb48 listOfNodes>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f5056d73b48 listOfNodes>)
                     (const_int 8 [0x8]))) [0 listOfNodes.nodes+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:38 -1
      (nil))
 (insn 39 38 40 6 (set (reg:SI 140)
@@ -352,7 +352,7 @@ try_optimize_cfg iteration 2
         (reg:DF 79 [ D.2550 ])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:38 -1
      (nil))
 (insn 50 49 51 6 (set (reg/f:DI 80 [ D.2547 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f8045adbc78 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f5056d73c78 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:39 -1
      (nil))
 (insn 51 50 52 6 (set (reg:SI 143)
@@ -377,7 +377,7 @@ try_optimize_cfg iteration 2
         ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:39 -1
      (nil))
 (insn 55 54 56 6 (set (reg/f:DI 84 [ D.2549 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f8045adbb48 listOfNodes>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f5056d73b48 listOfNodes>)
                     (const_int 8 [0x8]))) [0 listOfNodes.nodes+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:39 -1
      (nil))
 (insn 56 55 57 6 (set (reg:SI 144)
@@ -437,7 +437,7 @@ try_optimize_cfg iteration 2
         (reg:DF 88 [ D.2550 ])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:39 -1
      (nil))
 (insn 67 66 68 6 (set (reg/f:DI 89 [ D.2547 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f8045adbc78 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f5056d73c78 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:40 -1
      (nil))
 (insn 68 67 69 6 (set (reg:SI 147)
@@ -462,7 +462,7 @@ try_optimize_cfg iteration 2
         ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:40 -1
      (nil))
 (insn 72 71 73 6 (set (reg/f:DI 93 [ D.2549 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f8045adbb48 listOfNodes>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f5056d73b48 listOfNodes>)
                     (const_int 8 [0x8]))) [0 listOfNodes.nodes+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:40 -1
      (nil))
 (insn 73 72 74 6 (set (reg:SI 148)
@@ -524,7 +524,7 @@ try_optimize_cfg iteration 2
 (code_label 84 83 85 7 7 "" [1 uses])
 (note 85 84 86 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
 (insn 86 85 87 7 (set (reg/f:DI 98 [ D.2547 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f8045adbc78 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f5056d73c78 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:42 -1
      (nil))
 (insn 87 86 88 7 (set (reg:SI 151)
@@ -553,7 +553,7 @@ try_optimize_cfg iteration 2
                 (const_int 40 [0x28])) [0 _47->node2.id+0 S4 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:42 -1
      (nil))
 (insn 92 91 93 7 (set (reg/f:DI 103 [ D.2549 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f8045adbb48 listOfNodes>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f5056d73b48 listOfNodes>)
                     (const_int 8 [0x8]))) [0 listOfNodes.nodes+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:42 -1
      (nil))
 (insn 93 92 94 7 (set (reg:SI 152)
@@ -620,7 +620,7 @@ try_optimize_cfg iteration 2
  -> 157)
 (note 105 104 106 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
 (insn 106 105 107 8 (set (reg/f:DI 108 [ D.2547 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f8045adbc78 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f5056d73c78 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:43 -1
      (nil))
 (insn 107 106 108 8 (set (reg:SI 155)
@@ -645,7 +645,7 @@ try_optimize_cfg iteration 2
         ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:43 -1
      (nil))
 (insn 111 110 112 8 (set (reg/f:DI 112 [ D.2549 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f8045adbb48 listOfNodes>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f5056d73b48 listOfNodes>)
                     (const_int 8 [0x8]))) [0 listOfNodes.nodes+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:43 -1
      (nil))
 (insn 112 111 113 8 (set (reg:SI 156)
@@ -705,7 +705,7 @@ try_optimize_cfg iteration 2
         (reg:DF 116 [ D.2550 ])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:43 -1
      (nil))
 (insn 123 122 124 8 (set (reg/f:DI 117 [ D.2547 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f8045adbc78 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f5056d73c78 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:44 -1
      (nil))
 (insn 124 123 125 8 (set (reg:SI 159)
@@ -730,7 +730,7 @@ try_optimize_cfg iteration 2
         ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:44 -1
      (nil))
 (insn 128 127 129 8 (set (reg/f:DI 121 [ D.2549 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f8045adbb48 listOfNodes>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f5056d73b48 listOfNodes>)
                     (const_int 8 [0x8]))) [0 listOfNodes.nodes+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:44 -1
      (nil))
 (insn 129 128 130 8 (set (reg:SI 160)
@@ -790,7 +790,7 @@ try_optimize_cfg iteration 2
         (reg:DF 125 [ D.2550 ])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:44 -1
      (nil))
 (insn 140 139 141 8 (set (reg/f:DI 126 [ D.2547 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f8045adbc78 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f5056d73c78 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:45 -1
      (nil))
 (insn 141 140 142 8 (set (reg:SI 163)
@@ -815,7 +815,7 @@ try_optimize_cfg iteration 2
         ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:45 -1
      (nil))
 (insn 145 144 146 8 (set (reg/f:DI 130 [ D.2549 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f8045adbb48 listOfNodes>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f5056d73b48 listOfNodes>)
                     (const_int 8 [0x8]))) [0 listOfNodes.nodes+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:45 -1
      (nil))
 (insn 146 145 147 8 (set (reg:SI 164)
@@ -888,7 +888,7 @@ try_optimize_cfg iteration 2
 (code_label 160 159 161 10 6 "" [1 uses])
 (note 161 160 162 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
 (insn 162 161 164 10 (set (reg:SI 60 [ D.2546 ])
-        (mem/j/c:SI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f8045adbb48 listOfNodes>) [0 listOfNodes.numberOfNodes+0 S4 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:36 -1
+        (mem/j/c:SI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f5056d73b48 listOfNodes>) [0 listOfNodes.numberOfNodes+0 S4 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:36 -1
      (nil))
 (insn 164 162 165 10 (set (reg:CCGC 17 flags)
         (compare:CCGC (reg:SI 60 [ D.2546 ])
@@ -915,7 +915,7 @@ try_optimize_cfg iteration 2
 (code_label 168 167 169 12 5 "" [1 uses])
 (note 169 168 170 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
 (insn 170 169 172 12 (set (reg:SI 59 [ D.2546 ])
-        (mem/j/c:SI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f8045adbc78 listOfLinks>) [0 listOfLinks.numberOfLinks+0 S4 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:35 -1
+        (mem/j/c:SI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f5056d73c78 listOfLinks>) [0 listOfLinks.numberOfLinks+0 S4 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:35 -1
      (nil))
 (insn 172 170 173 12 (set (reg:CCGC 17 flags)
         (compare:CCGC (reg:SI 59 [ D.2546 ])
@@ -988,7 +988,7 @@ try_optimize_cfg iteration 2
 (code_label 38 8 9 4 16 "" [1 uses])
 (note 9 38 10 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
 (insn 10 9 11 4 (set (reg/f:DI 61 [ D.2552 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f8045adbc78 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f5056d73c78 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:59 -1
      (nil))
 (insn 11 10 12 4 (set (reg:SI 72)
@@ -1030,7 +1030,7 @@ try_optimize_cfg iteration 2
  -> 27)
 (note 18 17 19 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
 (insn 19 18 20 5 (set (reg/f:DI 66 [ D.2552 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f8045adbc78 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f5056d73c78 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:59 -1
      (nil))
 (insn 20 19 21 5 (set (reg:SI 73)
@@ -1094,7 +1094,7 @@ try_optimize_cfg iteration 2
 (code_label 35 34 36 8 12 "" [1 uses])
 (note 36 35 37 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
 (insn 37 36 39 8 (set (reg:SI 60 [ D.2551 ])
-        (mem/j/c:SI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f8045adbc78 listOfLinks>) [0 listOfLinks.numberOfLinks+0 S4 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:58 -1
+        (mem/j/c:SI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f5056d73c78 listOfLinks>) [0 listOfLinks.numberOfLinks+0 S4 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:58 -1
      (nil))
 (insn 39 37 40 8 (set (reg:CCGC 17 flags)
         (compare:CCGC (reg:SI 60 [ D.2551 ])
@@ -1414,13 +1414,13 @@ try_optimize_cfg iteration 2
                 (const_int -680 [0xfffffffffffffd58])) [0 path+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:68 -1
      (nil))
 (insn 7 6 8 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f8045757a18 *.LC0>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:68 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f50569efa18 *.LC0>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:68 -1
      (nil))
 (insn 8 7 9 2 (set (reg:DI 5 di)
         (reg:DI 150)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:68 -1
      (nil))
 (call_insn 9 8 10 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f8045aa1000 fopen>) [0 fopen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f5056d39000 fopen>) [0 fopen S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:68 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1447,10 +1447,10 @@ try_optimize_cfg iteration 2
  -> 20)
 (note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
 (insn 15 14 16 4 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f8045757ab0 *.LC1>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:70 -1
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f50569efab0 *.LC1>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:70 -1
      (nil))
 (call_insn 16 15 17 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:70 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1492,13 +1492,13 @@ try_optimize_cfg iteration 2
         ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:82 -1
      (nil))
 (insn 29 28 30 6 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f8045757b48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:82 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f50569efb48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:82 -1
      (nil))
 (insn 30 29 31 6 (set (reg:DI 5 di)
         (reg:DI 152)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:82 -1
      (nil))
 (call_insn 31 30 32 6 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:82 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1520,10 +1520,10 @@ try_optimize_cfg iteration 2
         (reg:DI 154)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:83 -1
      (nil))
 (insn 36 35 37 6 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f8045757be0 *.LC3>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:83 -1
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f50569efbe0 *.LC3>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:83 -1
      (nil))
 (call_insn 37 36 38 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f8045ae2e00 validDataFromFile>) [0 validDataFromFile S1 A8])
+        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f5056d7ae00 validDataFromFile>) [0 validDataFromFile S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:83 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1558,10 +1558,10 @@ try_optimize_cfg iteration 2
  -> 50)
 (note 44 43 45 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
 (insn 45 44 46 8 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:83 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:83 -1
      (nil))
 (call_insn 46 45 47 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:83 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1584,10 +1584,10 @@ try_optimize_cfg iteration 2
         (reg:DI 155)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:85 -1
      (nil))
 (insn 54 53 55 9 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f8045757be0 *.LC3>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:85 -1
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f50569efbe0 *.LC3>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:85 -1
      (nil))
 (call_insn/i 55 54 56 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f80459b7e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f5056c4fe00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:85 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1610,13 +1610,13 @@ try_optimize_cfg iteration 2
  -> 234)
 (note 59 58 60 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
 (insn 60 59 61 10 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f8045757b48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:86 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f50569efb48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:86 -1
      (nil))
 (insn 61 60 62 10 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:86 -1
      (nil))
 (call_insn 62 61 63 10 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:86 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1638,10 +1638,10 @@ try_optimize_cfg iteration 2
         (reg:DI 157)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:87 -1
      (nil))
 (insn 67 66 68 10 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f8045757d10 *.LC5>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:87 -1
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f50569efd10 *.LC5>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:87 -1
      (nil))
 (call_insn 68 67 69 10 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f8045ae2e00 validDataFromFile>) [0 validDataFromFile S1 A8])
+        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f5056d7ae00 validDataFromFile>) [0 validDataFromFile S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:87 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1663,10 +1663,10 @@ try_optimize_cfg iteration 2
  -> 78)
 (note 72 71 73 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
 (insn 73 72 74 11 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:87 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:87 -1
      (nil))
 (call_insn 74 73 75 11 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:87 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1682,13 +1682,13 @@ try_optimize_cfg iteration 2
 (code_label 78 77 79 12 23 "" [1 uses])
 (note 79 78 80 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
 (insn 80 79 81 12 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f8045757b48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:88 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f50569efb48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:88 -1
      (nil))
 (insn 81 80 82 12 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:88 -1
      (nil))
 (call_insn 82 81 83 12 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:88 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1710,7 +1710,7 @@ try_optimize_cfg iteration 2
         (reg:DI 159)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:89 -1
      (nil))
 (call_insn 87 86 88 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f8045ae2300 inputIsNumber>) [0 inputIsNumber S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f5056d7a300 inputIsNumber>) [0 inputIsNumber S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:89 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1731,10 +1731,10 @@ try_optimize_cfg iteration 2
  -> 97)
 (note 91 90 92 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
 (insn 92 91 93 13 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:89 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:89 -1
      (nil))
 (call_insn 93 92 94 13 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:89 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1757,7 +1757,7 @@ try_optimize_cfg iteration 2
         (reg:DI 160)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:90 -1
      (nil))
 (call_insn/i 101 100 102 14 (set (reg:DF 21 xmm0)
-        (call (mem:QI (symbol_ref:DI ("atof") [flags 0x41]  <function_decl 0x7f8045ac3c00 atof>) [0 atof S1 A8])
+        (call (mem:QI (symbol_ref:DI ("atof") [flags 0x41]  <function_decl 0x7f5056d5bc00 atof>) [0 atof S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:90 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1766,17 +1766,17 @@ try_optimize_cfg iteration 2
 (insn 102 101 103 14 (set (reg:DF 65 [ minLat.0 ])
         (reg:DF 21 xmm0)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:90 -1
      (nil))
-(insn 103 102 104 14 (set (mem/c:DF (symbol_ref:DI ("minLat")  <var_decl 0x7f8045adb5f0 minLat>) [0 minLat+0 S8 A64])
+(insn 103 102 104 14 (set (mem/c:DF (symbol_ref:DI ("minLat")  <var_decl 0x7f5056d735f0 minLat>) [0 minLat+0 S8 A64])
         (reg:DF 65 [ minLat.0 ])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:90 -1
      (nil))
 (insn 104 103 105 14 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f8045757b48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:92 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f50569efb48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:92 -1
      (nil))
 (insn 105 104 106 14 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:92 -1
      (nil))
 (call_insn 106 105 107 14 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:92 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1798,10 +1798,10 @@ try_optimize_cfg iteration 2
         (reg:DI 162)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:93 -1
      (nil))
 (insn 111 110 112 14 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f8045757da8 *.LC6>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:93 -1
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f50569efda8 *.LC6>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:93 -1
      (nil))
 (call_insn 112 111 113 14 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f8045ae2e00 validDataFromFile>) [0 validDataFromFile S1 A8])
+        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f5056d7ae00 validDataFromFile>) [0 validDataFromFile S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:93 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1823,10 +1823,10 @@ try_optimize_cfg iteration 2
  -> 122)
 (note 116 115 117 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
 (insn 117 116 118 15 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:93 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:93 -1
      (nil))
 (call_insn 118 117 119 15 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:93 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1842,13 +1842,13 @@ try_optimize_cfg iteration 2
 (code_label 122 121 123 16 25 "" [1 uses])
 (note 123 122 124 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
 (insn 124 123 125 16 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f8045757b48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:94 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f50569efb48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:94 -1
      (nil))
 (insn 125 124 126 16 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:94 -1
      (nil))
 (call_insn 126 125 127 16 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:94 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1870,7 +1870,7 @@ try_optimize_cfg iteration 2
         (reg:DI 164)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:95 -1
      (nil))
 (call_insn 131 130 132 16 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f8045ae2300 inputIsNumber>) [0 inputIsNumber S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f5056d7a300 inputIsNumber>) [0 inputIsNumber S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:95 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1908,7 +1908,7 @@ try_optimize_cfg iteration 2
         (reg:DI 165)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:96 -1
      (nil))
 (call_insn/i 143 142 144 18 (set (reg:DF 21 xmm0)
-        (call (mem:QI (symbol_ref:DI ("atof") [flags 0x41]  <function_decl 0x7f8045ac3c00 atof>) [0 atof S1 A8])
+        (call (mem:QI (symbol_ref:DI ("atof") [flags 0x41]  <function_decl 0x7f5056d5bc00 atof>) [0 atof S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:96 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1917,17 +1917,17 @@ try_optimize_cfg iteration 2
 (insn 144 143 145 18 (set (reg:DF 68 [ minLon.1 ])
         (reg:DF 21 xmm0)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:96 -1
      (nil))
-(insn 145 144 146 18 (set (mem/c:DF (symbol_ref:DI ("minLon")  <var_decl 0x7f8045adb720 minLon>) [0 minLon+0 S8 A64])
+(insn 145 144 146 18 (set (mem/c:DF (symbol_ref:DI ("minLon")  <var_decl 0x7f5056d73720 minLon>) [0 minLon+0 S8 A64])
         (reg:DF 68 [ minLon.1 ])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:96 -1
      (nil))
 (insn 146 145 147 18 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f8045757b48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:98 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f50569efb48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:98 -1
      (nil))
 (insn 147 146 148 18 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:98 -1
      (nil))
 (call_insn 148 147 149 18 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:98 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1949,10 +1949,10 @@ try_optimize_cfg iteration 2
         (reg:DI 167)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:99 -1
      (nil))
 (insn 153 152 154 18 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x7f8045757e40 *.LC7>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:99 -1
+        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x7f50569efe40 *.LC7>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:99 -1
      (nil))
 (call_insn 154 153 155 18 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f8045ae2e00 validDataFromFile>) [0 validDataFromFile S1 A8])
+        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f5056d7ae00 validDataFromFile>) [0 validDataFromFile S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:99 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1974,10 +1974,10 @@ try_optimize_cfg iteration 2
  -> 164)
 (note 158 157 159 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
 (insn 159 158 160 19 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:99 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:99 -1
      (nil))
 (call_insn 160 159 161 19 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:99 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1993,13 +1993,13 @@ try_optimize_cfg iteration 2
 (code_label 164 163 165 20 27 "" [1 uses])
 (note 165 164 166 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
 (insn 166 165 167 20 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f8045757b48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:100 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f50569efb48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:100 -1
      (nil))
 (insn 167 166 168 20 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:100 -1
      (nil))
 (call_insn 168 167 169 20 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:100 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2021,7 +2021,7 @@ try_optimize_cfg iteration 2
         (reg:DI 169)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:101 -1
      (nil))
 (call_insn 173 172 174 20 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f8045ae2300 inputIsNumber>) [0 inputIsNumber S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f5056d7a300 inputIsNumber>) [0 inputIsNumber S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:101 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2059,7 +2059,7 @@ try_optimize_cfg iteration 2
         (reg:DI 170)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:102 -1
      (nil))
 (call_insn/i 185 184 186 22 (set (reg:DF 21 xmm0)
-        (call (mem:QI (symbol_ref:DI ("atof") [flags 0x41]  <function_decl 0x7f8045ac3c00 atof>) [0 atof S1 A8])
+        (call (mem:QI (symbol_ref:DI ("atof") [flags 0x41]  <function_decl 0x7f5056d5bc00 atof>) [0 atof S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:102 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2068,17 +2068,17 @@ try_optimize_cfg iteration 2
 (insn 186 185 187 22 (set (reg:DF 71 [ maxLat.2 ])
         (reg:DF 21 xmm0)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:102 -1
      (nil))
-(insn 187 186 188 22 (set (mem/c:DF (symbol_ref:DI ("maxLat")  <var_decl 0x7f8045adb688 maxLat>) [0 maxLat+0 S8 A64])
+(insn 187 186 188 22 (set (mem/c:DF (symbol_ref:DI ("maxLat")  <var_decl 0x7f5056d73688 maxLat>) [0 maxLat+0 S8 A64])
         (reg:DF 71 [ maxLat.2 ])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:102 -1
      (nil))
 (insn 188 187 189 22 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f8045757b48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:104 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f50569efb48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:104 -1
      (nil))
 (insn 189 188 190 22 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:104 -1
      (nil))
 (call_insn 190 189 191 22 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:104 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2100,10 +2100,10 @@ try_optimize_cfg iteration 2
         (reg:DI 172)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:105 -1
      (nil))
 (insn 195 194 196 22 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x7f8045757ed8 *.LC8>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:105 -1
+        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x7f50569efed8 *.LC8>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:105 -1
      (nil))
 (call_insn 196 195 197 22 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f8045ae2e00 validDataFromFile>) [0 validDataFromFile S1 A8])
+        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f5056d7ae00 validDataFromFile>) [0 validDataFromFile S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:105 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2125,10 +2125,10 @@ try_optimize_cfg iteration 2
  -> 206)
 (note 200 199 201 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
 (insn 201 200 202 23 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:105 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:105 -1
      (nil))
 (call_insn 202 201 203 23 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:105 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2144,13 +2144,13 @@ try_optimize_cfg iteration 2
 (code_label 206 205 207 24 29 "" [1 uses])
 (note 207 206 208 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
 (insn 208 207 209 24 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f8045757b48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:106 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f50569efb48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:106 -1
      (nil))
 (insn 209 208 210 24 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:106 -1
      (nil))
 (call_insn 210 209 211 24 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:106 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2172,7 +2172,7 @@ try_optimize_cfg iteration 2
         (reg:DI 174)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:107 -1
      (nil))
 (call_insn 215 214 216 24 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f8045ae2300 inputIsNumber>) [0 inputIsNumber S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f5056d7a300 inputIsNumber>) [0 inputIsNumber S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:107 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2193,10 +2193,10 @@ try_optimize_cfg iteration 2
  -> 225)
 (note 219 218 220 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
 (insn 220 219 221 25 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:107 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:107 -1
      (nil))
 (call_insn 221 220 222 25 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:107 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2219,7 +2219,7 @@ try_optimize_cfg iteration 2
         (reg:DI 175)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:108 -1
      (nil))
 (call_insn/i 229 228 230 26 (set (reg:DF 21 xmm0)
-        (call (mem:QI (symbol_ref:DI ("atof") [flags 0x41]  <function_decl 0x7f8045ac3c00 atof>) [0 atof S1 A8])
+        (call (mem:QI (symbol_ref:DI ("atof") [flags 0x41]  <function_decl 0x7f5056d5bc00 atof>) [0 atof S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:108 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2228,7 +2228,7 @@ try_optimize_cfg iteration 2
 (insn 230 229 231 26 (set (reg:DF 74 [ maxLon.3 ])
         (reg:DF 21 xmm0)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:108 -1
      (nil))
-(insn 231 230 232 26 (set (mem/c:DF (symbol_ref:DI ("maxLon")  <var_decl 0x7f8045adb7b8 maxLon>) [0 maxLon+0 S8 A64])
+(insn 231 230 232 26 (set (mem/c:DF (symbol_ref:DI ("maxLon")  <var_decl 0x7f5056d737b8 maxLon>) [0 maxLon+0 S8 A64])
         (reg:DF 74 [ maxLon.3 ])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:108 -1
      (nil))
 (jump_insn 232 231 233 26 (set (pc)
@@ -2246,10 +2246,10 @@ try_optimize_cfg iteration 2
         (reg:DI 176)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:114 -1
      (nil))
 (insn 238 237 239 27 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x7f8045765000 *.LC9>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:114 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x7f50569fd000 *.LC9>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:114 -1
      (nil))
 (call_insn/i 239 238 240 27 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f80459b7e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f5056c4fe00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:114 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2320,7 +2320,7 @@ try_optimize_cfg iteration 2
         (reg:DI 177)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:81 -1
      (nil))
 (insn 259 258 260 31 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x7f8045765098 *.LC10>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:81 -1
+        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x7f50569fd098 *.LC10>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:81 -1
      (nil))
 (insn 260 259 261 31 (set (reg:DI 5 di)
         (reg:DI 178)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:81 -1
@@ -2329,7 +2329,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:81 -1
      (nil))
 (call_insn 262 261 263 31 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("*__isoc99_fscanf") [flags 0x41]  <function_decl 0x7f80459c0300 fscanf>) [0 __builtin_fscanf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_fscanf") [flags 0x41]  <function_decl 0x7f5056c58300 fscanf>) [0 __builtin_fscanf S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:81 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -2361,7 +2361,7 @@ try_optimize_cfg iteration 2
         (reg:DI 179)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:122 -1
      (nil))
 (call_insn 271 270 272 32 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7f8045a9ae00 fclose>) [0 fclose S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7f5056d32e00 fclose>) [0 fclose S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:122 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2370,7 +2370,7 @@ try_optimize_cfg iteration 2
         (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -8 [0xfffffffffffffff8])) [0 links+0 S4 A32])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:126 -1
      (nil))
-(insn 273 272 274 32 (set (mem/j/c:SI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f8045adbc78 listOfLinks>) [0 listOfLinks.numberOfLinks+0 S4 A64])
+(insn 273 272 274 32 (set (mem/j/c:SI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f5056d73c78 listOfLinks>) [0 listOfLinks.numberOfLinks+0 S4 A64])
         (reg:SI 180)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:126 -1
      (nil))
 (insn 274 273 275 32 (set (reg:SI 181)
@@ -2387,7 +2387,7 @@ try_optimize_cfg iteration 2
         (reg:DI 76 [ D.2555 ])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:127 -1
      (nil))
 (call_insn 278 277 279 32 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x7f80459d0d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x7f5056c68d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:127 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2401,7 +2401,7 @@ try_optimize_cfg iteration 2
 (insn 280 279 281 32 (set (reg/f:DI 77 [ D.2556 ])
         (reg/f:DI 182)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:127 -1
      (nil))
-(insn 281 280 282 32 (set (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f8045adbc78 listOfLinks>)
+(insn 281 280 282 32 (set (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f5056d73c78 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])
         (reg/f:DI 77 [ D.2556 ])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:127 -1
      (nil))
@@ -2414,13 +2414,13 @@ try_optimize_cfg iteration 2
                 (const_int -680 [0xfffffffffffffd58])) [0 path+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:132 -1
      (nil))
 (insn 284 283 285 32 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f8045757a18 *.LC0>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:132 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f50569efa18 *.LC0>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:132 -1
      (nil))
 (insn 285 284 286 32 (set (reg:DI 5 di)
         (reg:DI 183)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:132 -1
      (nil))
 (call_insn 286 285 287 32 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f8045aa1000 fopen>) [0 fopen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f5056d39000 fopen>) [0 fopen S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:132 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2448,13 +2448,13 @@ try_optimize_cfg iteration 2
         ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:134 -1
      (nil))
 (insn 293 292 294 33 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f8045757b48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:134 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f50569efb48 *.LC2>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:134 -1
      (nil))
 (insn 294 293 295 33 (set (reg:DI 5 di)
         (reg:DI 185)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:134 -1
      (nil))
 (call_insn 295 294 296 33 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:134 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2476,10 +2476,10 @@ try_optimize_cfg iteration 2
         (reg:DI 187)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:135 -1
      (nil))
 (insn 300 299 301 33 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f8045757be0 *.LC3>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:135 -1
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f50569efbe0 *.LC3>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:135 -1
      (nil))
 (call_insn/i 301 300 302 33 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f80459b7e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f5056c4fe00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:135 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2509,10 +2509,10 @@ try_optimize_cfg iteration 2
         (reg:DI 188)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:137 -1
      (nil))
 (insn 308 307 309 34 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x7f8045765000 *.LC9>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:137 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x7f50569fd000 *.LC9>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:137 -1
      (nil))
 (call_insn/i 309 308 310 34 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f80459b7e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f5056c4fe00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:137 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2535,13 +2535,13 @@ try_optimize_cfg iteration 2
  -> 524)
 (note 313 312 314 35 [bb 35] NOTE_INSN_BASIC_BLOCK)
 (insn 314 313 315 35 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:138 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:138 -1
      (nil))
 (insn 315 314 316 35 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:138 -1
      (nil))
 (call_insn 316 315 317 35 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:138 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2563,10 +2563,10 @@ try_optimize_cfg iteration 2
         (reg:DI 190)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:139 -1
      (nil))
 (insn 321 320 322 35 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x7f80457651c8 *.LC12>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:139 -1
+        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x7f50569fd1c8 *.LC12>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:139 -1
      (nil))
 (call_insn 322 321 323 35 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f8045ae2e00 validDataFromFile>) [0 validDataFromFile S1 A8])
+        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f5056d7ae00 validDataFromFile>) [0 validDataFromFile S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:139 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2588,10 +2588,10 @@ try_optimize_cfg iteration 2
  -> 332)
 (note 326 325 327 36 [bb 36] NOTE_INSN_BASIC_BLOCK)
 (insn 327 326 328 36 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:139 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:139 -1
      (nil))
 (call_insn 328 327 329 36 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:139 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2607,13 +2607,13 @@ try_optimize_cfg iteration 2
 (code_label 332 331 333 37 37 "" [1 uses])
 (note 333 332 334 37 [bb 37] NOTE_INSN_BASIC_BLOCK)
 (insn 334 333 335 37 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:140 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:140 -1
      (nil))
 (insn 335 334 336 37 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:140 -1
      (nil))
 (call_insn 336 335 337 37 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:140 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2635,7 +2635,7 @@ try_optimize_cfg iteration 2
         (reg:DI 192)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:141 -1
      (nil))
 (call_insn 341 340 342 37 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f8045ae2300 inputIsNumber>) [0 inputIsNumber S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f5056d7a300 inputIsNumber>) [0 inputIsNumber S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:141 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2656,10 +2656,10 @@ try_optimize_cfg iteration 2
  -> 351)
 (note 345 344 346 38 [bb 38] NOTE_INSN_BASIC_BLOCK)
 (insn 346 345 347 38 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:141 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:141 -1
      (nil))
 (call_insn 347 346 348 38 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:141 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2675,7 +2675,7 @@ try_optimize_cfg iteration 2
 (code_label 351 350 352 39 38 "" [1 uses])
 (note 352 351 353 39 [bb 39] NOTE_INSN_BASIC_BLOCK)
 (insn 353 352 354 39 (set (reg/f:DI 83 [ D.2557 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f8045adbc78 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f5056d73c78 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:142 -1
      (nil))
 (insn 354 353 355 39 (set (reg:SI 193)
@@ -2707,7 +2707,7 @@ try_optimize_cfg iteration 2
         (reg:DI 194)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:142 -1
      (nil))
 (call_insn/i 360 359 361 39 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("atoi") [flags 0x41]  <function_decl 0x7f8045ac3d00 atoi>) [0 atoi S1 A8])
+        (call (mem:QI (symbol_ref:DI ("atoi") [flags 0x41]  <function_decl 0x7f5056d5bd00 atoi>) [0 atoi S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:142 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2720,13 +2720,13 @@ try_optimize_cfg iteration 2
         (reg:SI 87 [ D.2554 ])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:142 -1
      (nil))
 (insn 363 362 364 39 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:144 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:144 -1
      (nil))
 (insn 364 363 365 39 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:144 -1
      (nil))
 (call_insn 365 364 366 39 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:144 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2748,10 +2748,10 @@ try_optimize_cfg iteration 2
         (reg:DI 196)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:145 -1
      (nil))
 (insn 370 369 371 39 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x7f8045765260 *.LC13>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:145 -1
+        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x7f50569fd260 *.LC13>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:145 -1
      (nil))
 (call_insn 371 370 372 39 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f8045ae2e00 validDataFromFile>) [0 validDataFromFile S1 A8])
+        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f5056d7ae00 validDataFromFile>) [0 validDataFromFile S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:145 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2773,10 +2773,10 @@ try_optimize_cfg iteration 2
  -> 381)
 (note 375 374 376 40 [bb 40] NOTE_INSN_BASIC_BLOCK)
 (insn 376 375 377 40 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:145 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:145 -1
      (nil))
 (call_insn 377 376 378 40 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:145 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2792,13 +2792,13 @@ try_optimize_cfg iteration 2
 (code_label 381 380 382 41 39 "" [1 uses])
 (note 382 381 383 41 [bb 41] NOTE_INSN_BASIC_BLOCK)
 (insn 383 382 384 41 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:146 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:146 -1
      (nil))
 (insn 384 383 385 41 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:146 -1
      (nil))
 (call_insn 385 384 386 41 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:146 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2820,7 +2820,7 @@ try_optimize_cfg iteration 2
         (reg:DI 198)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:147 -1
      (nil))
 (call_insn 390 389 391 41 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f8045ae2300 inputIsNumber>) [0 inputIsNumber S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f5056d7a300 inputIsNumber>) [0 inputIsNumber S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:147 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2841,10 +2841,10 @@ try_optimize_cfg iteration 2
  -> 400)
 (note 394 393 395 42 [bb 42] NOTE_INSN_BASIC_BLOCK)
 (insn 395 394 396 42 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:147 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:147 -1
      (nil))
 (call_insn 396 395 397 42 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:147 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2860,7 +2860,7 @@ try_optimize_cfg iteration 2
 (code_label 400 399 401 43 40 "" [1 uses])
 (note 401 400 402 43 [bb 43] NOTE_INSN_BASIC_BLOCK)
 (insn 402 401 403 43 (set (reg/f:DI 90 [ D.2557 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f8045adbc78 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f5056d73c78 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:148 -1
      (nil))
 (insn 403 402 404 43 (set (reg:SI 199)
@@ -2892,7 +2892,7 @@ try_optimize_cfg iteration 2
         (reg:DI 200)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:148 -1
      (nil))
 (call_insn/i 409 408 410 43 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("atoi") [flags 0x41]  <function_decl 0x7f8045ac3d00 atoi>) [0 atoi S1 A8])
+        (call (mem:QI (symbol_ref:DI ("atoi") [flags 0x41]  <function_decl 0x7f5056d5bd00 atoi>) [0 atoi S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:148 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2906,13 +2906,13 @@ try_optimize_cfg iteration 2
         (reg:SI 94 [ D.2554 ])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:148 -1
      (nil))
 (insn 412 411 413 43 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:150 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:150 -1
      (nil))
 (insn 413 412 414 43 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:150 -1
      (nil))
 (call_insn 414 413 415 43 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:150 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2934,10 +2934,10 @@ try_optimize_cfg iteration 2
         (reg:DI 202)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:151 -1
      (nil))
 (insn 419 418 420 43 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x7f8045765260 *.LC13>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:151 -1
+        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x7f50569fd260 *.LC13>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:151 -1
      (nil))
 (call_insn 420 419 421 43 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f8045ae2e00 validDataFromFile>) [0 validDataFromFile S1 A8])
+        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f5056d7ae00 validDataFromFile>) [0 validDataFromFile S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:151 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2959,10 +2959,10 @@ try_optimize_cfg iteration 2
  -> 430)
 (note 424 423 425 44 [bb 44] NOTE_INSN_BASIC_BLOCK)
 (insn 425 424 426 44 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:151 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:151 -1
      (nil))
 (call_insn 426 425 427 44 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:151 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2978,13 +2978,13 @@ try_optimize_cfg iteration 2
 (code_label 430 429 431 45 41 "" [1 uses])
 (note 431 430 432 45 [bb 45] NOTE_INSN_BASIC_BLOCK)
 (insn 432 431 433 45 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:152 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:152 -1
      (nil))
 (insn 433 432 434 45 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:152 -1
      (nil))
 (call_insn 434 433 435 45 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:152 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3006,7 +3006,7 @@ try_optimize_cfg iteration 2
         (reg:DI 204)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:153 -1
      (nil))
 (call_insn 439 438 440 45 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f8045ae2300 inputIsNumber>) [0 inputIsNumber S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f5056d7a300 inputIsNumber>) [0 inputIsNumber S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:153 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3027,10 +3027,10 @@ try_optimize_cfg iteration 2
  -> 449)
 (note 443 442 444 46 [bb 46] NOTE_INSN_BASIC_BLOCK)
 (insn 444 443 445 46 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:153 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:153 -1
      (nil))
 (call_insn 445 444 446 46 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:153 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3046,7 +3046,7 @@ try_optimize_cfg iteration 2
 (code_label 449 448 450 47 42 "" [1 uses])
 (note 450 449 451 47 [bb 47] NOTE_INSN_BASIC_BLOCK)
 (insn 451 450 452 47 (set (reg/f:DI 97 [ D.2557 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f8045adbc78 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f5056d73c78 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:154 -1
      (nil))
 (insn 452 451 453 47 (set (reg:SI 205)
@@ -3078,7 +3078,7 @@ try_optimize_cfg iteration 2
         (reg:DI 206)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:154 -1
      (nil))
 (call_insn/i 458 457 459 47 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("atoi") [flags 0x41]  <function_decl 0x7f8045ac3d00 atoi>) [0 atoi S1 A8])
+        (call (mem:QI (symbol_ref:DI ("atoi") [flags 0x41]  <function_decl 0x7f5056d5bd00 atoi>) [0 atoi S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:154 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3092,13 +3092,13 @@ try_optimize_cfg iteration 2
         (reg:SI 101 [ D.2554 ])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:154 -1
      (nil))
 (insn 461 460 462 47 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:156 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:156 -1
      (nil))
 (insn 462 461 463 47 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:156 -1
      (nil))
 (call_insn 463 462 464 47 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:156 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3113,13 +3113,13 @@ try_optimize_cfg iteration 2
         (reg:DI 207)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:156 -1
      (nil))
 (insn 466 465 467 47 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:157 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:157 -1
      (nil))
 (insn 467 466 468 47 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:157 -1
      (nil))
 (call_insn 468 467 469 47 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:157 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3134,13 +3134,13 @@ try_optimize_cfg iteration 2
         (reg:DI 208)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:157 -1
      (nil))
 (insn 471 470 472 47 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:158 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:158 -1
      (nil))
 (insn 472 471 473 47 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:158 -1
      (nil))
 (call_insn 473 472 474 47 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:158 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3162,10 +3162,10 @@ try_optimize_cfg iteration 2
         (reg:DI 210)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:159 -1
      (nil))
 (insn 478 477 479 47 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x7f80457652f8 *.LC14>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:159 -1
+        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x7f50569fd2f8 *.LC14>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:159 -1
      (nil))
 (call_insn 479 478 480 47 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f8045ae2e00 validDataFromFile>) [0 validDataFromFile S1 A8])
+        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f5056d7ae00 validDataFromFile>) [0 validDataFromFile S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:159 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3187,10 +3187,10 @@ try_optimize_cfg iteration 2
  -> 489)
 (note 483 482 484 48 [bb 48] NOTE_INSN_BASIC_BLOCK)
 (insn 484 483 485 48 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:159 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:159 -1
      (nil))
 (call_insn 485 484 486 48 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:159 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3206,13 +3206,13 @@ try_optimize_cfg iteration 2
 (code_label 489 488 490 49 43 "" [1 uses])
 (note 490 489 491 49 [bb 49] NOTE_INSN_BASIC_BLOCK)
 (insn 491 490 492 49 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:160 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:160 -1
      (nil))
 (insn 492 491 493 49 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:160 -1
      (nil))
 (call_insn 493 492 494 49 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:160 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3234,7 +3234,7 @@ try_optimize_cfg iteration 2
         (reg:DI 212)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:161 -1
      (nil))
 (call_insn 498 497 499 49 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f8045ae2300 inputIsNumber>) [0 inputIsNumber S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f5056d7a300 inputIsNumber>) [0 inputIsNumber S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:161 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3255,10 +3255,10 @@ try_optimize_cfg iteration 2
  -> 508)
 (note 502 501 503 50 [bb 50] NOTE_INSN_BASIC_BLOCK)
 (insn 503 502 504 50 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:161 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:161 -1
      (nil))
 (call_insn 504 503 505 50 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:161 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3274,7 +3274,7 @@ try_optimize_cfg iteration 2
 (code_label 508 507 509 51 44 "" [1 uses])
 (note 509 508 510 51 [bb 51] NOTE_INSN_BASIC_BLOCK)
 (insn 510 509 511 51 (set (reg/f:DI 104 [ D.2557 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f8045adbc78 listOfLinks>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfLinks")  <var_decl 0x7f5056d73c78 listOfLinks>)
                     (const_int 8 [0x8]))) [0 listOfLinks.links+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:162 -1
      (nil))
 (insn 511 510 512 51 (set (reg:SI 105 [ links.4 ])
@@ -3319,7 +3319,7 @@ try_optimize_cfg iteration 2
         (reg:DI 214)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:162 -1
      (nil))
 (call_insn/i 519 518 520 51 (set (reg:DF 21 xmm0)
-        (call (mem:QI (symbol_ref:DI ("atof") [flags 0x41]  <function_decl 0x7f8045ac3c00 atof>) [0 atof S1 A8])
+        (call (mem:QI (symbol_ref:DI ("atof") [flags 0x41]  <function_decl 0x7f5056d5bc00 atof>) [0 atof S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:162 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3347,10 +3347,10 @@ try_optimize_cfg iteration 2
         (reg:DI 215)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:165 -1
      (nil))
 (insn 528 527 529 52 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x7f8045765390 *.LC15>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:165 -1
+        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x7f50569fd390 *.LC15>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:165 -1
      (nil))
 (call_insn/i 529 528 530 52 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f80459b7e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f5056c4fe00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:165 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3373,13 +3373,13 @@ try_optimize_cfg iteration 2
  -> 708)
 (note 533 532 534 53 [bb 53] NOTE_INSN_BASIC_BLOCK)
 (insn 534 533 535 53 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:166 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:166 -1
      (nil))
 (insn 535 534 536 53 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:166 -1
      (nil))
 (call_insn 536 535 537 53 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:166 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3401,10 +3401,10 @@ try_optimize_cfg iteration 2
         (reg:DI 217)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:167 -1
      (nil))
 (insn 541 540 542 53 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x7f80457651c8 *.LC12>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:167 -1
+        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x7f50569fd1c8 *.LC12>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:167 -1
      (nil))
 (call_insn 542 541 543 53 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f8045ae2e00 validDataFromFile>) [0 validDataFromFile S1 A8])
+        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f5056d7ae00 validDataFromFile>) [0 validDataFromFile S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:167 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3426,10 +3426,10 @@ try_optimize_cfg iteration 2
  -> 552)
 (note 546 545 547 54 [bb 54] NOTE_INSN_BASIC_BLOCK)
 (insn 547 546 548 54 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:167 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:167 -1
      (nil))
 (call_insn 548 547 549 54 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:167 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3445,13 +3445,13 @@ try_optimize_cfg iteration 2
 (code_label 552 551 553 55 46 "" [1 uses])
 (note 553 552 554 55 [bb 55] NOTE_INSN_BASIC_BLOCK)
 (insn 554 553 555 55 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:168 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:168 -1
      (nil))
 (insn 555 554 556 55 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:168 -1
      (nil))
 (call_insn 556 555 557 55 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:168 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3473,7 +3473,7 @@ try_optimize_cfg iteration 2
         (reg:DI 219)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:169 -1
      (nil))
 (call_insn 561 560 562 55 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f8045ae2300 inputIsNumber>) [0 inputIsNumber S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f5056d7a300 inputIsNumber>) [0 inputIsNumber S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:169 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3494,10 +3494,10 @@ try_optimize_cfg iteration 2
  -> 571)
 (note 565 564 566 56 [bb 56] NOTE_INSN_BASIC_BLOCK)
 (insn 566 565 567 56 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:169 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:169 -1
      (nil))
 (call_insn 567 566 568 56 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:169 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3520,7 +3520,7 @@ try_optimize_cfg iteration 2
         (reg:DI 220)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:170 -1
      (nil))
 (call_insn/i 575 574 576 57 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("atoi") [flags 0x41]  <function_decl 0x7f8045ac3d00 atoi>) [0 atoi S1 A8])
+        (call (mem:QI (symbol_ref:DI ("atoi") [flags 0x41]  <function_decl 0x7f5056d5bd00 atoi>) [0 atoi S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:170 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3534,13 +3534,13 @@ try_optimize_cfg iteration 2
         (reg:SI 221)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:170 -1
      (nil))
 (insn 578 577 579 57 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:172 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:172 -1
      (nil))
 (insn 579 578 580 57 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:172 -1
      (nil))
 (call_insn 580 579 581 57 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:172 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3562,10 +3562,10 @@ try_optimize_cfg iteration 2
         (reg:DI 223)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:173 -1
      (nil))
 (insn 585 584 586 57 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC16") [flags 0x2]  <var_decl 0x7f8045765428 *.LC16>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:173 -1
+        (symbol_ref/f:DI ("*.LC16") [flags 0x2]  <var_decl 0x7f50569fd428 *.LC16>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:173 -1
      (nil))
 (call_insn 586 585 587 57 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f8045ae2e00 validDataFromFile>) [0 validDataFromFile S1 A8])
+        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f5056d7ae00 validDataFromFile>) [0 validDataFromFile S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:173 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3587,10 +3587,10 @@ try_optimize_cfg iteration 2
  -> 596)
 (note 590 589 591 58 [bb 58] NOTE_INSN_BASIC_BLOCK)
 (insn 591 590 592 58 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:173 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:173 -1
      (nil))
 (call_insn 592 591 593 58 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:173 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3606,13 +3606,13 @@ try_optimize_cfg iteration 2
 (code_label 596 595 597 59 48 "" [1 uses])
 (note 597 596 598 59 [bb 59] NOTE_INSN_BASIC_BLOCK)
 (insn 598 597 599 59 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:174 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:174 -1
      (nil))
 (insn 599 598 600 59 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:174 -1
      (nil))
 (call_insn 600 599 601 59 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:174 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3634,7 +3634,7 @@ try_optimize_cfg iteration 2
         (reg:DI 225)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:175 -1
      (nil))
 (call_insn 605 604 606 59 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f8045ae2300 inputIsNumber>) [0 inputIsNumber S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f5056d7a300 inputIsNumber>) [0 inputIsNumber S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:175 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3655,10 +3655,10 @@ try_optimize_cfg iteration 2
  -> 615)
 (note 609 608 610 60 [bb 60] NOTE_INSN_BASIC_BLOCK)
 (insn 610 609 611 60 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:175 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:175 -1
      (nil))
 (call_insn 611 610 612 60 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:175 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3681,7 +3681,7 @@ try_optimize_cfg iteration 2
         (reg:DI 226)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:176 -1
      (nil))
 (call_insn/i 619 618 620 61 (set (reg:DF 21 xmm0)
-        (call (mem:QI (symbol_ref:DI ("atof") [flags 0x41]  <function_decl 0x7f8045ac3c00 atof>) [0 atof S1 A8])
+        (call (mem:QI (symbol_ref:DI ("atof") [flags 0x41]  <function_decl 0x7f5056d5bc00 atof>) [0 atof S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:176 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3695,13 +3695,13 @@ try_optimize_cfg iteration 2
         (reg:DF 227)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:176 -1
      (nil))
 (insn 622 621 623 61 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:178 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:178 -1
      (nil))
 (insn 623 622 624 61 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:178 -1
      (nil))
 (call_insn 624 623 625 61 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:178 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3723,10 +3723,10 @@ try_optimize_cfg iteration 2
         (reg:DI 229)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:179 -1
      (nil))
 (insn 629 628 630 61 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC17") [flags 0x2]  <var_decl 0x7f80457654c0 *.LC17>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:179 -1
+        (symbol_ref/f:DI ("*.LC17") [flags 0x2]  <var_decl 0x7f50569fd4c0 *.LC17>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:179 -1
      (nil))
 (call_insn 630 629 631 61 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f8045ae2e00 validDataFromFile>) [0 validDataFromFile S1 A8])
+        (call (mem:QI (symbol_ref:DI ("validDataFromFile") [flags 0x3]  <function_decl 0x7f5056d7ae00 validDataFromFile>) [0 validDataFromFile S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:179 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3748,10 +3748,10 @@ try_optimize_cfg iteration 2
  -> 640)
 (note 634 633 635 62 [bb 62] NOTE_INSN_BASIC_BLOCK)
 (insn 635 634 636 62 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:179 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:179 -1
      (nil))
 (call_insn 636 635 637 62 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:179 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3767,13 +3767,13 @@ try_optimize_cfg iteration 2
 (code_label 640 639 641 63 50 "" [1 uses])
 (note 641 640 642 63 [bb 63] NOTE_INSN_BASIC_BLOCK)
 (insn 642 641 643 63 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:180 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:180 -1
      (nil))
 (insn 643 642 644 63 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:180 -1
      (nil))
 (call_insn 644 643 645 63 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:180 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3795,7 +3795,7 @@ try_optimize_cfg iteration 2
         (reg:DI 231)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:181 -1
      (nil))
 (call_insn 649 648 650 63 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f8045ae2300 inputIsNumber>) [0 inputIsNumber S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inputIsNumber") [flags 0x41]  <function_decl 0x7f5056d7a300 inputIsNumber>) [0 inputIsNumber S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:181 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3816,10 +3816,10 @@ try_optimize_cfg iteration 2
  -> 659)
 (note 653 652 654 64 [bb 64] NOTE_INSN_BASIC_BLOCK)
 (insn 654 653 655 64 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f8045757c78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:181 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50569efc78 *.LC4>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:181 -1
      (nil))
 (call_insn 655 654 656 64 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f80459c0d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f5056c58d00 __builtin_puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:181 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3842,7 +3842,7 @@ try_optimize_cfg iteration 2
         (reg:DI 232)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:182 -1
      (nil))
 (call_insn/i 663 662 664 65 (set (reg:DF 21 xmm0)
-        (call (mem:QI (symbol_ref:DI ("atof") [flags 0x41]  <function_decl 0x7f8045ac3c00 atof>) [0 atof S1 A8])
+        (call (mem:QI (symbol_ref:DI ("atof") [flags 0x41]  <function_decl 0x7f5056d5bc00 atof>) [0 atof S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:182 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3856,7 +3856,7 @@ try_optimize_cfg iteration 2
         (reg:DF 233)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:182 -1
      (nil))
 (insn 666 665 667 65 (set (reg:DF 117 [ minLat.5 ])
-        (mem/c:DF (symbol_ref:DI ("minLat")  <var_decl 0x7f8045adb5f0 minLat>) [0 minLat+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:184 -1
+        (mem/c:DF (symbol_ref:DI ("minLat")  <var_decl 0x7f5056d735f0 minLat>) [0 minLat+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:184 -1
      (nil))
 (insn 667 666 668 65 (set (reg:DF 234)
         (mem/c:DF (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -3882,7 +3882,7 @@ try_optimize_cfg iteration 2
 (code_label 967 671 673 68 69 "" [1 uses])
 (note 673 967 674 68 [bb 68] NOTE_INSN_BASIC_BLOCK)
 (insn 674 673 675 68 (set (reg:DF 118 [ maxLat.6 ])
-        (mem/c:DF (symbol_ref:DI ("maxLat")  <var_decl 0x7f8045adb688 maxLat>) [0 maxLat+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:184 -1
+        (mem/c:DF (symbol_ref:DI ("maxLat")  <var_decl 0x7f5056d73688 maxLat>) [0 maxLat+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:184 -1
      (nil))
 (insn 675 674 676 68 (set (reg:CCFPU 17 flags)
         (compare:CCFPU (reg:DF 118 [ maxLat.6 ])
@@ -3905,7 +3905,7 @@ try_optimize_cfg iteration 2
 (code_label 968 678 680 71 70 "" [1 uses])
 (note 680 968 681 71 [bb 71] NOTE_INSN_BASIC_BLOCK)
 (insn 681 680 682 71 (set (reg:DF 119 [ minLon.7 ])
-        (mem/c:DF (symbol_ref:DI ("minLon")  <var_decl 0x7f8045adb720 minLon>) [0 minLon+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:184 -1
+        (mem/c:DF (symbol_ref:DI ("minLon")  <var_decl 0x7f5056d73720 minLon>) [0 minLon+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:184 -1
      (nil))
 (insn 682 681 683 71 (set (reg:DF 235)
         (mem/c:DF (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -3931,7 +3931,7 @@ try_optimize_cfg iteration 2
 (code_label 969 686 688 74 71 "" [1 uses])
 (note 688 969 689 74 [bb 74] NOTE_INSN_BASIC_BLOCK)
 (insn 689 688 690 74 (set (reg:DF 120 [ maxLon.8 ])
-        (mem/c:DF (symbol_ref:DI ("maxLon")  <var_decl 0x7f8045adb7b8 maxLon>) [0 maxLon+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:184 -1
+        (mem/c:DF (symbol_ref:DI ("maxLon")  <var_decl 0x7f5056d737b8 maxLon>) [0 maxLon+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:184 -1
      (nil))
 (insn 690 689 691 74 (set (reg:CCFPU 17 flags)
         (compare:CCFPU (reg:DF 120 [ maxLon.8 ])
@@ -3961,7 +3961,7 @@ try_optimize_cfg iteration 2
         (reg:SI 236)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:184 -1
      (nil))
 (call_insn 698 697 699 77 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("nodeInLinks") [flags 0x3]  <function_decl 0x7f8045aeb000 nodeInLinks>) [0 nodeInLinks S1 A8])
+        (call (mem:QI (symbol_ref:DI ("nodeInLinks") [flags 0x3]  <function_decl 0x7f5056d83000 nodeInLinks>) [0 nodeInLinks S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:184 -1
      (nil)
     (expr_list:REG_BR_PRED (use (reg:SI 5 di))
@@ -4019,7 +4019,7 @@ try_optimize_cfg iteration 2
         (reg:DI 237)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:133 -1
      (nil))
 (insn 717 716 718 81 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x7f8045765098 *.LC10>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:133 -1
+        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x7f50569fd098 *.LC10>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:133 -1
      (nil))
 (insn 718 717 719 81 (set (reg:DI 5 di)
         (reg:DI 238)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:133 -1
@@ -4028,7 +4028,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:133 -1
      (nil))
 (call_insn 720 719 721 81 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("*__isoc99_fscanf") [flags 0x41]  <function_decl 0x7f80459c0300 fscanf>) [0 __builtin_fscanf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_fscanf") [flags 0x41]  <function_decl 0x7f5056c58300 fscanf>) [0 __builtin_fscanf S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:133 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -4056,7 +4056,7 @@ try_optimize_cfg iteration 2
         (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -12 [0xfffffffffffffff4])) [0 nodes+0 S4 A32])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:192 -1
      (nil))
-(insn 728 727 729 82 (set (mem/j/c:SI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f8045adbb48 listOfNodes>) [0 listOfNodes.numberOfNodes+0 S4 A64])
+(insn 728 727 729 82 (set (mem/j/c:SI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f5056d73b48 listOfNodes>) [0 listOfNodes.numberOfNodes+0 S4 A64])
         (reg:SI 239)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:192 -1
      (nil))
 (insn 729 728 730 82 (set (reg:SI 240)
@@ -4073,7 +4073,7 @@ try_optimize_cfg iteration 2
         (reg:DI 122 [ D.2555 ])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:193 -1
      (nil))
 (call_insn 733 732 734 82 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x7f80459d0d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x7f5056c68d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:193 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4087,7 +4087,7 @@ try_optimize_cfg iteration 2
 (insn 735 734 736 82 (set (reg/f:DI 123 [ D.2556 ])
         (reg/f:DI 241)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:193 -1
      (nil))
-(insn 736 735 737 82 (set (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f8045adbb48 listOfNodes>)
+(insn 736 735 737 82 (set (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f5056d73b48 listOfNodes>)
                     (const_int 8 [0x8]))) [0 listOfNodes.nodes+0 S8 A64])
         (reg/f:DI 123 [ D.2556 ])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:193 -1
      (nil))
@@ -4100,13 +4100,13 @@ try_optimize_cfg iteration 2
                 (const_int -680 [0xfffffffffffffd58])) [0 path+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:197 -1
      (nil))
 (insn 739 738 740 82 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f8045757a18 *.LC0>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:197 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f50569efa18 *.LC0>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:197 -1
      (nil))
 (insn 740 739 741 82 (set (reg:DI 5 di)
         (reg:DI 242)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:197 -1
      (nil))
 (call_insn 741 740 742 82 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f8045aa1000 fopen>) [0 fopen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f5056d39000 fopen>) [0 fopen S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:197 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4134,13 +4134,13 @@ try_optimize_cfg iteration 2
         ]) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:199 -1
      (nil))
 (insn 748 747 749 83 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC18") [flags 0x2]  <var_decl 0x7f8045765558 *.LC18>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:199 -1
+        (symbol_ref/f:DI ("*.LC18") [flags 0x2]  <var_decl 0x7f50569fd558 *.LC18>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:199 -1
      (nil))
 (insn 749 748 750 83 (set (reg:DI 5 di)
         (reg:DI 244)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:199 -1
      (nil))
 (call_insn 750 749 751 83 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:199 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4162,10 +4162,10 @@ try_optimize_cfg iteration 2
         (reg:DI 246)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:200 -1
      (nil))
 (insn 755 754 756 83 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f8045757be0 *.LC3>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:200 -1
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f50569efbe0 *.LC3>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:200 -1
      (nil))
 (call_insn/i 756 755 757 83 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f80459b7e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f5056c4fe00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:200 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4195,10 +4195,10 @@ try_optimize_cfg iteration 2
         (reg:DI 247)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:200 -1
      (nil))
 (insn 763 762 764 84 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x7f8045765000 *.LC9>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:200 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x7f50569fd000 *.LC9>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:200 -1
      (nil))
 (call_insn/i 764 763 765 84 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f80459b7e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f5056c4fe00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:200 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4228,10 +4228,10 @@ try_optimize_cfg iteration 2
         (reg:DI 248)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:202 -1
      (nil))
 (insn 771 770 772 85 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x7f8045765390 *.LC15>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:202 -1
+        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x7f50569fd390 *.LC15>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:202 -1
      (nil))
 (call_insn/i 772 771 773 85 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f80459b7e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f5056c4fe00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:202 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4254,13 +4254,13 @@ try_optimize_cfg iteration 2
  -> 912)
 (note 776 775 777 86 [bb 86] NOTE_INSN_BASIC_BLOCK)
 (insn 777 776 778 86 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:203 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:203 -1
      (nil))
 (insn 778 777 779 86 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:203 -1
      (nil))
 (call_insn 779 778 780 86 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:203 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4275,13 +4275,13 @@ try_optimize_cfg iteration 2
         (reg:DI 249)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:203 -1
      (nil))
 (insn 782 781 783 86 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:204 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:204 -1
      (nil))
 (insn 783 782 784 86 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:204 -1
      (nil))
 (call_insn 784 783 785 86 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:204 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4303,7 +4303,7 @@ try_optimize_cfg iteration 2
         (reg:DI 251)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:205 -1
      (nil))
 (call_insn/i 789 788 790 86 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("atoi") [flags 0x41]  <function_decl 0x7f8045ac3d00 atoi>) [0 atoi S1 A8])
+        (call (mem:QI (symbol_ref:DI ("atoi") [flags 0x41]  <function_decl 0x7f5056d5bd00 atoi>) [0 atoi S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:205 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4317,13 +4317,13 @@ try_optimize_cfg iteration 2
         (reg:SI 252)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:205 -1
      (nil))
 (insn 792 791 793 86 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:207 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:207 -1
      (nil))
 (insn 793 792 794 86 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:207 -1
      (nil))
 (call_insn 794 793 795 86 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:207 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4338,13 +4338,13 @@ try_optimize_cfg iteration 2
         (reg:DI 253)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:207 -1
      (nil))
 (insn 797 796 798 86 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:208 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:208 -1
      (nil))
 (insn 798 797 799 86 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:208 -1
      (nil))
 (call_insn 799 798 800 86 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:208 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4366,7 +4366,7 @@ try_optimize_cfg iteration 2
         (reg:DI 255)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:209 -1
      (nil))
 (call_insn/i 804 803 805 86 (set (reg:DF 21 xmm0)
-        (call (mem:QI (symbol_ref:DI ("atof") [flags 0x41]  <function_decl 0x7f8045ac3c00 atof>) [0 atof S1 A8])
+        (call (mem:QI (symbol_ref:DI ("atof") [flags 0x41]  <function_decl 0x7f5056d5bc00 atof>) [0 atof S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:209 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4380,13 +4380,13 @@ try_optimize_cfg iteration 2
         (reg:DF 256)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:209 -1
      (nil))
 (insn 807 806 808 86 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:211 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:211 -1
      (nil))
 (insn 808 807 809 86 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:211 -1
      (nil))
 (call_insn 809 808 810 86 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:211 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4401,13 +4401,13 @@ try_optimize_cfg iteration 2
         (reg:DI 257)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:211 -1
      (nil))
 (insn 812 811 813 86 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f8045765130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:212 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f50569fd130 *.LC11>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:212 -1
      (nil))
 (insn 813 812 814 86 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:212 -1
      (nil))
 (call_insn 814 813 815 86 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f8045ac3600 strtok>) [0 strtok S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f5056d5b600 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:212 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4429,7 +4429,7 @@ try_optimize_cfg iteration 2
         (reg:DI 259)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:213 -1
      (nil))
 (call_insn/i 819 818 820 86 (set (reg:DF 21 xmm0)
-        (call (mem:QI (symbol_ref:DI ("atof") [flags 0x41]  <function_decl 0x7f8045ac3c00 atof>) [0 atof S1 A8])
+        (call (mem:QI (symbol_ref:DI ("atof") [flags 0x41]  <function_decl 0x7f5056d5bc00 atof>) [0 atof S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:213 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4443,7 +4443,7 @@ try_optimize_cfg iteration 2
         (reg:DF 260)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:213 -1
      (nil))
 (insn 822 821 823 86 (set (reg:DF 128 [ minLat.9 ])
-        (mem/c:DF (symbol_ref:DI ("minLat")  <var_decl 0x7f8045adb5f0 minLat>) [0 minLat+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:215 -1
+        (mem/c:DF (symbol_ref:DI ("minLat")  <var_decl 0x7f5056d735f0 minLat>) [0 minLat+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:215 -1
      (nil))
 (insn 823 822 824 86 (set (reg:DF 261)
         (mem/c:DF (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -4469,7 +4469,7 @@ try_optimize_cfg iteration 2
 (code_label 971 827 829 89 73 "" [1 uses])
 (note 829 971 830 89 [bb 89] NOTE_INSN_BASIC_BLOCK)
 (insn 830 829 831 89 (set (reg:DF 129 [ maxLat.10 ])
-        (mem/c:DF (symbol_ref:DI ("maxLat")  <var_decl 0x7f8045adb688 maxLat>) [0 maxLat+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:215 -1
+        (mem/c:DF (symbol_ref:DI ("maxLat")  <var_decl 0x7f5056d73688 maxLat>) [0 maxLat+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:215 -1
      (nil))
 (insn 831 830 832 89 (set (reg:CCFPU 17 flags)
         (compare:CCFPU (reg:DF 129 [ maxLat.10 ])
@@ -4492,7 +4492,7 @@ try_optimize_cfg iteration 2
 (code_label 972 834 836 92 74 "" [1 uses])
 (note 836 972 837 92 [bb 92] NOTE_INSN_BASIC_BLOCK)
 (insn 837 836 838 92 (set (reg:DF 130 [ minLon.11 ])
-        (mem/c:DF (symbol_ref:DI ("minLon")  <var_decl 0x7f8045adb720 minLon>) [0 minLon+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:215 -1
+        (mem/c:DF (symbol_ref:DI ("minLon")  <var_decl 0x7f5056d73720 minLon>) [0 minLon+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:215 -1
      (nil))
 (insn 838 837 839 92 (set (reg:DF 262)
         (mem/c:DF (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -4518,7 +4518,7 @@ try_optimize_cfg iteration 2
 (code_label 973 842 844 95 75 "" [1 uses])
 (note 844 973 845 95 [bb 95] NOTE_INSN_BASIC_BLOCK)
 (insn 845 844 846 95 (set (reg:DF 131 [ maxLon.12 ])
-        (mem/c:DF (symbol_ref:DI ("maxLon")  <var_decl 0x7f8045adb7b8 maxLon>) [0 maxLon+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:215 -1
+        (mem/c:DF (symbol_ref:DI ("maxLon")  <var_decl 0x7f5056d737b8 maxLon>) [0 maxLon+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:215 -1
      (nil))
 (insn 846 845 847 95 (set (reg:CCFPU 17 flags)
         (compare:CCFPU (reg:DF 131 [ maxLon.12 ])
@@ -4548,7 +4548,7 @@ try_optimize_cfg iteration 2
         (reg:SI 263)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:215 -1
      (nil))
 (call_insn 854 853 855 98 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("nodeInLinks") [flags 0x3]  <function_decl 0x7f8045aeb000 nodeInLinks>) [0 nodeInLinks S1 A8])
+        (call (mem:QI (symbol_ref:DI ("nodeInLinks") [flags 0x3]  <function_decl 0x7f5056d83000 nodeInLinks>) [0 nodeInLinks S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:215 -1
      (nil)
     (expr_list:REG_BR_PRED (use (reg:SI 5 di))
@@ -4569,7 +4569,7 @@ try_optimize_cfg iteration 2
  -> 916)
 (note 858 857 859 99 [bb 99] NOTE_INSN_BASIC_BLOCK)
 (insn 859 858 860 99 (set (reg/f:DI 133 [ D.2559 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f8045adbb48 listOfNodes>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f5056d73b48 listOfNodes>)
                     (const_int 8 [0x8]))) [0 listOfNodes.nodes+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:216 -1
      (nil))
 (insn 860 859 861 99 (set (reg:SI 264)
@@ -4628,7 +4628,7 @@ try_optimize_cfg iteration 2
         (reg:SI 267)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:216 -1
      (nil))
 (insn 871 870 872 99 (set (reg/f:DI 137 [ D.2559 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f8045adbb48 listOfNodes>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f5056d73b48 listOfNodes>)
                     (const_int 8 [0x8]))) [0 listOfNodes.nodes+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:217 -1
      (nil))
 (insn 872 871 873 99 (set (reg:SI 268)
@@ -4688,7 +4688,7 @@ try_optimize_cfg iteration 2
         (reg:DF 271)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:217 -1
      (nil))
 (insn 883 882 884 99 (set (reg/f:DI 141 [ D.2559 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f8045adbb48 listOfNodes>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f5056d73b48 listOfNodes>)
                     (const_int 8 [0x8]))) [0 listOfNodes.nodes+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:218 -1
      (nil))
 (insn 884 883 885 99 (set (reg:SI 272)
@@ -4748,7 +4748,7 @@ try_optimize_cfg iteration 2
         (reg:DF 275)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:218 -1
      (nil))
 (insn 895 894 896 99 (set (reg/f:DI 145 [ D.2559 ])
-        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f8045adbb48 listOfNodes>)
+        (mem/f/j/c:DI (const:DI (plus:DI (symbol_ref:DI ("listOfNodes")  <var_decl 0x7f5056d73b48 listOfNodes>)
                     (const_int 8 [0x8]))) [0 listOfNodes.nodes+0 S8 A64])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:219 -1
      (nil))
 (insn 896 895 897 99 (set (reg:SI 276)
@@ -4845,7 +4845,7 @@ try_optimize_cfg iteration 2
         (reg:DI 280)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:198 -1
      (nil))
 (insn 921 920 922 102 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x7f8045765098 *.LC10>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:198 -1
+        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x7f50569fd098 *.LC10>)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:198 -1
      (nil))
 (insn 922 921 923 102 (set (reg:DI 5 di)
         (reg:DI 281)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:198 -1
@@ -4854,7 +4854,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:198 -1
      (nil))
 (call_insn 924 923 925 102 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("*__isoc99_fscanf") [flags 0x41]  <function_decl 0x7f80459c0300 fscanf>) [0 __builtin_fscanf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_fscanf") [flags 0x41]  <function_decl 0x7f5056c58300 fscanf>) [0 __builtin_fscanf S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:198 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -4886,7 +4886,7 @@ try_optimize_cfg iteration 2
         (reg:DI 282)) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:227 -1
      (nil))
 (call_insn 933 932 934 103 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7f8045a9ae00 fclose>) [0 fclose S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7f5056d32e00 fclose>) [0 fclose S1 A8])
             (const_int 0 [0]))) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:227 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4894,7 +4894,7 @@ try_optimize_cfg iteration 2
 (insn 934 933 935 103 (set (reg:QI 0 ax)
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:230 -1
      (nil))
-(call_insn 935 934 936 103 (call (mem:QI (symbol_ref:DI ("completeLinks") [flags 0x3]  <function_decl 0x7f8045ae2f00 completeLinks>) [0 completeLinks S1 A8])
+(call_insn 935 934 936 103 (call (mem:QI (symbol_ref:DI ("completeLinks") [flags 0x3]  <function_decl 0x7f5056d7af00 completeLinks>) [0 completeLinks S1 A8])
         (const_int 0 [0])) /home/csunix/sc20bac/Desktop/Programs/comp1921-cwk2/reading.c:230 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
