@@ -17,6 +17,15 @@ Email: sc20bac@leeds.ac.uk
 
 ----
 
+# Git repository
+
+SSH: git@gitlab.com:sc20bac/comp1921-cwk2.git
+HTTP: https://gitlab.com/sc20bac/comp1921-cwk2.git
+
+# Git commit history
+
+![](commits_screenshot.png)
+
 ## About the files
 The project contains 9 files:
  
