@@ -2,7 +2,7 @@
 # code details
 
 EXE_DIR = .
-EXE = $(EXE_DIR)/path
+EXE = $(EXE_DIR)/CyberRoads
 SRC= main.c reading.c sdl_functions.c dijkstra.c bellman_ford.c globalFunctions.c 
 
 # generic build details
