@@ -25,6 +25,7 @@ Email: sc20bac@leeds.ac.uk
 # Git repository
 
 SSH: git@gitlab.com:sc20bac/comp1921-cwk2.git
+
 HTTP: https://gitlab.com/sc20bac/comp1921-cwk2.git
 
 
@@ -56,7 +57,10 @@ Furthermore, there should also be one mode folder named `unity` and two mode fil
 On the **Feng Linux** machine that the University provides us with, the software can be built by using these commands: `mkdir build` -> `cd build` -> `cmake ..` -> `make`.
 After you have used these commands you have two options. If you want to run the program, you would want to use the `./path` command. If you want to use the unit testing program type `./unit_tests` command.
 
+If the software does not work as intended, another way to run the program is to run the `make` command in the main folder but this would also need to ode all the files from the `assets` folder into the main folder and the `unit_tests` file will not exist.
+
 If you want to run this software on **Windows** you will have to just run the `CyberRoads.exe` file but you would also need to move all the files from the `assets` folder into the main folder. 
+
 <br>
 
 ## Drawbacks
