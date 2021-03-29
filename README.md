@@ -18,29 +18,38 @@ Email: sc20bac@leeds.ac.uk
 ----
 
 ## About the files
-The project contains 8 files:
+The project contains 9 files:
  
 ```
-Makefile;
-Final_Map.map
-main.c; globalFunctions.c; readding.c;
-Dijkstra.c; BellmanFord.c
-SDLFunctions.c;
-functions.h
+CMakeLists.txt; Makefile;
+main.c; unit_tests.c;
+globalFunctions.c; readding.c;
+dijkstra.c; bellman_ford.c
+sdl_functions.c;
+functions.h;
+CyberRoads.exe
 ```
 
-On the **Feng Linux** machine that the University provides us with, the sotware can be built by using `make` command, followed by `./path` in the console.
+There is also a folder named `assets` that contains the dll files for SDL, the font for SDL_TTF and the map for the project. There should be 7 files:
 
-If you want to run this software on **Windows** you will have to just run the `.exe` file.
-It would be recommended to also have the `SDL2.dll` file in the directory to be sure everything runs as intended. 
+```
+Final_Map.map;
+OpenSans.ttf;
+libfreetype-6.dll; SDL2.dll; SDL2_image.dll; SDL2_ttf.dll; zlib1.dll
+```
 
+Furthermore, there should also be one mode folder named `unity` and two mode files:  `unity.c` and `unity.h`. These files are used for debugging.
+
+On the **Feng Linux** machine that the University provides us with, the software can be built by using these commands: `mkdir build` -> `cd build` -> `cmake ..` -> `make’.
+After you have used these commands you have two options. If you want to run the program, you would want to use the `./path` command. If you want to use the unit testing program type `./unit_tests` command.
+
+If you want to run this software on **Windows** you will have to just run the `CyberRoads.exe` file but you would also need to move all the files from the `assets` folder into the main folder. 
 <br>
 
 ## Drawbacks
 In the current state of the program will not make the path between the two points if you use Bellman-Ford algorithm but it will make the shortest path.
 
-The animations **do not work** on **Linux**.
-
+If the graph given in the `Final_Map.map` file has a negative weight link, Dijkstra’s algorithm will not work as intended. Also, if there is a negative weight cycle, Bellman-Ford’s Algorithm will also not work properly. 
 <br>
 
 ## First command
@@ -48,6 +57,8 @@ When the program is first launched the user has one option: to type the file's n
 
 If the program cannot open the file, it will not proceed to the next commands.
 If the file can be opened, then the program will proceed in readding the data and store the nodes' values and links' values. 
+
+If the format is not the same as the initial `Final_Map.map` file, the program will not work and send a `File has invalid stored data! ` message.
 
 <br>
 
@@ -57,8 +68,10 @@ After the file from which we will read the information from has executed correct
 
 * [Show Command](#show-command)
 * [Read Nodes Command](#read-nodes-command)
+* [Random Nodes Command](#random-nodes-command)
 * [Show Path Command](#show-path-command)
-* [The Algorithms](#the-algorithms)
+* [Find Path Command](#find-path-command)
+* [Find Distance Command](#find-dostance-command)
 * [Exit](#exit-command)
 
 <br>
@@ -66,7 +79,7 @@ After the file from which we will read the information from has executed correct
 
 ## Show Command
 
-After the file has been read, the user can chose to visualize how the map looks.
+After the file has been read, the user can choose to visualize how the map looks.
 
 This command can be accessed by typing `show` into the CMD.
 
@@ -75,13 +88,13 @@ This command can be accessed by typing `show` into the CMD.
 
 ## Read Nodes Command
 
-If the user wants to see the distance between two points, he needs to insert the coordinates of these two points (_start_ and _end_ points ).
+If the user wants to see the distance between two points, he needs to insert the coordinates of these two points (_start_ and _end_ points).
 
 This command can be accessed by typing `read nodes` into the CMD.
 
 If the user has chosen to use this command, he will be asked to insert the following information: 
 
-- start Node’s Latitude ;
+- start Node’s Latitude;
 
 - start Node’s Longitude;
 
@@ -89,36 +102,41 @@ If the user has chosen to use this command, he will be asked to insert the follo
 
 - end Node’s Longitude;
 
-If the coordinates are not exactly the same as the Node in the database, the user will not be able to proceed. Also, if the user inserted invalid characters, he will need to type again the coordinates.
+If the coordinates are not the same as the Node in the database, the user will not be able to proceed. Also, if the user inserted invalid characters, he would need to type again the coordinates.
 
 <br>
+
+## Random Nodes Command
+
+If the user does not want to use the `read nodes` command but still wants to select two nodes, he/she is able to use the `random nodes` command to have two randomly selected nodes as the start node and finish node.
+
+<br>
+
 
 ## Show Path Command
 
-If the user wants to see the path between the two pints, he is able to use the `show path` command in the CMD in order to rewatch the animation for the path. 
+If the user wants to see the path between the two pints, he can use the `show path` command in the CMD to re-watch the animation for the path. 
 
-Keep in mind that, if one of the algorithms has not been used, the program will inform the user that the `show path` command is not available and will ask to first use an algorithm.
+Keep in mind that, if the `find path` command has not been used, the program will inform the user that the `show path` command is not available and will ask to first use the `find path` command.
 
 
 <br>
 
-## The Algorithms
+## Find Path Command
 
-There are a couple of algorithms that the user will be able to chose from:
-
-- Dijkstra's algorithm;
-
-- Bellman-Ford algorithm;
-
-He can chose of o these by typing `dijkstra` or `bellman-ford` respectively in the CMD. 
-After the user has chosen an algorithm, another information will be required: if an animation of the algorithm wants to be shown.
+If the user wants to find the path between the two nodes, he/she can type the `find path` command. After this command has been chosen, the user can choose whether to have an animation of how the program finds the shortest path or not.  Just type `yes` not `not` depending on your preference.
 
 If **yes**, the program will open a window in which the user can visualize how the computer does the algorithm (this process will take a little more time compared to the other option).
 
-If **not**, the program will proceed with finding the shortest path between the two points.
+If **not**, the program will proceed with finding the shortest path between the two points. **Disclaimer:** the program will open a window for a brief moment but it will be destroyed instantly. 
 
 <br>
 
+## Find Distance Command
+
+If the user just wants to know the distance but not the path between the two nodes, he/she is able to use the `find distance` command. After this, the program will tell the distance.
+
+<br>
 ## Exit Command
 
 If the user does not want to continue, he can use this command `exit` to exit the program.

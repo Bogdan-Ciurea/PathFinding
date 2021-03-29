@@ -10,18 +10,6 @@
     Date Work Commenced: 3rd Mar 2021
 *************************************************************************/
 
-/*
-Final_Map.map
-read nodes
-53.807817
--1.562377
-53.808649
--1.544174
-bellman-ford
-yes
-
- */
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

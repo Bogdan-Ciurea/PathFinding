@@ -187,7 +187,7 @@ int relativePozY(double y){
 
 // The purpose of this function is to show the map of the nodes and edges
 // The function will take an integer as a parameter, this representing if the function should also show the path
-// If the user has read two points, these two points will be coloured black
+// If the user has read two points, these two points will be colored black
 void showMap(int showPath){
     initValues();
 

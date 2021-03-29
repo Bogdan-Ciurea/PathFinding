@@ -31,14 +31,11 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="BellmanFord.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Dijkstra.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="README.md" />
-		<Unit filename="SDLFunctions.c">
+		<Unit filename="bellman_ford.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="dijkstra.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="functions.h" />
@@ -49,6 +46,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="reading.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sdl_functions.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>

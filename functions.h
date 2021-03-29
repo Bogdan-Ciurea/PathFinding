@@ -67,7 +67,7 @@ int readFromFile(char* input);
 
 // The purpose of this function is to show the map of the nodes and edges
 // The function will take an integer as a parameter, this representing if the function should also show the path
-// If the user has read two points, these two points will be coloured black
+// If the user has read two points, these two points will be colored black
 void showMap(int showPath);
 
 // The purpose of this function is to see if the input is a number or not
@@ -125,10 +125,10 @@ int getCoordinatesStFin();
 // If the function worked properly, and the path is found, then it will return 1 indicating success
 // If the function did not work as intended, it will return 0 indicating an error
 // The function will have three steps:
-// Step 1: Initialise the predecessor, the distance and the visited matrices
+// Step 1: Initialize the predecessor, the distance and the visited matrices
 // Step 2: Relax all the edges
 // Step 3: Make the path
-// If the user chooses to see the animation, during the 2nd step, the visited nodes will be coloured in blue and the compared one in green
+// If the user chooses to see the animation, during the 2nd step, the visited nodes will be colored in blue and the compared one in green
 int dijkstra(int animation);
 
 // The purpose of this function is to find the shortest distance from node x to node y using Bellman-Ford's Algorithm

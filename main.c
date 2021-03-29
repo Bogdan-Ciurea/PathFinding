@@ -18,7 +18,7 @@
 #include "functions.h"
 
 // The purpose of this function is to show the available commands
-// The function will take an integer as a parameter, represenfing if we want to show the commands from the start of the program or not
+// The function will take an integer as a parameter, representing if we want to show the commands from the start of the program or not
 void showAvailableCommands(int start){
     if(start){
     printf("You have the following commands:\n1) 'show' - to show the map\n2) 'read nodes' - to read the Start and Finish nodes\n");

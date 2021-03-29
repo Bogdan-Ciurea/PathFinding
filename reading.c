@@ -16,8 +16,8 @@
 #include <stdlib.h>
 #include "functions.h"
 
-// The purpose if this function is to compare the expected and actial input
-// The function will take two char pointers, the first representing the actial input and the second representing the expected input
+// The purpose if this function is to compare the expected and actual input
+// The function will take two char pointers, the first representing the actual input and the second representing the expected input
 // If the two inputs are the same, the function will return 1
 // Id the two inputs are not the same, the function will return 0
 int validDataFromFile(char *input, char *expected){
@@ -49,8 +49,8 @@ void completeLinks(){
 
 // The purpose of this function is to see if a node is connected to any other node
 // The function will take one integer value as a parameter, this representing id of the node
-// If the function worked properly, and the node has an edge, then it will return 1 
-// If there is no edge from the node, it will return 0 
+// If the function worked properly, and the node has an edge, then it will return 1
+// If there is no edge from the node, it will return 0
 int nodeInLinks(int Id){
     extern Links listOfLinks;
     int i;
@@ -62,7 +62,7 @@ int nodeInLinks(int Id){
 }
 
 // The purpose of this function is to read the borders, nodes and edges of the map
-// If the function worked properly, and all the data has been read coretley, then it will return 1 indicating succes
+// If the function worked properly, and all the data has been read correctly, then it will return 1 indicating success
 // If the function did not work as intended, it will return 0 indicating an error
 int readFromFile(char* path){
     FILE* file = fopen(path, "r");

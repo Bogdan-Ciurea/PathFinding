@@ -8,35 +8,38 @@
 	<SDL_image.h>
 	"functions.h"
 
-1616764458 c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\functions.h
+1617010672 c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\functions.h
 
-1616845924 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\dijkstra.c
+1617011157 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\dijkstra.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 	<float.h>
 	<SDL.h>
 	<SDL_image.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
 	"functions.h"
 
-1616848650 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\globalfunctions.c
+1617010974 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\globalfunctions.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
 	<float.h>
 	<math.h>
 	<windows.h>
+	<time.h>
 	<unistd.h>
 	"functions.h"
 
-1616766161 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\main.c
+1616945423 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\main.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 	<float.h>
 	"functions.h"
 
-1616669256 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\reading.c
+1616945423 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\reading.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -46,6 +49,29 @@
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_ttf.h>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"functions.h"
+
+1617010983 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\bellman_ford.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<float.h>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	"functions.h"
+
+1617010672 source:c:\users\ciure\desktop\things\.uni\comp 1921 programming project\cwk 2\comp1921-cwk2\sdl_functions.c
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
 	<string.h>
 	<stdio.h>
 	<stdlib.h>

@@ -25,27 +25,10 @@
 #endif
 
 #include "functions.h"
-/*
-Final_Map.map
-read nodes
-53.807817
--1.562377
-53.808649
--1.544174
-dijkstra
-yes
-
-Final_Map.map
-random nodes
-find path
-no
-
- */
 
 extern Links listOfLinks;
 extern Nodes pathOfNodes;
 extern Nodes listOfNodes;
-
 
 // The purpose of this function is to draw the first state of the frame (red dots and edges and the legend)
 // This function will take an SDL_Renderer pointer as a parameter
@@ -53,12 +36,14 @@ void drawInitialFrame(SDL_Renderer *renderer){
     int i;
 
     //Draw the points
-    for(i = 0; i < listOfNodes.numberOfNodes; i++)
+    for(i = 0; i < listOfNodes.numberOfNodes; i++){
         drawPoint(relativePozX(listOfNodes.nodes[i].lon), relativePozY(listOfNodes.nodes[i].lat), renderer);
+    }
 
-    for(i = 0; i < listOfLinks.numberOfLinks; i++)
+    for(i = 0; i < listOfLinks.numberOfLinks; i++){
         drawLine(renderer, relativePozX(listOfLinks.links[i].node1.lon), relativePozX(listOfLinks.links[i].node2.lon),
             relativePozY(listOfLinks.links[i].node1.lat), relativePozY(listOfLinks.links[i].node2.lat));
+    }
 
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); //Color is Black
     drawPoint(listOfNodes.nodes[indexFinish].lon);
@@ -74,7 +59,7 @@ void drawInitialFrame(SDL_Renderer *renderer){
 // This function will take an SDL_Renderer pointer as a parameter
 // The animation will consist of two parts:
 // The first part is to connect every point, from node x to node y
-// The second part is to make the nodes flash, in a blue colour there, three times
+// The second part is to make the nodes flash, in a blue color, three times
 void animatePath(SDL_Renderer *renderer){
     int running = 1, i, j;
     SDL_Event event;
@@ -95,15 +80,19 @@ void animatePath(SDL_Renderer *renderer){
         SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
 
         // First part
-        for(i = pathOfNodes.numberOfNodes - 1; i > 0 && running == 1 ; i--){
-            while(SDL_PollEvent(&event)) // Checks if the window is closed
-                if(event.type == SDL_QUIT)
+        for(i = pathOfNodes.numberOfNodes - 1; i >= 0 && running == 1 ; i--){
+            while(SDL_PollEvent(&event)){ // Checks if the window is closed
+                if(event.type == SDL_QUIT){
                     running = 0;
-
+                }
+            }
 
             drawPoint(relativePozX(pathOfNodes.nodes[i].lon), relativePozY(pathOfNodes.nodes[i].lat),renderer);
-            drawLine(renderer, relativePozX(pathOfNodes.nodes[i - 1].lon), relativePozX(pathOfNodes.nodes[i].lon),
-                relativePozY(pathOfNodes.nodes[i - 1].lat), relativePozY(pathOfNodes.nodes[i].lat));
+            if(i > 0){
+                drawLine(renderer, relativePozX(pathOfNodes.nodes[i - 1].lon), relativePozX(pathOfNodes.nodes[i].lon),
+                    relativePozY(pathOfNodes.nodes[i - 1].lat), relativePozY(pathOfNodes.nodes[i].lat));
+            }
+
 
             wait(0.13);
             SDL_RenderPresent(renderer);
@@ -111,9 +100,11 @@ void animatePath(SDL_Renderer *renderer){
 
         // Second part
         for(j = 0; j < 3 && running == 1; j++){
-            while(SDL_PollEvent(&event)) // Checks if the window is closed
-                if(event.type == SDL_QUIT)
+            while(SDL_PollEvent(&event)) {// Checks if the window is closed
+                if(event.type == SDL_QUIT){
                     running = 0;
+                }
+            }
 
             SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255); // Color is red
             drawInitialFrame(renderer);
@@ -125,14 +116,19 @@ void animatePath(SDL_Renderer *renderer){
             drawPoint(relativePozX(pathOfNodes.nodes[pathOfNodes.numberOfNodes - 1].lon), relativePozY(pathOfNodes.nodes[pathOfNodes.numberOfNodes - 1].lat),renderer);
 
             // Draws all of the points
-            for(i = pathOfNodes.numberOfNodes - 2; i > 0 && running == 1 ; i--){
-                while(SDL_PollEvent(&event)) // Checks if the window is closed
-                    if(event.type == SDL_QUIT)
+            for(i = pathOfNodes.numberOfNodes - 2; i >= 0 && running == 1 ; i--){
+                while(SDL_PollEvent(&event)){ // Checks if the window is closed
+                    if(event.type == SDL_QUIT){
                         running = 0;
+                    }
+                }
 
                 drawPoint(relativePozX(pathOfNodes.nodes[i].lon), relativePozY(pathOfNodes.nodes[i].lat),renderer);
-                drawLine(renderer, relativePozX(pathOfNodes.nodes[i - 1].lon), relativePozX(pathOfNodes.nodes[i].lon),
-                    relativePozY(pathOfNodes.nodes[i - 1].lat), relativePozY(pathOfNodes.nodes[i].lat));
+                if(i > 0){
+                    drawLine(renderer, relativePozX(pathOfNodes.nodes[i - 1].lon), relativePozX(pathOfNodes.nodes[i].lon),
+                        relativePozY(pathOfNodes.nodes[i - 1].lat), relativePozY(pathOfNodes.nodes[i].lat));
+                }
+
             }
             SDL_RenderPresent(renderer);
             wait(0.4);
@@ -147,10 +143,10 @@ void animatePath(SDL_Renderer *renderer){
 // If the function worked properly, and the path is found, then it will return 1 indicating success
 // If the function did not work as intended, it will return 0 indicating an error
 // The function will have three steps:
-// Step 1: Initialise the predecessor, the distance and the visited matrices
+// Step 1: Initialize the predecessor, the distance and the visited matrices
 // Step 2: Relax all the edges
 // Step 3: Make the path
-// If the user chooses to see the animation, during the 2nd step, the visited nodes will be coloured in blue and the compared one in green
+// If the user chooses to see the animation, during the 2nd step, the visited nodes will be colored in blue and the compared one in green
 int dijkstra(int animation){
     // Initialize the variables
     initValues();
@@ -284,7 +280,7 @@ int dijkstra(int animation){
         printf("\n");
 
         if(animation){
-            // Animates the path with a green color
+            // Animates the path with a blue color
             animatePath(renderer);
         }
 	}
