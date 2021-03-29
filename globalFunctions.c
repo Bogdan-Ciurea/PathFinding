@@ -182,7 +182,7 @@ const double distBetweenNodes(const int node1, const int node2){
 // The purpose of this function is to wait a specific number of seconds
 // The function will take one float value as a parameter, this representing the seconds we want to wait
 // It is an equivalent of time.sleep in python
-void wait(float time){// cross-platform sleep function
+void wait(float time){
     time *= 1000;
     int seconds = time;
 

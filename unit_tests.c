@@ -12,18 +12,8 @@
 
 #include "unity.h"
 #include "functions.h"
+#include <float.h>
 
-/*
-void test_order_create() {
-struct Customer c;
-c.name = "Farha";
-struct Order *o = order_create(&c);
-TEST_ASSERT_NOT_NULL_MESSAGE(o,"order_create returned a null pointer");
-TEST_ASSERT_EQUAL_PTR_MESSAGE(&c,o->customer,"order create returned an order with the wrong customer");
-TEST_ASSERT_NULL_MESSAGE(o->dishes,"order_create returned an order with a Non-NULL array");
-TEST_ASSERT_EQUAL_INT(0,o->order_length);
-}
-*/
 void test_random(){
     readFromFile("Final_Map.map");
     extern int indexStart, indexFinish;
@@ -62,8 +52,17 @@ void test_reading_nodes(){
 
 void test_nonexistent_file(){
     TEST_ASSERT_EQUAL_INT_MESSAGE( readFromFile("Hello.c"), 0, "This file should not exist!" );
+    TEST_ASSERT_EQUAL_INT_MESSAGE( readFromFile("main.c"), 0, "This file should have invalid format!" );
     TEST_ASSERT_EQUAL_INT_MESSAGE( readFromFile("Final_Map.map"), 1, "This file has to exsit!" );
 }
+
+void test_distances(){
+    readFromFile("Final_Map.map");
+    TEST_ASSERT_EQUAL_DOUBLE_MESSAGE( distBetweenNodes(0, 1), 11.006410,  "Incorrect distance!");
+    TEST_ASSERT_EQUAL_DOUBLE_MESSAGE( distBetweenNodes(2, 3), 11.029994,  "Incorrect distance!");
+    TEST_ASSERT_EQUAL_DOUBLE_MESSAGE( distBetweenNodes(0, 2), DBL_MAX,  "Incorrect distance!");
+}
+
 
 void setUp(){
 
@@ -78,6 +77,7 @@ int main(){
     RUN_TEST(test_input_is_number);
     RUN_TEST(test_reading_nodes);
     RUN_TEST(test_random);
+    RUN_TEST(test_distances);
 
     return UNITY_END();
 }

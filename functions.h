@@ -91,7 +91,7 @@ const int relativePozY(const double y);
 // It is an equivalent of time.sleep in python
 void wait(float seconds);
 
-//The function that will choose two random nodes from the map if the user does not want to input two points
+//The purpose of this function is to choose two random nodes from the map if the user does not want to input two points
 const int randomNodes();
 
 // The purpose of this function is to see if a node has the given coordinates
@@ -111,7 +111,6 @@ void completePath();
 // If the function did not work as intended, it will return DBL_MAX indicating an error
 const double distBetweenNodes(const int node1, const int node2);
 
-//The function that will get the two points' coordinates
 // The purpose of this function is to get the two nodes
 // If the function worked properly, and the nodes have been read successfully, then it will return 1 indicating success
 // If the function did not work as intended, it will return 0 indicating an error
