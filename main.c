@@ -22,7 +22,7 @@
 void showAvailableCommands(const int start){
     if(start){
     printf("You have the following commands:\n1) 'show' - to show the map\n2) 'read nodes' - to read the Start and Finish nodes\n");
-    printf("3) 'random nodes' - will chose two random nodes from the map\n");
+    printf("3) 'random nodes' - will choose two random nodes from the map\n");
     printf("4) 'show path' - to view the shortest path | You first have to use an algorithm!\n");
     printf("5) 'find path' - to find the path using Dijkstra's algorithm | You first have to read the two nodes\n");
     printf("6) 'find distance' - to find the shortest distance (does not tell you the path) using Bellman-Ford algorithm | You first have to read the two nodes\n");
@@ -31,7 +31,7 @@ void showAvailableCommands(const int start){
     }
     else{
     printf("You have the following commands:\n1) 'show' - to show the map\n2) 'read nodes' - to read the Start and Finish nodes\n");
-    printf("3) 'random nodes' - will chose two random nodes from the map\n");
+    printf("3) 'random nodes' - will choose two random nodes from the map\n");
     printf("4) 'show path' - to view the shortest path\n");
     printf("5) 'find path' - to find the path\n");
     printf("6) 'find distance' - to find the shortest distance\n");
