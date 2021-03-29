@@ -17,14 +17,18 @@ Email: sc20bac@leeds.ac.uk
 
 ----
 
+# Table of contents
+* [Git repository](#git-repository)
+* [The Software](#the-software)
+* [Git Commit History](#git-commit-history)
+
 # Git repository
 
 SSH: git@gitlab.com:sc20bac/comp1921-cwk2.git
 HTTP: https://gitlab.com/sc20bac/comp1921-cwk2.git
 
-# Git commit history
 
-![](commits_screenshot.png)
+# The software
 
 ## About the files
 The project contains 9 files:
@@ -149,3 +153,7 @@ If the user just wants to know the distance but not the path between the two nod
 ## Exit Command
 
 If the user does not want to continue, he can use this command `exit` to exit the program.
+
+# Git commit history
+
+![](commits_screenshot.png)
