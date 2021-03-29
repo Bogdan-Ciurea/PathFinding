@@ -16,8 +16,13 @@
 #include <stdlib.h>
 #include <float.h>
 
+#ifdef _WIN32
+#include <SDL.h>
+#include <SDL_image.h>
+#else
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#endif
 
 #include "functions.h"
 /*
@@ -68,8 +73,8 @@ void drawInitialFrame(SDL_Renderer *renderer){
 // The purpose of this function is to make an animation of the path from node x to node y
 // This function will take an SDL_Renderer pointer as a parameter
 // The animation will consist of two parts:
-// The first part is to connect every pont, from node x to node y
-// The second part is to make the nodes flash, in a blue color there, three times
+// The first part is to connect every point, from node x to node y
+// The second part is to make the nodes flash, in a blue colour there, three times
 void animatePath(SDL_Renderer *renderer){
     int running = 1, i, j;
     SDL_Event event;
@@ -137,15 +142,15 @@ void animatePath(SDL_Renderer *renderer){
     }
 }
 
-// The purpose of this function is to find the shortest path and shortest distance from node x to node y using Dijkstra's Algorith
+// The purpose of this function is to find the shortest path and shortest distance from node x to node y using Dijkstra's Algorithm
 // The function will take an integer as a parameter. This value indicates if the user wants to see how the algorithm works
-// If the function worked properly, and the path is found, then it will return 1 indicating succes
+// If the function worked properly, and the path is found, then it will return 1 indicating success
 // If the function did not work as intended, it will return 0 indicating an error
 // The function will have three steps:
-// Step 1: Initialise the predecesor, the distance and the visited matrices
+// Step 1: Initialise the predecessor, the distance and the visited matrices
 // Step 2: Relax all the edges
 // Step 3: Make the path
-// If the user chooses to see the animation, during the 2nd step, the viseded nodes will be collored in blue and the comared one in green
+// If the user chooses to see the animation, during the 2nd step, the visited nodes will be coloured in blue and the compared one in green
 int dijkstra(int animation){
     // Initialize the variables
     initValues();
@@ -183,7 +188,7 @@ int dijkstra(int animation){
         SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255); //Blue
         drawPoint(relativePozX(listOfNodes.nodes[indexStart].lon), relativePozY(listOfNodes.nodes[indexStart].lat), renderer);
         SDL_RenderPresent(renderer);
-    } 
+    }
 
 	// Step 1: Initialize pred[],distance[] and visited[]
 	for(i = 0; i < n; i++){

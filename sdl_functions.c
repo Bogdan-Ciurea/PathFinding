@@ -10,9 +10,15 @@
     Date Work Commenced: 3rd Mar 2021
 *************************************************************************/
 
+#ifdef _WIN32
+#include <SDL.h>
+#include <SDL_image.h>
+#include <SDL_ttf.h>
+#else
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_ttf.h>
+#endif
 
 #include <string.h>
 #include <stdio.h>
@@ -181,7 +187,7 @@ int relativePozY(double y){
 
 // The purpose of this function is to show the map of the nodes and edges
 // The function will take an integer as a parameter, this representing if the function should also show the path
-// If the user has read two points, these two points will be colored black
+// If the user has read two points, these two points will be coloured black
 void showMap(int showPath){
     initValues();
 

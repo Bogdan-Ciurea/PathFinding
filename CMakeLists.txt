@@ -7,7 +7,7 @@ PKG_SEARCH_MODULE(SDL2TTF REQUIRED SDL2_ttf>=2.0.0)
 
 project(CyberRoads)
 
-set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE Release)
 
 set(CMAKE_C_FLAGS "-std=c99 -fdump-rtl-expand")
 

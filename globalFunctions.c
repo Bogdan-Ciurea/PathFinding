@@ -16,11 +16,17 @@
 #include <float.h>
 #include <math.h>
 
-#ifdef _WIN32
+//Taken from : https://stackoverflow.com/questions/1157209/is-there-an-alternative-sleep-function-in-c-to-milliseconds
+//Start
+#ifdef WIN32
 #include <windows.h>
+#elif _POSIX_C_SOURCE >= 199309L
+#include <time.h>   // for nanosleep
 #else
-#include <unistd.h>
+#include <unistd.h> // for usleep
 #endif
+//Finish reference code
+
 
 #include "functions.h"
 
@@ -169,12 +175,29 @@ double distBetweenNodes(int node1, int node2){
 // The purpose of this function is to wait a specific number of seconds
 // The function will take one float value as a parameter, this representing the seconds we want to wait
 // It is an equivalent of time.sleep in python
-void wait(float seconds){
+void wait(float time){// cross-platform sleep function
+    time *= 1000; 
+    int seconds = time;
+
+    #ifdef WIN32
+        Sleep(seconds);
+    #elif _POSIX_C_SOURCE >= 199309L
+        struct timespec ts;
+        ts.tv_sec = seconds / 1000;
+        ts.tv_nsec = (seconds % 1000) * 1000000;
+        nanosleep(&ts, NULL);
+    #else
+        if (seconds >= 1000)
+        sleep(seconds / 1000);
+        usleep((seconds % 1000) * 1000);
+    #endif
+/*
     #ifdef _WIN32
     Sleep(1000 * seconds);
     #else
+    //sleep(1);
     usleep(1000000 * seconds);
-    #endif
+    #endif*/
 }
 
 // The purpose of this function is to add information to the pathOfNodes from the listOfNodes

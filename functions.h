@@ -40,17 +40,17 @@ typedef struct{
 //The variable that will store all the nodes
 typedef struct{
     int numberOfNodes; // Represents how many nodes do we have
-    Node *nodes; // This pointer will store all the nodes 
+    Node *nodes; // This pointer will store all the nodes
 }Nodes;
 
-//The variables that will tell the dimentions of the map
-double minLat, maxLat, minLon, maxLon; 
+//The variables that will tell the dimensions of the map
+double minLat, maxLat, minLon, maxLon;
 int width, height;
 
 //The index of the starting node and the finish node that we want to link
 int indexStart, indexFinish;
 
-int hasReadNodes; 
+int hasReadNodes;
 Nodes listOfNodes; //The list of nodes
 Nodes pathOfNodes; //The path of nodes from node x to node y
 Links listOfLinks; //The list of edges
@@ -61,13 +61,13 @@ Links listOfLinks; //The list of edges
 ===============*/
 
 // The purpose of this function is to read the borders, nodes and edges of the map
-// If the function worked properly, and all the data has been read coretley, then it will return 1 indicating succes
+// If the function worked properly, and all the data has been read correctly, then it will return 1 indicating success
 // If the function did not work as intended, it will return 0 indicating an error
 int readFromFile(char* input);
 
 // The purpose of this function is to show the map of the nodes and edges
 // The function will take an integer as a parameter, this representing if the function should also show the path
-// If the user has read two points, these two points will be colored black
+// If the user has read two points, these two points will be coloured black
 void showMap(int showPath);
 
 // The purpose of this function is to see if the input is a number or not
@@ -95,9 +95,9 @@ void wait(float seconds);
 int randomNodes();
 
 // The purpose of this function is to see if a node has the given coordinates
-// The function will take two double variables, representing the x and y coordinates of the suposed node
-// If the given coordinates have a coresponding node, the function will return the index if the node the coordinates corespond with
-// If the given coordinates do not have a coresponding node, the function will return -1
+// The function will take two double variables, representing the x and y coordinates of the supposed node
+// If the given coordinates have a corresponding node, the function will return the index if the node the coordinates correspond to
+// If the given coordinates do not have a corresponding node, the function will return -1
 int nodeInNodes(double x, double y);
 
 // The purpose of this function is to add information to the pathOfNodes from the listOfNodes
@@ -107,37 +107,37 @@ void completePath();
 
 // The purpose of this function is to find the distance between two nodes that are connected with one edge
 // The function will take two integers as parameters. These parameters represent the matrixId.
-// If the function worked properly, and the node have an edge connecting them, then it will return the weight of the edge indicating succes
+// If the function worked properly, and the node have an edge connecting them, then it will return the weight of the edge indicating success
 // If the function did not work as intended, it will return DBL_MAX indicating an error
 double distBetweenNodes(int node1, int node2);
 
 //The function that will get the two points' coordinates
-// The purpose of this function is to get the two nodes  
-// If the function worked properly, and the nodes have been read successfully, then it will return 1 indicating succes
+// The purpose of this function is to get the two nodes
+// If the function worked properly, and the nodes have been read successfully, then it will return 1 indicating success
 // If the function did not work as intended, it will return 0 indicating an error
 // The user will be asked to give the coordinates of the nodes
 // The function will read the input and validate it (if it is a number)
 // If the input is valid the function will try to find the nodes
 int getCoordinatesStFin();
 
-// The purpose of this function is to find the shortest path and shortest distance from node x to node y using Dijkstra's Algorith
+// The purpose of this function is to find the shortest path and shortest distance from node x to node y using Dijkstra's Algorithm
 // The function will take an integer as a parameter. This value indicates if the user wants to see how the algorithm works
-// If the function worked properly, and the path is found, then it will return 1 indicating succes
+// If the function worked properly, and the path is found, then it will return 1 indicating success
 // If the function did not work as intended, it will return 0 indicating an error
 // The function will have three steps:
-// Step 1: Initialise the predecesor, the distance and the visited matrices
+// Step 1: Initialise the predecessor, the distance and the visited matrices
 // Step 2: Relax all the edges
 // Step 3: Make the path
-// If the user chooses to see the animation, during the 2nd step, the viseded nodes will be collored in blue and the comared one in green
+// If the user chooses to see the animation, during the 2nd step, the visited nodes will be coloured in blue and the compared one in green
 int dijkstra(int animation);
 
-// The purpose of this function is to find the shortest distance from node x to node y using Bellman-Ford's Algorith
-// If the function worked properly, and the path is found, then it will return 1 indicating succes
+// The purpose of this function is to find the shortest distance from node x to node y using Bellman-Ford's Algorithm
+// If the function worked properly, and the path is found, then it will return 1 indicating success
 // If the function did not work as intended, it will return 0 indicating an error
 // The function will have three steps:
 // Step 1: Initialize distances from the start node to all other nodes
-// Step 2: Relax all edges |listOfNodes.numberOfNodes| - 1 times 
-// Disclaimer!: The function is not ment fo find the path so it will just show the distance
+// Step 2: Relax all edges |listOfNodes.numberOfNodes| - 1 times
+// Disclaimer!: The function is not meant for find the path so it will just show the distance
 int bellmanFord();
 
 #endif

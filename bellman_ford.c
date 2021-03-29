@@ -27,8 +27,13 @@ yes
 #include <stdlib.h>
 #include <float.h>
 
+#ifdef _WIN32
+#include <SDL.h>
+#include <SDL_image.h>
+#else
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#endif
 
 #include "functions.h"
 
@@ -37,13 +42,13 @@ extern Nodes pathOfNodes;
 extern Nodes listOfNodes;
 extern int indexStart, height, width, indexFinish;
 
-// The purpose of this function is to find the shortest distance from node x to node y using Bellman-Ford's Algorith
-// If the function worked properly, and the path is found, then it will return 1 indicating succes
+// The purpose of this function is to find the shortest distance from node x to node y using Bellman-Ford's Algorithm
+// If the function worked properly, and the path is found, then it will return 1 indicating success
 // If the function did not work as intended, it will return 0 indicating an error
 // The function will have three steps:
 // Step 1: Initialize distances from the start node to all other nodes
 // Step 2: Relax all edges |listOfNodes.numberOfNodes| - 1 times
-// Disclaimer!: The function is not ment fo find the path so it will just show the distance
+// Disclaimer!: The function is not meant for find the path so it will just show the distance
 int bellmanFord(){
     initValues();
     SDL_Event event;
