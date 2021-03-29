@@ -37,11 +37,11 @@ extern int indexStart, height, width, indexFinish;
 // Step 1: Initialize distances from the start node to all other nodes
 // Step 2: Relax all edges |listOfNodes.numberOfNodes| - 1 times
 // Disclaimer!: The function is not meant for find the path so it will just show the distance
-int bellmanFord(){
+const int bellmanFord(){
     initValues();
     SDL_Event event;
 
-    int i, j, lastNode;
+    static int i, j, lastNode;
 	double distance[listOfNodes.numberOfNodes], weight;
 
     // Step 1: Initialize distances from the start node to all other nodes

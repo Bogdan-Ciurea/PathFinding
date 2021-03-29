@@ -147,7 +147,7 @@ void animatePath(SDL_Renderer *renderer){
 // Step 2: Relax all the edges
 // Step 3: Make the path
 // If the user chooses to see the animation, during the 2nd step, the visited nodes will be colored in blue and the compared one in green
-int dijkstra(int animation){
+const int dijkstra(const int animation){
     // Initialize the variables
     initValues();
     SDL_Event event;

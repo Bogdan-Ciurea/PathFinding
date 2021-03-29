@@ -19,7 +19,7 @@
 
 // The purpose of this function is to show the available commands
 // The function will take an integer as a parameter, representing if we want to show the commands from the start of the program or not
-void showAvailableCommands(int start){
+void showAvailableCommands(const int start){
     if(start){
     printf("You have the following commands:\n1) 'show' - to show the map\n2) 'read nodes' - to read the Start and Finish nodes\n");
     printf("3) 'random nodes' - will chose two random nodes from the map\n");
@@ -45,8 +45,8 @@ int main(void){
 	printf("===============\n");
 	printf("Hello\n===============\n\n");
 
-	char path[50];
-	int a, answer;
+	static char path[50];
+	static int a, answer;
 
 	//Reading the input for the file.
 	printf("Type the name of the file you want to open.\nBe careful to also type the extension of the file.\n");
@@ -62,7 +62,7 @@ int main(void){
 
     printf("File successfully read.\n\n");
 
-    int hasMadeAPath = 0;
+    static int hasMadeAPath = 0;
     extern int hasReadNodes;
     hasReadNodes = 0;
 

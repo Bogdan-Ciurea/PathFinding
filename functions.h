@@ -63,7 +63,7 @@ Links listOfLinks; //The list of edges
 // The purpose of this function is to read the borders, nodes and edges of the map
 // If the function worked properly, and all the data has been read correctly, then it will return 1 indicating success
 // If the function did not work as intended, it will return 0 indicating an error
-int readFromFile(char* input);
+const int readFromFile(const char* input);
 
 // The purpose of this function is to show the map of the nodes and edges
 // The function will take an integer as a parameter, this representing if the function should also show the path
@@ -74,17 +74,17 @@ void showMap(int showPath);
 // The function will take a char pointer as a parameter
 // If the input is a number, the function will return 1
 // If the input is not a number, the function will return 0
-int inputIsNumber(char* input);
+const int inputIsNumber(const char* input);
 
 // The purpose of this function is to give the position of a node relative to the window that we render
 // The function will take one double value as a parameter, this representing the longitude of the node
 // The function will return the integer value of the relative value to the window
-int relativePozX(double x);
+const int relativePozX(const double x);
 
 // The purpose of this function is to give the position of a node relative to the window that we render
 // The function will take one double value as a parameter, this representing the latitude of the node
 // The function will return the integer value of the relative value to the window
-int relativePozY(double y);
+const int relativePozY(const double y);
 
 // The purpose of this function is to wait a specific number of seconds
 // The function will take one float value as a parameter, this representing the seconds we want to wait
@@ -92,13 +92,13 @@ int relativePozY(double y);
 void wait(float seconds);
 
 //The function that will choose two random nodes from the map if the user does not want to input two points
-int randomNodes();
+const int randomNodes();
 
 // The purpose of this function is to see if a node has the given coordinates
 // The function will take two double variables, representing the x and y coordinates of the supposed node
 // If the given coordinates have a corresponding node, the function will return the index if the node the coordinates correspond to
 // If the given coordinates do not have a corresponding node, the function will return -1
-int nodeInNodes(double x, double y);
+const int nodeInNodes(const double x, const double y);
 
 // The purpose of this function is to add information to the pathOfNodes from the listOfNodes
 // After the path is build, it will only store the id in matrix of each node
@@ -109,7 +109,7 @@ void completePath();
 // The function will take two integers as parameters. These parameters represent the matrixId.
 // If the function worked properly, and the node have an edge connecting them, then it will return the weight of the edge indicating success
 // If the function did not work as intended, it will return DBL_MAX indicating an error
-double distBetweenNodes(int node1, int node2);
+const double distBetweenNodes(const int node1, const int node2);
 
 //The function that will get the two points' coordinates
 // The purpose of this function is to get the two nodes
@@ -118,7 +118,7 @@ double distBetweenNodes(int node1, int node2);
 // The user will be asked to give the coordinates of the nodes
 // The function will read the input and validate it (if it is a number)
 // If the input is valid the function will try to find the nodes
-int getCoordinatesStFin();
+const int getCoordinatesStFin();
 
 // The purpose of this function is to find the shortest path and shortest distance from node x to node y using Dijkstra's Algorithm
 // The function will take an integer as a parameter. This value indicates if the user wants to see how the algorithm works
@@ -129,7 +129,7 @@ int getCoordinatesStFin();
 // Step 2: Relax all the edges
 // Step 3: Make the path
 // If the user chooses to see the animation, during the 2nd step, the visited nodes will be colored in blue and the compared one in green
-int dijkstra(int animation);
+const int dijkstra(const int animation);
 
 // The purpose of this function is to find the shortest distance from node x to node y using Bellman-Ford's Algorithm
 // If the function worked properly, and the path is found, then it will return 1 indicating success
@@ -138,6 +138,6 @@ int dijkstra(int animation);
 // Step 1: Initialize distances from the start node to all other nodes
 // Step 2: Relax all edges |listOfNodes.numberOfNodes| - 1 times
 // Disclaimer!: The function is not meant for find the path so it will just show the distance
-int bellmanFord();
+const int bellmanFord();
 
 #endif

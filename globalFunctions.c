@@ -36,9 +36,9 @@
 // The function will take two double variables, representing the x and y coordinates of the supposed node
 // If the given coordinates have a corresponding node, the function will return the index if the node the coordinates correspond with
 // If the given coordinates do not have a corresponding node, the function will return -1
-int nodeInNodes(double x, double y){
+const int nodeInNodes(const double x, const double y){
     extern Nodes listOfNodes;
-    int i;
+    static int i;
     for(i = 0; i < listOfNodes.numberOfNodes; i++)
         if(listOfNodes.nodes[i].lat == x && listOfNodes.nodes[i].lon == y)
             return listOfNodes.nodes[i].matrixId;
@@ -49,7 +49,7 @@ int nodeInNodes(double x, double y){
 // The purpose of this function is to chose two random nodes from the list
 // If the function worked properly, and the two random nodes where selected, then it will return 1 indicating success
 // If the function did not work as intended, it will return 0 indicating an error
-int randomNodes(){
+const int randomNodes(){
     extern int indexStart, indexFinish;
     extern Nodes listOfNodes;
 
@@ -68,7 +68,7 @@ int randomNodes(){
 // The function will take a char pointer as a parameter
 // If the input is a number, the function will return 1
 // If the input is not a number, the function will return 0
-int inputIsNumber(char* input){
+const int inputIsNumber(const char* input){
     int i, dots = 0;
     for(i = 0; i < strlen(input); i++){
         if(strchr("1234567890.", input[i]) == NULL){
@@ -96,10 +96,10 @@ int inputIsNumber(char* input){
 // The user will be asked to give the coordinates of the nodes
 // The function will read the input and validate it (if it is a number)
 // If the input is valid the function will try to find the nodes
-int getCoordinatesStFin(){
+const int getCoordinatesStFin(){
     extern int indexStart, indexFinish;
-    double x, y;
-    char input[100], *firstElem;
+    static double x, y;
+    static char input[100], *firstElem;
 
     printf("Keep in mind that you can also type 'back' to return to the Main Menu.\n");
 
@@ -167,7 +167,7 @@ int getCoordinatesStFin(){
 // The function will take two integers as parameters. These parameters represent the matrixId.
 // If the function worked properly, and the node have an edge connecting them, then it will return the weight of the edge indicating success
 // If the function did not work as intended, it will return DBL_MAX indicating an error
-double distBetweenNodes(int node1, int node2){
+const double distBetweenNodes(const int node1, const int node2){
     int i;
     extern Links listOfLinks;
 
@@ -216,7 +216,7 @@ void wait(float time){// cross-platform sleep function
 void completePath(){
     extern Nodes pathOfNodes;
     extern Nodes listOfNodes;
-    int i;
+    static int i;
 
     for(i = 0; i < pathOfNodes.numberOfNodes; i++){
         pathOfNodes.nodes[i].id = listOfNodes.nodes[pathOfNodes.nodes[i].matrixId].id;

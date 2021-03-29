@@ -27,20 +27,20 @@
 
 //These distances are taken from the image that we where given
 //They can be changed by changing the value of the scaler
-float scaler = 1.5;
+const float scaler = 1.5;
 extern int width;
-int mapWidth;
+static int mapWidth;
 extern int height;
-int mapHeight;
-int distToBoxWidth;
-int distToBoxHeight;
-int distFromBoxWidth;
-int distFromBoxHeight;
-int smallLine;
-int distBetweenLinesBot;
-int distBetweenLinesLeft;
-int boxWidth;
-int boxHeight;
+static int mapHeight;
+static int distToBoxWidth;
+static int distToBoxHeight;
+static int distFromBoxWidth;
+static int distFromBoxHeight;
+static int smallLine;
+static int distBetweenLinesBot;
+static int distBetweenLinesLeft;
+static int boxWidth;
+static int boxHeight;
 
 // The purpose of this function is to initialize the sizes of the lines, boxes etc to build the frame
 void initValues(){
@@ -65,7 +65,7 @@ extern Nodes pathOfNodes;
 // The purpose of this function is to draw a small star around a node
 // The third parameter will be an SDL_Renderer pointer
 // The first and second parameters will be the x and y coordinates of the node
-void drawPoint(int x, int y, SDL_Renderer *renderer){
+void drawPoint(const int x, const int y, SDL_Renderer *renderer){
     SDL_RenderDrawPoint(renderer, x, y);
 
     //Make the box
@@ -101,7 +101,7 @@ void drawPoint(int x, int y, SDL_Renderer *renderer){
 // The first parameter will be an SDL_Renderer pointer
 // The second and forth parameters will be the x and y coordinates of the first node
 // The third and fith parameters will be the x and y coordinates of the second node
-void drawLine(SDL_Renderer *renderer, int x1, int x2, int y1, int y2){
+void drawLine(SDL_Renderer *renderer, const int x1, const int x2, const int y1, const int y2){
     SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
 }
 
@@ -109,8 +109,8 @@ void drawLine(SDL_Renderer *renderer, int x1, int x2, int y1, int y2){
 // The function will take take an SDL_Renderer pointer as a parameter
 void makeFrame(SDL_Renderer *renderer){
 
-    char num[100];
-    float heightDist =  (maxLat - minLat)/9, widthDist = (maxLon - minLon)/4;
+    static char num[100];
+    const float heightDist =  (maxLat - minLat)/9, widthDist = (maxLon - minLon)/4;
 
     //Creates the font
     TTF_Init();
@@ -132,7 +132,7 @@ void makeFrame(SDL_Renderer *renderer){
     //The future corrections (-x) that you will see at the end of every coordinates
     //are there to correct the differences between some values
 
-    int i;
+    static int i;
     for(i = 0; i < 5; i++){
         drawLine(renderer, distToBoxWidth + i*distBetweenLinesBot + distFromBoxWidth, distToBoxWidth + distFromBoxWidth + i*distBetweenLinesBot,
                  boxHeight + distToBoxHeight - smallLine - 1, boxHeight + distToBoxHeight - 1);
@@ -174,14 +174,14 @@ void makeFrame(SDL_Renderer *renderer){
 // The purpose of this function is to give the position of a node relative to the window that we render
 // The function will take one double value as a parameter, this representing the longitude of the node
 // The function will return the integer value of the relative value to the window
-int relativePozX(double x){
+const int relativePozX(const double x){
     return (int) ((x - minLon)*mapWidth/(maxLon-minLon) + distToBoxWidth + distFromBoxWidth);
 }
 
 // The purpose of this function is to give the position of a node relative to the window that we render
 // The function will take one double value as a parameter, this representing the latitude of the node
 // The function will return the integer value of the relative value to the window
-int relativePozY(double y){
+const int relativePozY(const double y){
     return (int) (height - ((y - minLat)*mapHeight/(maxLat-minLat) + distToBoxHeight + distFromBoxHeight));
 }
 
