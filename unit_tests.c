@@ -55,9 +55,9 @@ void test_reading_nodes(){
     TEST_ASSERT_MESSAGE( nodeInNodes(100, -1) == -1,"Node does not exist!" ); //node outside
     TEST_ASSERT_MESSAGE( nodeInNodes(53.802060, -1.547648) == -1,"Node does not exist!" ); //node inside
 
-    TEST_ASSERT_MESSAGE( nodeInNodes(53.802793, -1.548657) != -1, "Node exists!" );
-    TEST_ASSERT_MESSAGE( nodeInNodes(53.803873, -1.549117) != -1, "Node exists!" );
-    TEST_ASSERT_MESSAGE( nodeInNodes(53.801418, -1.553514) != -1, "Node exists!" );
+    TEST_ASSERT_EQUAL_INT_MESSAGE( nodeInNodes(53.809295, -1.555582) == -1, 0, "Node exists!" );
+    TEST_ASSERT_EQUAL_INT_MESSAGE( nodeInNodes(53.809470, -1.553787) == -1, 0, "Node exists!" );
+    TEST_ASSERT_EQUAL_INT_MESSAGE( nodeInNodes(53.805273, -1.562772) == -1, 0, "Node exists!" );
 }
 
 void test_nonexistent_file(){
