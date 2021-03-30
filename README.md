@@ -1,19 +1,19 @@
 # Introduction
-**This software was made by Bogdan Alexandru Ciurea
+**This software was made by Bogdan Alexandru Ciurea**
 
-University of Leeds
+**University of Leeds**
 
-School of Computing
+**School of Computing**
 
-COMP1921 - Programming project
+**COMP1921 - Programming project**
 
-Coursework 2
+**Coursework 2**
 
-Student Name: Bogdan Alexandru Ciurea
+**Student Name: Bogdan Alexandru Ciurea**
 
-Student ID: 201438333
+**Student ID: 201438333**
 
-Email: sc20bac@leeds.ac.uk**
+**Email: sc20bac@leeds.ac.uk**
 
 ----
 
