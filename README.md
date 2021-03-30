@@ -20,6 +20,7 @@ Email: sc20bac@leeds.ac.uk
 # Table of contents
 * [Git repository](#git-repository)
 * [The Software](#the-software)
+* [Video Presentation] (#video-presentation)
 * [Git Commit History](#git-commit-history)
 
 # Git repository
@@ -162,6 +163,13 @@ If the user does not want to continue, he can use this command `exit` to exit th
 ## Egypt Map
 
 ![](egypt_map.png)
+
+# Video Presentation
+<figure class="video_container">
+	<video controls="true" allowfullscreen="true">
+		<source src="video_demonstration.mp4" type"video/mp4">
+	</video>
+</figure>
 
 # Git commit history
 
