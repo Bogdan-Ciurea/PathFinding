@@ -156,6 +156,7 @@ If **not**, the program will proceed with finding the shortest path between the 
 If the user just wants to know the distance but not the path between the two nodes, he/she is able to use the `find distance` command. After this, the program will tell the distance.
 
 <br>
+
 ## Exit Command
 
 If the user does not want to continue, he can use this command `exit` to exit the program.
