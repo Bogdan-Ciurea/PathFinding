@@ -1,5 +1,5 @@
 # Introduction
-This software was made by Bogdan Alexandru Ciurea
+**This software was made by Bogdan Alexandru Ciurea
 
 University of Leeds
 
@@ -13,7 +13,7 @@ Student Name: Bogdan Alexandru Ciurea
 
 Student ID: 201438333
 
-Email: sc20bac@leeds.ac.uk
+Email: sc20bac@leeds.ac.uk**
 
 ----
 
@@ -169,13 +169,6 @@ If the user does not want to continue, he can use this command `exit` to exit th
 
 ![](video_demonstration.mp4)
 
-![Sample Video](video_demonstration.mp4)
-
-<figure class="video_container">
-	<video controls="true" allowfullscreen="true">
-		<source src="video_demonstration.mp4" type"video/mp4">
-	</video>
-</figure>
 
 # Git commit history
 
