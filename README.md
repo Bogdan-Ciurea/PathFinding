@@ -90,6 +90,7 @@ After the file from which we will read the information from has executed correct
 * [Find Path Command](#find-path-command)
 * [Find Distance Command](#find-dostance-command)
 * [Exit](#exit-command)
+* [Map](#egypt-map)
 
 <br>
 
@@ -157,6 +158,10 @@ If the user just wants to know the distance but not the path between the two nod
 ## Exit Command
 
 If the user does not want to continue, he can use this command `exit` to exit the program.
+
+## Egypt Map
+
+![](egypt_map.png)
 
 # Git commit history
 
