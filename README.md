@@ -166,6 +166,7 @@ If the user does not want to continue, he can use this command `exit` to exit th
 ![](egypt_map.png)
 
 # Video Presentation
+
 <figure class="video_container">
 	<video controls="true" allowfullscreen="true">
 		<source src="video_demonstration.mp4" type"video/mp4">
