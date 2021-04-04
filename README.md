@@ -17,17 +17,6 @@
 
 ----
 
-# Table of contents
-* [Git repository](#git-repository)
-* [The Software](#the-software)
-
-# Git repository
-
-SSH: git@gitlab.com:sc20bac/comp1921-cwk2.git
-
-HTTP: https://gitlab.com/sc20bac/comp1921-cwk2.git
-
-
 # The software
 
 ## About the files
