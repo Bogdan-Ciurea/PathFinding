@@ -1,19 +1,13 @@
+
 # Introduction
 **This software was made by Bogdan Alexandru Ciurea**
 
-**University of Leeds**
-
-**School of Computing**
-
-**COMP1921 - Programming project**
-
-**Coursework 2**
 
 **Student Name: Bogdan Alexandru Ciurea**
 
-**Student ID: 201438333**
+**Email: ciureabogdanalexandru@yahoo.com**
 
-**Email: sc20bac@leeds.ac.uk**
+**Purpose: University project**
 
 ----
 
@@ -145,7 +139,3 @@ If the user just wants to know the distance but not the path between the two nod
 ## Exit Command
 
 If the user does not want to continue, he can use this command `exit` to exit the program.
-
-## Egypt Map
-
-![](egypt_map.png)
