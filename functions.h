@@ -13,6 +13,24 @@
 #ifndef globalFunctions_h
 #define globalFunctions_h
 
+#ifdef _WIN32__
+    #include <SDL.h>
+    #include <SDL_image.h>
+    #include <SDL_ttf.h>
+#else
+    #ifdef __APPLE__ 
+        // Apple
+        #include <SDL2/SDL.h>
+        #include <SDL2/SDL_image.h>
+        #include <SDL2/SDL_ttf.h>
+    #else
+        // Linux
+        #include <SDL2/SDL.h>
+        #include <SDL2/SDL_image.h>
+        #include <SDL2/SDL_ttf.h>
+    #endif
+#endif
+
 /*==============
     Variables
 ===============*/
@@ -89,7 +107,10 @@ const int relativePozY(const double y);
 // The purpose of this function is to wait a specific number of seconds
 // The function will take one float value as a parameter, this representing the seconds we want to wait
 // It is an equivalent of time.sleep in python
-void wait(float seconds);
+#ifdef __APPLE__
+#else
+    void wait(float seconds);
+#endif
 
 //The purpose of this function is to choose two random nodes from the map if the user does not want to input two points
 const int randomNodes();
@@ -138,5 +159,16 @@ const int dijkstra(const int animation);
 // Step 2: Relax all edges |listOfNodes.numberOfNodes| - 1 times
 // Disclaimer!: The function is not meant for find the path so it will just show the distance
 const int bellmanFord();
+
+// The purpose of this function is to initialize the values of the variables
+void initValues();
+
+void drawPoint(const int x, const int y, SDL_Renderer *renderer);
+
+void drawLine(SDL_Renderer *renderer, const int x1, const int x2, const int y1, const int y2);
+
+void makeFrame(SDL_Renderer *renderer);
+
+void animatePath(SDL_Renderer *renderer);
 
 #endif

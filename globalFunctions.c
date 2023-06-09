@@ -182,6 +182,9 @@ const double distBetweenNodes(const int node1, const int node2){
 // The purpose of this function is to wait a specific number of seconds
 // The function will take one float value as a parameter, this representing the seconds we want to wait
 // It is an equivalent of time.sleep in python
+#ifdef __APPLE__
+// macOS-specific implementation
+#else
 void wait(float time){
     time *= 1000;
     int seconds = time;
@@ -209,6 +212,7 @@ void wait(float time){
     usleep(1000000 * seconds);
     #endif*/
 }
+#endif
 
 // The purpose of this function is to add information to the pathOfNodes from the listOfNodes
 // After the path is build, it will only store the id in matrix of each node

@@ -40,7 +40,7 @@ void showAvailableCommands(const int start){
 }
 
 
-int main(void){
+int main(int argc, char *argv[]){
 
 	printf("===============\n");
 	printf("Hello\n===============\n\n");

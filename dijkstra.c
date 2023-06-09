@@ -46,7 +46,7 @@ void drawInitialFrame(SDL_Renderer *renderer){
     }
 
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); //Color is Black
-    drawPoint(listOfNodes.nodes[indexFinish].lon);
+    // drawPoint(listOfNodes.nodes[indexFinish].lon);
     drawPoint(relativePozX(listOfNodes.nodes[indexStart].lon), relativePozY(listOfNodes.nodes[indexStart].lat), renderer);
     drawPoint(relativePozX(listOfNodes.nodes[indexFinish].lon), relativePozY(listOfNodes.nodes[indexFinish].lat), renderer);
     SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255); //Color is Red
@@ -93,8 +93,12 @@ void animatePath(SDL_Renderer *renderer){
                     relativePozY(pathOfNodes.nodes[i - 1].lat), relativePozY(pathOfNodes.nodes[i].lat));
             }
 
-
-            wait(0.13);
+            #ifdef __APPLE__
+                int time1 = 130;
+                wait(&time1);
+            #else
+                wait(0.13);
+            #endif
             SDL_RenderPresent(renderer);
         }
 
@@ -111,7 +115,12 @@ void animatePath(SDL_Renderer *renderer){
 
             //Draw the path with a blue color
             SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
-            wait(0.4);
+            #ifdef __APPLE__
+                int time1 = 400;
+                wait(&time1);
+            #else
+                wait(0.40);
+            #endif
             SDL_RenderPresent(renderer);
             drawPoint(relativePozX(pathOfNodes.nodes[pathOfNodes.numberOfNodes - 1].lon), relativePozY(pathOfNodes.nodes[pathOfNodes.numberOfNodes - 1].lat),renderer);
 
@@ -131,7 +140,11 @@ void animatePath(SDL_Renderer *renderer){
 
             }
             SDL_RenderPresent(renderer);
-            wait(0.4);
+            #ifdef __APPLE__
+                wait(&time1);
+            #else
+                wait(0.40);
+            #endif
 
         }
 
